@@ -3,6 +3,8 @@
 
 target 'PetAdoption' do
 
+pod 'Parse'
+
 end
 
 target 'PetAdoptionTests' do
