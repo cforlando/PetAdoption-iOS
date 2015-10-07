@@ -11,12 +11,13 @@
 		D71813E51B4F469400A7D16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D71813E41B4F469400A7D16B /* main.m */; };
 		D71813E81B4F469400A7D16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71813E71B4F469400A7D16B /* AppDelegate.m */; };
 		D71813EB1B4F469400A7D16B /* PetAdoption.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D71813E91B4F469400A7D16B /* PetAdoption.xcdatamodeld */; };
-		D71813EE1B4F469400A7D16B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71813ED1B4F469400A7D16B /* ViewController.m */; };
+		D71813EE1B4F469400A7D16B /* AnimalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71813ED1B4F469400A7D16B /* AnimalListViewController.m */; };
 		D71813F11B4F469400A7D16B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D71813EF1B4F469400A7D16B /* Main.storyboard */; };
 		D71813F31B4F469400A7D16B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D71813F21B4F469400A7D16B /* Images.xcassets */; };
 		D71813F61B4F469400A7D16B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71813F41B4F469400A7D16B /* LaunchScreen.xib */; };
 		D71814021B4F469400A7D16B /* PetAdoptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71814011B4F469400A7D16B /* PetAdoptionTests.m */; };
 		D7DC726F1BC4985100E1A577 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7DC726E1BC4985100E1A577 /* settings.plist */; };
+		D7DC72741BC49CAF00E1A577 /* AnimalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,8 @@
 		D71813E61B4F469400A7D16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D71813E71B4F469400A7D16B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D71813EA1B4F469400A7D16B /* PetAdoption.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetAdoption.xcdatamodel; sourceTree = "<group>"; };
-		D71813EC1B4F469400A7D16B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D71813ED1B4F469400A7D16B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D71813EC1B4F469400A7D16B /* AnimalListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimalListViewController.h; sourceTree = "<group>"; };
+		D71813ED1B4F469400A7D16B /* AnimalListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimalListViewController.m; sourceTree = "<group>"; };
 		D71813F01B4F469400A7D16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D71813F21B4F469400A7D16B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D71813F51B4F469400A7D16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +49,8 @@
 		D71814001B4F469400A7D16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D71814011B4F469400A7D16B /* PetAdoptionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetAdoptionTests.m; sourceTree = "<group>"; };
 		D7DC726E1BC4985100E1A577 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
+		D7DC72721BC49CAF00E1A577 /* AnimalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalCollectionViewCell.h; sourceTree = "<group>"; };
+		D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +113,9 @@
 		D71813E11B4F469400A7D16B /* PetAdoption */ = {
 			isa = PBXGroup;
 			children = (
+				D7DC72701BC49C3F00E1A577 /* Animal List */,
 				D71813E61B4F469400A7D16B /* AppDelegate.h */,
 				D71813E71B4F469400A7D16B /* AppDelegate.m */,
-				D71813EC1B4F469400A7D16B /* ViewController.h */,
-				D71813ED1B4F469400A7D16B /* ViewController.m */,
 				D71813EF1B4F469400A7D16B /* Main.storyboard */,
 				D71813F21B4F469400A7D16B /* Images.xcassets */,
 				D71813F41B4F469400A7D16B /* LaunchScreen.xib */,
@@ -147,6 +149,25 @@
 				D71814001B4F469400A7D16B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7DC72701BC49C3F00E1A577 /* Animal List */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC72711BC49C9300E1A577 /* Cells */,
+				D71813EC1B4F469400A7D16B /* AnimalListViewController.h */,
+				D71813ED1B4F469400A7D16B /* AnimalListViewController.m */,
+			);
+			name = "Animal List";
+			sourceTree = "<group>";
+		};
+		D7DC72711BC49C9300E1A577 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC72721BC49CAF00E1A577 /* AnimalCollectionViewCell.h */,
+				D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +308,8 @@
 			files = (
 				D71813E81B4F469400A7D16B /* AppDelegate.m in Sources */,
 				D71813EB1B4F469400A7D16B /* PetAdoption.xcdatamodeld in Sources */,
-				D71813EE1B4F469400A7D16B /* ViewController.m in Sources */,
+				D7DC72741BC49CAF00E1A577 /* AnimalCollectionViewCell.m in Sources */,
+				D71813EE1B4F469400A7D16B /* AnimalListViewController.m in Sources */,
 				D71813E51B4F469400A7D16B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
