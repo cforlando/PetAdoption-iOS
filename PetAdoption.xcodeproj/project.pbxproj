@@ -18,6 +18,7 @@
 		D71814021B4F469400A7D16B /* PetAdoptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71814011B4F469400A7D16B /* PetAdoptionTests.m */; };
 		D7DC726F1BC4985100E1A577 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7DC726E1BC4985100E1A577 /* settings.plist */; };
 		D7DC72741BC49CAF00E1A577 /* AnimalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */; };
+		D7DC72781BC4A08000E1A577 /* AnimalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DC72771BC4A08000E1A577 /* AnimalDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D7DC726E1BC4985100E1A577 /* settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		D7DC72721BC49CAF00E1A577 /* AnimalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalCollectionViewCell.h; sourceTree = "<group>"; };
 		D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalCollectionViewCell.m; sourceTree = "<group>"; };
+		D7DC72761BC4A08000E1A577 /* AnimalDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalDetailsViewController.h; sourceTree = "<group>"; };
+		D7DC72771BC4A08000E1A577 /* AnimalDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 		D71813E11B4F469400A7D16B /* PetAdoption */ = {
 			isa = PBXGroup;
 			children = (
+				D7DC72751BC4A07400E1A577 /* Animal Detail */,
 				D7DC72701BC49C3F00E1A577 /* Animal List */,
 				D71813E61B4F469400A7D16B /* AppDelegate.h */,
 				D71813E71B4F469400A7D16B /* AppDelegate.m */,
@@ -168,6 +172,15 @@
 				D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		D7DC72751BC4A07400E1A577 /* Animal Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D7DC72761BC4A08000E1A577 /* AnimalDetailsViewController.h */,
+				D7DC72771BC4A08000E1A577 /* AnimalDetailsViewController.m */,
+			);
+			name = "Animal Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +324,7 @@
 				D7DC72741BC49CAF00E1A577 /* AnimalCollectionViewCell.m in Sources */,
 				D71813EE1B4F469400A7D16B /* AnimalListViewController.m in Sources */,
 				D71813E51B4F469400A7D16B /* main.m in Sources */,
+				D7DC72781BC4A08000E1A577 /* AnimalDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,9 @@
 #import "AnimalCollectionViewCell.h"
 
 @interface AnimalListViewController ()
-
+{
+    NSMutableArray *animalsArray;
+}
 @end
 
 @implementation AnimalListViewController
@@ -20,38 +22,67 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"City of Lady Lake Animal Servicester", nil);
+    self.title = NSLocalizedString(@"City of Lady Lake Animal Services", nil);
+    // Do any  additional setup after loading the view, typically from a nib.
+    
+    [self fetchAnimals];
+
+}
+
+-(void)fetchAnimals {
     
     PFQuery *query = [PFQuery queryWithClassName:@"Animal"];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"%@", objects);
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+    {
+        if (error) {
+            // TODO: Error handling
+        } else {
+            animalsArray = [NSMutableArray arrayWithArray:objects];
+            
+            NSLog(@"%@", animalsArray);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
+        }
     }];
-
-    // Do any additional setup after loading the view, typically from a nib.
-
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+#pragma mark UICollectionView Data Source and Delegate Methods
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    return [animalsArray count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     AnimalCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AnimalCell" forIndexPath:indexPath];
     
-    cell.captionLabel.text = @"Test";
+    PFObject *animal = [animalsArray objectAtIndex:indexPath.row];
+    cell.captionLabel.text = animal[@"name"];
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showDetails" sender:self];
+}
+
+#pragma mark Segue Methods
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showDetails"]) {
+
+    }
+}
+
+#pragma mark - Memory methods
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
