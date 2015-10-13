@@ -1,3 +1,6 @@
+## Attention
+In order to build this project you will need keys for Parse.com. If you are unsure of the key values please contact akozlik at g mail.com 
+
 ## Proto.io Mockup
 https://codefortravel.proto.io/share/?id=f45f246b-3ea7-4587-a8aa-e9dbf0395593&v=3
 
