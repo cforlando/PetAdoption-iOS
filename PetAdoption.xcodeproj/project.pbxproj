@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B5DA63919042A2C53AC1AA60 /* libPods-PetAdoption.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E0A5F2B154B58478586AC /* libPods-PetAdoption.a */; };
-		D7099E2D1BCCA6A200DFF2A4 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7099E2C1BCCA6A200DFF2A4 /* settings.plist */; settings = {ASSET_TAGS = (); }; };
+		D7099E2D1BCCA6A200DFF2A4 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7099E2C1BCCA6A200DFF2A4 /* settings.plist */; };
 		D71813E51B4F469400A7D16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D71813E41B4F469400A7D16B /* main.m */; };
 		D71813E81B4F469400A7D16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D71813E71B4F469400A7D16B /* AppDelegate.m */; };
 		D71813EB1B4F469400A7D16B /* PetAdoption.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D71813E91B4F469400A7D16B /* PetAdoption.xcdatamodeld */; };
@@ -18,7 +18,6 @@
 		D71813F61B4F469400A7D16B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71813F41B4F469400A7D16B /* LaunchScreen.xib */; };
 		D71814021B4F469400A7D16B /* PetAdoptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D71814011B4F469400A7D16B /* PetAdoptionTests.m */; };
 		D7DC72741BC49CAF00E1A577 /* AnimalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */; };
-		D7DC72781BC4A08000E1A577 /* AnimalDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DC72771BC4A08000E1A577 /* AnimalDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +51,6 @@
 		D71814011B4F469400A7D16B /* PetAdoptionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetAdoptionTests.m; sourceTree = "<group>"; };
 		D7DC72721BC49CAF00E1A577 /* AnimalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalCollectionViewCell.h; sourceTree = "<group>"; };
 		D7DC72731BC49CAF00E1A577 /* AnimalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalCollectionViewCell.m; sourceTree = "<group>"; };
-		D7DC72761BC4A08000E1A577 /* AnimalDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalDetailsViewController.h; sourceTree = "<group>"; };
-		D7DC72771BC4A08000E1A577 /* AnimalDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +174,6 @@
 		D7DC72751BC4A07400E1A577 /* Animal Detail */ = {
 			isa = PBXGroup;
 			children = (
-				D7DC72761BC4A08000E1A577 /* AnimalDetailsViewController.h */,
-				D7DC72771BC4A08000E1A577 /* AnimalDetailsViewController.m */,
 			);
 			name = "Animal Detail";
 			sourceTree = "<group>";
@@ -195,6 +190,7 @@
 				D71813DC1B4F469400A7D16B /* Frameworks */,
 				D71813DD1B4F469400A7D16B /* Resources */,
 				7553788321F7F1C5145AC4A1 /* Copy Pods Resources */,
+				17FD1FE197BD0CCF138051EC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +278,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17FD1FE197BD0CCF138051EC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PetAdoption/Pods-PetAdoption-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4D3F99C507954C623AEC87FE /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,7 +335,6 @@
 				D7DC72741BC49CAF00E1A577 /* AnimalCollectionViewCell.m in Sources */,
 				D71813EE1B4F469400A7D16B /* AnimalListViewController.m in Sources */,
 				D71813E51B4F469400A7D16B /* main.m in Sources */,
-				D7DC72781BC4A08000E1A577 /* AnimalDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
