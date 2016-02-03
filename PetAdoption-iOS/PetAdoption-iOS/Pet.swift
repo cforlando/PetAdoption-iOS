@@ -10,5 +10,5 @@ import UIKit
 
 class Pet: NSObject {
 	var petName : String!;
-	
+	var petImageUrls : [String]!;
 }

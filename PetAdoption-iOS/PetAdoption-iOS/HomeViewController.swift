@@ -19,8 +19,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 		self.title = NSLocalizedString("Home", comment: "");
 		self.collectionView.delegate = self;
 		self.collectionView.dataSource = self;
-        // Do any additional setup after loading the view.
+		self.collectionView.collectionViewLayout = CustomHomeCollectionViewFlowLayout();
 		
+		let normalCellView = UINib(nibName: "PetImageCollectionViewCell", bundle: nil);
+		self.collectionView.registerNib(normalCellView, forCellWithReuseIdentifier: collectionViewCellId);
+		
+		//Load some data (fake data for now)
 		let petService = FindPetsService();
 		let result = petService.execute();
 		self.petData = result.petsFound;
@@ -45,11 +49,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 	}
 	
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellId, forIndexPath: indexPath);
+	
+		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellId, forIndexPath: indexPath) as? PetImageCollectionViewCell;
+		let pet = petData[indexPath.row];
+		cell!.updateWithPet(pet);
 		
-		cell.backgroundColor = UIColor(white: 0.5, alpha: 1);
-		
-		return cell;
+		return cell!;
 	}
 	
 }
