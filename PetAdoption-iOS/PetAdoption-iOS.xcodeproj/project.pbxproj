@@ -25,6 +25,9 @@
 		D0950B0D1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950B0C1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift */; };
 		D0950B101C61A5F3002E198C /* PetImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0950B0F1C61A5F3002E198C /* PetImageCollectionViewCell.xib */; };
 		D0950B131C61A667002E198C /* PetImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */; };
+		D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE391C62E9AE008C0BF8 /* Info.storyboard */; };
+		D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */; };
+		D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		D0950B0C1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D0950B0F1C61A5F3002E198C /* PetImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D769DE391C62E9AE008C0BF8 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LostPet.storyboard; sourceTree = "<group>"; };
+		D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 		D0950AC61C618C2F002E198C /* PetAdoption-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D769DE381C62E986008C0BF8 /* Storyboards */,
 				D0950B0E1C61A5D5002E198C /* Nibs */,
 				D0950B0B1C619877002E198C /* CustomComponents */,
 				D0950B081C6193A6002E198C /* ServiceResults */,
@@ -149,7 +156,6 @@
 				D0950B021C619301002E198C /* Services */,
 				D0950AF71C618D86002E198C /* ViewControllers */,
 				D0950AC71C618C2F002E198C /* AppDelegate.swift */,
-				D0950ACB1C618C2F002E198C /* Main.storyboard */,
 				D0950ACE1C618C2F002E198C /* Assets.xcassets */,
 				D0950AD01C618C2F002E198C /* LaunchScreen.storyboard */,
 				D0950AD31C618C2F002E198C /* Info.plist */,
@@ -225,6 +231,17 @@
 				D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */,
 			);
 			name = Nibs;
+			sourceTree = "<group>";
+		};
+		D769DE381C62E986008C0BF8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D0950ACB1C618C2F002E198C /* Main.storyboard */,
+				D769DE391C62E9AE008C0BF8 /* Info.storyboard */,
+				D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */,
+				D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,11 +351,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */,
 				D0950AD21C618C2F002E198C /* LaunchScreen.storyboard in Resources */,
 				D0950ACF1C618C2F002E198C /* Assets.xcassets in Resources */,
 				D0950AF61C618CE4002E198C /* Podfile in Resources */,
 				D0950ACD1C618C2F002E198C /* Main.storyboard in Resources */,
 				D0950B101C61A5F3002E198C /* PetImageCollectionViewCell.xib in Resources */,
+				D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */,
+				D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
