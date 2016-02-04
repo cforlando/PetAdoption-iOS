@@ -28,6 +28,7 @@
 		D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE391C62E9AE008C0BF8 /* Info.storyboard */; };
 		D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */; };
 		D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */; };
+		D769DE401C62EDB1008C0BF8 /* PetListings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3F1C62EDB1008C0BF8 /* PetListings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D769DE391C62E9AE008C0BF8 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LostPet.storyboard; sourceTree = "<group>"; };
 		D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		D769DE3F1C62EDB1008C0BF8 /* PetListings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PetListings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				D769DE391C62E9AE008C0BF8 /* Info.storyboard */,
 				D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */,
 				D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */,
+				D769DE3F1C62EDB1008C0BF8 /* PetListings.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				D0950AF61C618CE4002E198C /* Podfile in Resources */,
 				D0950ACD1C618C2F002E198C /* Main.storyboard in Resources */,
 				D0950B101C61A5F3002E198C /* PetImageCollectionViewCell.xib in Resources */,
+				D769DE401C62EDB1008C0BF8 /* PetListings.storyboard in Resources */,
 				D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */,
 				D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */,
 			);
