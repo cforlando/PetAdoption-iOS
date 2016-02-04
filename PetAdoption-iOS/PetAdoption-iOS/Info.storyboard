@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w3x-Ky-LYF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="zvl-Ks-YW8">
+            <objects>
+                <viewController id="McP-S4-WE2" customClass="InfoViewController" customModule="PetAdoption_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zfH-G2-AVk"/>
+                        <viewControllerLayoutGuide type="bottom" id="98J-MB-cro"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CbM-9t-ObS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xbf-ON-Hrt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rki-nw-5gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="1944"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Ge5-lh-3u3">
+            <objects>
+                <navigationController id="w3x-Ky-LYF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" id="dak-hK-k9b"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z7r-hc-dvD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="McP-S4-WE2" kind="relationship" relationship="rootViewController" id="0XF-Qy-90W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSc-OJ-9ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="1944"/>
+        </scene>
+    </scenes>
+</document>
