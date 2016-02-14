@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  PetListingDetailsViewController.swift
 //  PetAdoption-iOS
 //
 //  Created by Marco Ledesma on 2/13/16.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class PetListingDetailViewController: UIViewController {
+	var pet : Pet!;
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		self.title = pet.petName;
         // Do any additional setup after loading the view.
     }
 

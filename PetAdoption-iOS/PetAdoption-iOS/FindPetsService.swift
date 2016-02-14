@@ -22,7 +22,7 @@ class FindPetsService: NSObject {
 		var fakePetImageIndex = 0;
 		for (var i = 0; i < 10; i++) {
 			let pet = Pet();
-			pet.petName = "Marco \(i)";
+			pet.petName = "Nice Cat \(i)";
 			pet.petImageUrls = [
 				fakePetImages[fakePetImageIndex]
 			];

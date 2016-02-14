@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qib-KM-1M4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qib-KM-1M4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Pet Listing View Controller-->
         <scene sceneID="yQO-ys-l2b">
             <objects>
-                <viewController id="OcW-IL-9vK" customClass="HomeViewController" customModule="PetAdoption_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OcW-IL-9vK" customClass="PetListingViewController" customModule="PetAdoption_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g7g-3d-AUU"/>
                         <viewControllerLayoutGuide type="bottom" id="t7a-DO-DWM"/>
@@ -40,11 +41,61 @@
                     <navigationItem key="navigationItem" id="iPs-xQ-mTd"/>
                     <connections>
                         <outlet property="collectionView" destination="AZn-wT-4hd" id="hL3-0m-0sX"/>
+                        <segue destination="sou-dF-Wjx" kind="show" identifier="segueToPetDetails" id="BgI-ac-nIX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="885-vW-cGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="-539"/>
+            <point key="canvasLocation" x="1193" y="-539"/>
+        </scene>
+        <!--Pet Details-->
+        <scene sceneID="X0H-KI-adT">
+            <objects>
+                <viewController title="Pet Details" id="sou-dF-Wjx" customClass="PetListingDetailViewController" customModule="PetAdoption_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y7U-tV-Zbb"/>
+                        <viewControllerLayoutGuide type="bottom" id="bUb-QH-LFH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LXd-Zb-gnW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YEc-Pw-IO3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Got-U6-1hf">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Got-U6-1hf" id="kRx-2B-TG3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5yG-UC-eHf">
+                                        <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5yG-UC-eHf" id="uVA-Bs-rC1">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YEc-Pw-IO3" firstAttribute="top" secondItem="LXd-Zb-gnW" secondAttribute="topMargin" id="L0n-4J-qse"/>
+                            <constraint firstItem="bUb-QH-LFH" firstAttribute="top" secondItem="YEc-Pw-IO3" secondAttribute="bottom" id="Qdm-8U-bck"/>
+                            <constraint firstItem="YEc-Pw-IO3" firstAttribute="leading" secondItem="LXd-Zb-gnW" secondAttribute="leadingMargin" constant="-20" id="Ten-QP-IHK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YEc-Pw-IO3" secondAttribute="trailing" constant="-20" id="UFW-QP-kDp"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSg-lg-EqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="-539"/>
         </scene>
         <!--Home-->
         <scene sceneID="04q-kY-qOv">

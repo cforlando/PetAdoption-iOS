@@ -15,8 +15,7 @@
 		D0950ADD1C618C2F002E198C /* PetAdoption_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950ADC1C618C2F002E198C /* PetAdoption_iOSTests.swift */; };
 		D0950AE81C618C2F002E198C /* PetAdoption_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AE71C618C2F002E198C /* PetAdoption_iOSUITests.swift */; };
 		D0950AF61C618CE4002E198C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D0950AF51C618CE4002E198C /* Podfile */; };
-		D0950AFB1C619146002E198C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AFA1C619146002E198C /* HomeViewController.swift */; };
-		D0950AFD1C619157002E198C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AFC1C619157002E198C /* SearchViewController.swift */; };
+		D0950AFB1C619146002E198C /* PetListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AFA1C619146002E198C /* PetListingViewController.swift */; };
 		D0950AFF1C619162002E198C /* LostPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AFE1C619162002E198C /* LostPetViewController.swift */; };
 		D0950B011C619172002E198C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950B001C619172002E198C /* InfoViewController.swift */; };
 		D0950B041C61933F002E198C /* FindPetsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950B031C61933F002E198C /* FindPetsService.swift */; };
@@ -25,6 +24,8 @@
 		D0950B0D1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950B0C1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift */; };
 		D0950B101C61A5F3002E198C /* PetImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0950B0F1C61A5F3002E198C /* PetImageCollectionViewCell.xib */; };
 		D0950B131C61A667002E198C /* PetImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */; };
+		D0E536791C70405D004794D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E536781C70405D004794D8 /* SearchViewController.swift */; };
+		D0E5367B1C70412A004794D8 /* PetListingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5367A1C70412A004794D8 /* PetListingDetailViewController.swift */; };
 		D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE391C62E9AE008C0BF8 /* Info.storyboard */; };
 		D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */; };
 		D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */; };
@@ -65,8 +66,7 @@
 		D0950AE71C618C2F002E198C /* PetAdoption_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoption_iOSUITests.swift; sourceTree = "<group>"; };
 		D0950AE91C618C2F002E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0950AF51C618CE4002E198C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D0950AFA1C619146002E198C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		D0950AFC1C619157002E198C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D0950AFA1C619146002E198C /* PetListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListingViewController.swift; sourceTree = "<group>"; };
 		D0950AFE1C619162002E198C /* LostPetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostPetViewController.swift; sourceTree = "<group>"; };
 		D0950B001C619172002E198C /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D0950B031C61933F002E198C /* FindPetsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPetsService.swift; sourceTree = "<group>"; };
@@ -75,6 +75,8 @@
 		D0950B0C1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D0950B0F1C61A5F3002E198C /* PetImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PetImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0E536781C70405D004794D8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D0E5367A1C70412A004794D8 /* PetListingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListingDetailViewController.swift; sourceTree = "<group>"; };
 		D769DE391C62E9AE008C0BF8 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LostPet.storyboard; sourceTree = "<group>"; };
 		D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -186,10 +188,10 @@
 		D0950AF71C618D86002E198C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0950AFA1C619146002E198C /* HomeViewController.swift */,
-				D0950AFC1C619157002E198C /* SearchViewController.swift */,
-				D0950AFE1C619162002E198C /* LostPetViewController.swift */,
-				D0950B001C619172002E198C /* InfoViewController.swift */,
+				D0E5367F1C704206004794D8 /* LostPet */,
+				D0E5367E1C704200004794D8 /* Info */,
+				D0E5367D1C7041F9004794D8 /* Search */,
+				D0E5367C1C7041F3004794D8 /* PetListings */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -233,6 +235,39 @@
 				D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */,
 			);
 			name = Nibs;
+			sourceTree = "<group>";
+		};
+		D0E5367C1C7041F3004794D8 /* PetListings */ = {
+			isa = PBXGroup;
+			children = (
+				D0950AFA1C619146002E198C /* PetListingViewController.swift */,
+				D0E5367A1C70412A004794D8 /* PetListingDetailViewController.swift */,
+			);
+			name = PetListings;
+			sourceTree = "<group>";
+		};
+		D0E5367D1C7041F9004794D8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D0E536781C70405D004794D8 /* SearchViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		D0E5367E1C704200004794D8 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				D0950B001C619172002E198C /* InfoViewController.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		D0E5367F1C704206004794D8 /* LostPet */ = {
+			isa = PBXGroup;
+			children = (
+				D0950AFE1C619162002E198C /* LostPetViewController.swift */,
+			);
+			name = LostPet;
 			sourceTree = "<group>";
 		};
 		D769DE381C62E986008C0BF8 /* Storyboards */ = {
@@ -435,15 +470,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E536791C70405D004794D8 /* SearchViewController.swift in Sources */,
 				D0950B071C619379002E198C /* Pet.swift in Sources */,
 				D0950B041C61933F002E198C /* FindPetsService.swift in Sources */,
 				D0950B131C61A667002E198C /* PetImageCollectionViewCell.swift in Sources */,
 				D0950AFF1C619162002E198C /* LostPetViewController.swift in Sources */,
 				D0950B0A1C6193C0002E198C /* FindPetsResult.swift in Sources */,
-				D0950AFD1C619157002E198C /* SearchViewController.swift in Sources */,
 				D0950AC81C618C2F002E198C /* AppDelegate.swift in Sources */,
 				D0950B0D1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift in Sources */,
-				D0950AFB1C619146002E198C /* HomeViewController.swift in Sources */,
+				D0950AFB1C619146002E198C /* PetListingViewController.swift in Sources */,
+				D0E5367B1C70412A004794D8 /* PetListingDetailViewController.swift in Sources */,
 				D0950B011C619172002E198C /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
