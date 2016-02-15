@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ImageGalleryView" customModule="PetAdoption_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="271"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSH-s0-PG7" userLabel="Image View Placeholder">
+                    <rect key="frame" x="0.0" y="0.0" width="475" height="271"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bEK-As-Rvj">
+                            <rect key="frame" x="0.0" y="0.0" width="475" height="271"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bEK-As-Rvj" secondAttribute="bottom" id="B92-S0-5LZ"/>
+                        <constraint firstItem="bEK-As-Rvj" firstAttribute="leading" secondItem="oSH-s0-PG7" secondAttribute="leading" id="DXv-hv-VmW"/>
+                        <constraint firstItem="bEK-As-Rvj" firstAttribute="top" secondItem="oSH-s0-PG7" secondAttribute="top" id="Yuu-gk-Lid"/>
+                        <constraint firstAttribute="trailing" secondItem="bEK-As-Rvj" secondAttribute="trailing" id="dna-cR-j9d"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oSH-s0-PG7" secondAttribute="trailing" id="3aA-8h-iJM"/>
+                <constraint firstItem="oSH-s0-PG7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W9R-n5-arU"/>
+                <constraint firstItem="oSH-s0-PG7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dea-rr-acH"/>
+                <constraint firstAttribute="bottom" secondItem="oSH-s0-PG7" secondAttribute="bottom" id="mDZ-dX-fwN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imagePlacholderImageView" destination="bEK-As-Rvj" id="LlG-0y-JEH"/>
+            </connections>
+            <point key="canvasLocation" x="269.5" y="179.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Image Placeholder" width="200" height="200"/>
+    </resources>
+</document>

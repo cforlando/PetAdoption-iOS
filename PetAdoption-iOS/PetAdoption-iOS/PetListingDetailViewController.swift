@@ -10,13 +10,45 @@ import UIKit
 
 class PetListingDetailViewController: UIViewController {
 	var pet : Pet!;
+	@IBOutlet var containerScrollView: UIScrollView!
+	@IBOutlet var imageContainerScrollView: UIScrollView!
+	@IBOutlet var detailsView: UIView!
+	@IBOutlet var additionalDetailsTableView: UITableView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad();
 		self.title = pet.petName;
-        // Do any additional setup after loading the view.
+		
+		self.displayImages();
     }
+	
+	private func displayImages() {
+		self.imageContainerScrollView.setNeedsLayout();
+		self.imageContainerScrollView.layoutSubviews();
+		
+		let fullWidth : CGFloat = CGFloat(self.pet.petImageUrls.count) * self.imageContainerScrollView.frame.width;
+		for (var i = 0; i < self.pet.petImageUrls.count; i++) {
+			var xOffset = self.imageContainerScrollView.frame.width * CGFloat(i);
+			
+			if (xOffset != 0) {
+				xOffset -= 75;
+			}
+			
+			let currentFrameOfScreen = CGRectMake(xOffset, 0, self.imageContainerScrollView.frame.width, self.imageContainerScrollView.frame.height);
+			let petImageCell = UINib(nibName: "ImageGalleryView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! ImageGalleryView;
+			petImageCell.frame = currentFrameOfScreen;
+			petImageCell.updateWithPet(pet.petImageUrls[i]);
+			self.imageContainerScrollView.addSubview(petImageCell);
+		}
+		
+		self.imageContainerScrollView.contentSize = CGSizeMake(fullWidth - 150, self.imageContainerScrollView.frame.height);
+	}
 
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated);
+		
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

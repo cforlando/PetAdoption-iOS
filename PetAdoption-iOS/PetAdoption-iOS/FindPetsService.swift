@@ -24,6 +24,7 @@ class FindPetsService: NSObject {
 			let pet = Pet();
 			pet.petName = "Nice Cat \(i)";
 			pet.petImageUrls = [
+				fakePetImages[fakePetImageIndex],
 				fakePetImages[fakePetImageIndex]
 			];
 			

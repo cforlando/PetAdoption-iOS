@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A6F31BF839691254FEBEC8DF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925933A48637FAFF5BE6240D /* Pods.framework */; };
+		D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */; };
+		D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013BFA61C717935007C8808 /* ImageGalleryView.swift */; };
 		D0950AC81C618C2F002E198C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AC71C618C2F002E198C /* AppDelegate.swift */; };
 		D0950ACD1C618C2F002E198C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0950ACB1C618C2F002E198C /* Main.storyboard */; };
 		D0950ACF1C618C2F002E198C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0950ACE1C618C2F002E198C /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		0FAB1D79CE506437B6C1A276 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		663952C31857525BF09BD3DD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		925933A48637FAFF5BE6240D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageGalleryView.xib; sourceTree = "<group>"; };
+		D013BFA61C717935007C8808 /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
 		D0950AC41C618C2F002E198C /* PetAdoption-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PetAdoption-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0950AC71C618C2F002E198C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0950ACC1C618C2F002E198C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 			children = (
 				D0950B0F1C61A5F3002E198C /* PetImageCollectionViewCell.xib */,
 				D0950B121C61A667002E198C /* PetImageCollectionViewCell.swift */,
+				D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */,
+				D013BFA61C717935007C8808 /* ImageGalleryView.swift */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -396,6 +402,7 @@
 				D0950ACD1C618C2F002E198C /* Main.storyboard in Resources */,
 				D0950B101C61A5F3002E198C /* PetImageCollectionViewCell.xib in Resources */,
 				D769DE401C62EDB1008C0BF8 /* PetListings.storyboard in Resources */,
+				D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */,
 				D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */,
 				D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */,
 			);
@@ -473,6 +480,7 @@
 				D0E536791C70405D004794D8 /* SearchViewController.swift in Sources */,
 				D0950B071C619379002E198C /* Pet.swift in Sources */,
 				D0950B041C61933F002E198C /* FindPetsService.swift in Sources */,
+				D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */,
 				D0950B131C61A667002E198C /* PetImageCollectionViewCell.swift in Sources */,
 				D0950AFF1C619162002E198C /* LostPetViewController.swift in Sources */,
 				D0950B0A1C6193C0002E198C /* FindPetsResult.swift in Sources */,
