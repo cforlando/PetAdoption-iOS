@@ -2,6 +2,8 @@ use_frameworks!
 
 platform :ios, '9.0'
 
-pod 'MGBoxKit'
-pod 'MBProgressHUD'
-pod 'SDWebImage'
+target 'PetAdoption-iOS' do
+  pod 'MGBoxKit'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+end

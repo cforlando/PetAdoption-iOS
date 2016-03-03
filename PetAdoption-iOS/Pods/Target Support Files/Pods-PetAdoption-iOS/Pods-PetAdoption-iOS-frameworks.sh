@@ -84,16 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/MBProgressHUD.framework"
-  install_framework "Pods/MGBoxKit.framework"
-  install_framework "Pods/MGEvents.framework"
-  install_framework "Pods/MGMushParser.framework"
-  install_framework "Pods/SDWebImage.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MGBoxKit/MGBoxKit.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MGEvents/MGEvents.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MGMushParser/MGMushParser.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/MBProgressHUD.framework"
-  install_framework "Pods/MGBoxKit.framework"
-  install_framework "Pods/MGEvents.framework"
-  install_framework "Pods/MGMushParser.framework"
-  install_framework "Pods/SDWebImage.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MGBoxKit/MGBoxKit.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MGEvents/MGEvents.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/MGMushParser/MGMushParser.framework"
+  install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
 fi
