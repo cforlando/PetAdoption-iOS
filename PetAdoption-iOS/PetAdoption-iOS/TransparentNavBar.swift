@@ -16,6 +16,17 @@ class TransparentNavBar: UINavigationBar
         self.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.shadowImage = UIImage()
         self.translucent = true
+
+        // Change the font and size of nav bar text
+        if let navBarFont = UIFont(name: "HelveticaNeue", size: 20.0)
+        {
+            let navBarAttributesDictionary: [String: AnyObject]? = [
+                NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSFontAttributeName: navBarFont
+            ]
+
+            self.titleTextAttributes = navBarAttributesDictionary
+        }
     }
 
 }

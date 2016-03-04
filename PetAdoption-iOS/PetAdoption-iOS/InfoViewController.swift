@@ -19,17 +19,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
         super.viewDidLoad()
 		//self.title = NSLocalizedString("Info", comment: "");
         // Do any additional setup after loading the view.
-
-        // Change the font and size of nav bar text
-        if let navBarFont = UIFont(name: "HelveticaNeue", size: 20.0)
-        {
-            let navBarAttributesDictionary: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.whiteColor(),
-                NSFontAttributeName: navBarFont
-            ]
-
-            navigationController?.navigationBar.titleTextAttributes = navBarAttributesDictionary
-        }
     }
 
     ////////////////////////////////////////////////////////////
