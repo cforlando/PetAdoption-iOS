@@ -20,11 +20,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petadoptionsloadingscreen" translatesAutoresizingMaskIntoConstraints="NO" id="LCo-R5-T6j">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet Adoption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-DX-pFZ">
+                                <rect key="frame" x="199" y="90" width="203" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Town of Lady Lake, Florida" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2w-5m-nV8">
+                                <rect key="frame" x="206" y="482" width="188" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LCo-R5-T6j" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0P9-Ik-tOQ"/>
+                            <constraint firstItem="n2g-DX-pFZ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="70" id="BfW-TH-Pz2"/>
+                            <constraint firstItem="U2w-5m-nV8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DKY-R4-mKp"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="U2w-5m-nV8" secondAttribute="bottom" constant="97" id="H6C-tz-woZ"/>
                             <constraint firstItem="LCo-R5-T6j" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Scd-WK-kTD"/>
+                            <constraint firstItem="n2g-DX-pFZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bLd-Aa-vC4"/>
                             <constraint firstItem="LCo-R5-T6j" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ceM-md-W0G"/>
                             <constraint firstItem="LCo-R5-T6j" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="on8-t6-Gp6"/>
                         </constraints>
