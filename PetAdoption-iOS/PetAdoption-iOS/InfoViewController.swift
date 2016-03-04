@@ -41,6 +41,13 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
 
     ////////////////////////////////////////////////////////////
 
+    override func preferredStatusBarStyle() -> UIStatusBarStyle
+    {
+        return .LightContent
+    }
+
+    ////////////////////////////////////////////////////////////
+
     @IBAction func sendFeedback(sender: AnyObject)
     {
         let mailComposeViewController = configuredMailComposeViewController()
