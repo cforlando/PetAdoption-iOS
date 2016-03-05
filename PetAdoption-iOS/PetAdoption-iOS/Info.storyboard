@@ -28,7 +28,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="von-06-PMD">
                                 <rect key="frame" x="32" y="72" width="536" height="482"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">This app was lovingly crafted for Lady Lake by the fine volunteers of Code for Orlando.  Check out http://www.codefororlando.com for more information.  Lorem ipsum dolor sit amet, quod veritus sapientem sea id. Et noluisse philosophia pro, an utroque noluisse cotidieque vix, ius et efficiendi necessitatibus. Mei et eripuit percipit tincidunt, est ornatus tacimates adversarium ne, id pri nulla instructior. Quis reprimique mea et, eum nibh democritum ei, est ad justo delectus conceptam.
+                                <string key="text">This app was lovingly crafted for Lady Lake by the fine volunteers of Code for Orlando.  Check out http://www.codefororlando.com for more information.  Lorem ipsum dolor sit amet, quod veritus sapientem sea id. Et noluisse philosophia pro, an utroque noluisse cotidieque vix, ius et efficiendi necessitatibus. Mei et eripuit percipit tincidunt, est ornatus tacimates adversarium ne, id pri nulla instructior. Quis reprimique mea et, eum nibh democritum ei, est ad justo delectus conceptam.
 
 Te scripta quaeque dignissim duo. Alii fabellas eum ut, vis ei recusabo accommodare, ne vidit utinam aperiri sit. Nonumy ornatus comprehensam qui ad. No mutat primis pro, in vel lobortis repudiare iracundia. Ex quidam laoreet contentiones sit, habeo fugit epicuri ius at.
 
@@ -36,7 +36,7 @@ Posse oblique ne qui, est et virtute prodesset. Purto nonumy imperdiet ne mel, i
 
 Ad per movet facete, ius vide deseruisse concludaturque no. Qui et nusquam reprehendunt. Eum id utamur referrentur repudiandae, amet diam ornatus vel ea, sea omnesque consectetuer at. Vivendum volutpat duo te, idque viderer interesset ne pro, sit cu omnium prompta.
 
-Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipscing an. Mel phaedrum perpetua dissentias at. Ex sit sint brute. Ei suas nibh laudem nam, ne tation phaedrum vis, mei ex evertitur similique. Ius decore nemore aperiri id, vix ut numquam platonem referrentur.</mutableString>
+Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipscing an. Mel phaedrum perpetua dissentias at. Ex sit sint brute. Ei suas nibh laudem nam, ne tation phaedrum vis, mei ex evertitur similique. Ius decore nemore aperiri id, vix ut numquam platonem referrentur.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -62,11 +62,11 @@ Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipsci
             </objects>
             <point key="canvasLocation" x="1169" y="1944"/>
         </scene>
-        <!--Info-->
+        <!--About-->
         <scene sceneID="Ge5-lh-3u3">
             <objects>
                 <navigationController id="w3x-Ky-LYF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" id="dak-hK-k9b"/>
+                    <tabBarItem key="tabBarItem" title="About" image="About" selectedImage="About Filled" id="dak-hK-k9b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z7r-hc-dvD" customClass="TransparentNavBar" customModule="PetAdoption_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -80,4 +80,8 @@ Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipsci
             <point key="canvasLocation" x="379" y="1944"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="About" width="25" height="25"/>
+        <image name="About Filled" width="25" height="25"/>
+    </resources>
 </document>
