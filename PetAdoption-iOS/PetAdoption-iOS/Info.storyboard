@@ -28,7 +28,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="von-06-PMD">
                                 <rect key="frame" x="32" y="72" width="536" height="482"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">This app was lovingly crafted for Lady Lake by the fine volunteers of Code for Orlando.
+                                <string key="text">This app was lovingly crafted for Lady Lake by the fine volunteers of Code for Orlando.
 
 Check out http://www.codefororlando.com for more information.  Also visit the Town of Lady Lake website at http://ladylake.org/.
 
@@ -40,7 +40,7 @@ Posse oblique ne qui, est et virtute prodesset. Purto nonumy imperdiet ne mel, i
 
 Ad per movet facete, ius vide deseruisse concludaturque no. Qui et nusquam reprehendunt. Eum id utamur referrentur repudiandae, amet diam ornatus vel ea, sea omnesque consectetuer at. Vivendum volutpat duo te, idque viderer interesset ne pro, sit cu omnium prompta.
 
-Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipscing an. Mel phaedrum perpetua dissentias at. Ex sit sint brute. Ei suas nibh laudem nam, ne tation phaedrum vis, mei ex evertitur similique. Ius decore nemore aperiri id, vix ut numquam platonem referrentur.</mutableString>
+Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipscing an. Mel phaedrum perpetua dissentias at. Ex sit sint brute. Ei suas nibh laudem nam, ne tation phaedrum vis, mei ex evertitur similique. Ius decore nemore aperiri id, vix ut numquam platonem referrentur.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
