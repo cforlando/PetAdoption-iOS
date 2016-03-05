@@ -28,7 +28,7 @@
         <scene sceneID="tJ0-bC-LEO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y2q-eu-IsN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="sW1-y2-jZ6"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" selectedImage="Search Filled" id="sW1-y2-jZ6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I3D-aW-EMH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -44,4 +44,8 @@
             <point key="canvasLocation" x="379" y="326"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Search" width="25" height="25"/>
+        <image name="Search Filled" width="25" height="25"/>
+    </resources>
 </document>
