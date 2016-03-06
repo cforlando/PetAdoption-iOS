@@ -15,10 +15,10 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
 
     ////////////////////////////////////////////////////////////
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-		//self.title = NSLocalizedString("Info", comment: "");
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.barStyle = .Black
     }
 
     ////////////////////////////////////////////////////////////
@@ -37,13 +37,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    ////////////////////////////////////////////////////////////
-
-    override func preferredStatusBarStyle() -> UIStatusBarStyle
-    {
-        return .LightContent
     }
 
     ////////////////////////////////////////////////////////////
