@@ -6,4 +6,5 @@ target 'PetAdoption-iOS' do
   pod 'MGBoxKit'
   pod 'MBProgressHUD'
   pod 'SDWebImage'
+  pod 'XLForm'
 end
