@@ -21,8 +21,6 @@ class PetImageCollectionViewCell: UICollectionViewCell {
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder);
-		
-		
 	}
 	
 	func updateWithPet(pet: Pet) {
@@ -33,8 +31,8 @@ class PetImageCollectionViewCell: UICollectionViewCell {
 		
 		if (!didSetTapEvent) {
 			didSetTapEvent = true;
-			let imageTapGesture = UITapGestureRecognizer(target: self, action: "didTap");
-			let labelTapGesture = UITapGestureRecognizer(target: self, action: "didTap");
+			let imageTapGesture = UITapGestureRecognizer(target: self, action: #selector(PetImageCollectionViewCell.didTap));
+			let labelTapGesture = UITapGestureRecognizer(target: self, action: #selector(PetImageCollectionViewCell.didTap));
 			self.petImageView.addGestureRecognizer(imageTapGesture);
 			self.petNameTextContainer.addGestureRecognizer(labelTapGesture);
 		}
