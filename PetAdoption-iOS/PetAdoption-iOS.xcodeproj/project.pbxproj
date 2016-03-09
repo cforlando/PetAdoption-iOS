@@ -10,6 +10,11 @@
 		3F8515E21C6CBD100FACB0F6 /* Pods_PetAdoption_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45654696408DDD70011AF14D /* Pods_PetAdoption_iOS.framework */; };
 		42C2522A1C8881DE00B2BE6D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C252291C8881DE00B2BE6D /* BackgroundView.swift */; };
 		42C2522C1C8899BD00B2BE6D /* TransparentNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2522B1C8899BD00B2BE6D /* TransparentNavBar.swift */; };
+		BFCD4E4B1C8F8BB700F50B72 /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD4E4A1C8F8BB700F50B72 /* Shelter.swift */; };
+		BFCD4E4D1C8F8BDB00F50B72 /* FindPetsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD4E4C1C8F8BDB00F50B72 /* FindPetsQuery.swift */; };
+		BFCD4E4F1C8F8C9E00F50B72 /* FakePetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD4E4E1C8F8C9E00F50B72 /* FakePetService.swift */; };
+		BFCD4E511C8F8CBF00F50B72 /* PetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD4E501C8F8CBF00F50B72 /* PetService.swift */; };
+		BFCD4E531C8F8CCD00F50B72 /* ServiceVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD4E521C8F8CCD00F50B72 /* ServiceVendor.swift */; };
 		D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */; };
 		D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013BFA61C717935007C8808 /* ImageGalleryView.swift */; };
 		D0950AC81C618C2F002E198C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0950AC71C618C2F002E198C /* AppDelegate.swift */; };
@@ -60,6 +65,11 @@
 		743003C75DF42CAE3261435B /* Pods-PetAdoption-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		925933A48637FAFF5BE6240D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7546D298D6108BB5722AD6E /* Pods-PetAdoption-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		BFCD4E4A1C8F8BB700F50B72 /* Shelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelter.swift; sourceTree = "<group>"; };
+		BFCD4E4C1C8F8BDB00F50B72 /* FindPetsQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPetsQuery.swift; sourceTree = "<group>"; };
+		BFCD4E4E1C8F8C9E00F50B72 /* FakePetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePetService.swift; sourceTree = "<group>"; };
+		BFCD4E501C8F8CBF00F50B72 /* PetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetService.swift; sourceTree = "<group>"; };
+		BFCD4E521C8F8CCD00F50B72 /* ServiceVendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceVendor.swift; sourceTree = "<group>"; };
 		D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageGalleryView.xib; sourceTree = "<group>"; };
 		D013BFA61C717935007C8808 /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
 		D0950AC41C618C2F002E198C /* PetAdoption-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PetAdoption-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				D0950B031C61933F002E198C /* FindPetsService.swift */,
+				BFCD4E4E1C8F8C9E00F50B72 /* FakePetService.swift */,
+				BFCD4E501C8F8CBF00F50B72 /* PetService.swift */,
+				BFCD4E521C8F8CCD00F50B72 /* ServiceVendor.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				D0950B061C619379002E198C /* Pet.swift */,
+				BFCD4E4A1C8F8BB700F50B72 /* Shelter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -226,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				D0950B091C6193C0002E198C /* FindPetsResult.swift */,
+				BFCD4E4C1C8F8BDB00F50B72 /* FindPetsQuery.swift */,
 			);
 			name = ServiceResults;
 			sourceTree = "<group>";
@@ -486,16 +501,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E536791C70405D004794D8 /* SearchViewController.swift in Sources */,
+				BFCD4E4D1C8F8BDB00F50B72 /* FindPetsQuery.swift in Sources */,
+				BFCD4E4B1C8F8BB700F50B72 /* Shelter.swift in Sources */,
+				BFCD4E511C8F8CBF00F50B72 /* PetService.swift in Sources */,
 				D0950B071C619379002E198C /* Pet.swift in Sources */,
 				42C2522C1C8899BD00B2BE6D /* TransparentNavBar.swift in Sources */,
 				42C2522A1C8881DE00B2BE6D /* BackgroundView.swift in Sources */,
 				D0950B041C61933F002E198C /* FindPetsService.swift in Sources */,
+				BFCD4E4F1C8F8C9E00F50B72 /* FakePetService.swift in Sources */,
 				D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */,
 				D0950B131C61A667002E198C /* PetImageCollectionViewCell.swift in Sources */,
 				D0950AFF1C619162002E198C /* LostPetViewController.swift in Sources */,
 				D0950B0A1C6193C0002E198C /* FindPetsResult.swift in Sources */,
 				D0950AC81C618C2F002E198C /* AppDelegate.swift in Sources */,
 				D0950B0D1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift in Sources */,
+				BFCD4E531C8F8CCD00F50B72 /* ServiceVendor.swift in Sources */,
 				D0950AFB1C619146002E198C /* PetListingViewController.swift in Sources */,
 				D0E5367B1C70412A004794D8 /* PetListingDetailViewController.swift in Sources */,
 				D0950B011C619172002E198C /* InfoViewController.swift in Sources */,
