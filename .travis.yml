@@ -1,0 +1,5 @@
+language: objective-c
+osx-image: xcode7.2
+xcode_workspace: PetAdoption-iOS.xcworkspace
+xcode_scheme: PetAdoption-iOS
+xcode_sdk: iphonesimulator9.2
