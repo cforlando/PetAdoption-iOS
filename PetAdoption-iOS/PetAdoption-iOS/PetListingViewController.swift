@@ -16,14 +16,15 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	
 	var petData : [Pet] = [];
 	let collectionViewCellId = "normal-cell";
+	var viewControllerTitle: String = "Home"
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder);
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "showPetDetails:", name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
 	}
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		self.title = NSLocalizedString("Home", comment: "");
 		self.collectionView.delegate = self;
 		self.collectionView.dataSource = self;
@@ -34,22 +35,30 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 		
 		//Load some data (fake data for now)
 		let petService = FindPetsService();
-		let result = petService.execute();
-		self.petData = result.petsFound;
-		
-		
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+		petService.execute({ (result) -> Void in
+			if (result.code == .Success) {
+				self.petData = result.petsFound;
+				self.collectionView.reloadData();
+			}
+			else {
+				//TODO: Handle error case
+			}
+		});
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 	
 	
 	// MARK: - NSNotification listeners
 	func showPetDetails(notification : NSNotification) {
-		let pet = notification.object as! Pet;
-		self.performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: pet);
+		let visible = (self.isViewLoaded() && self.view.window != nil)
+		if visible {
+			let pet = notification.object as! Pet;
+			self.performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: pet);
+		}
 	}
 	
 	// MARK: - Navigation delegate
@@ -59,7 +68,7 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 			detailsVC.pet = sender as! Pet;
 		}
 	}
-
+	
 	
 	// MARK: - UICollectionViewDataSource and Delegate
 	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -71,7 +80,7 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	}
 	
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-	
+		
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellId, forIndexPath: indexPath) as? PetImageCollectionViewCell;
 		let pet = petData[indexPath.row];
 		cell!.updateWithPet(pet);

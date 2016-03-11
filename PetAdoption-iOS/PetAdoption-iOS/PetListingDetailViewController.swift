@@ -27,7 +27,7 @@ class PetListingDetailViewController: UIViewController {
 		self.imageContainerScrollView.layoutSubviews();
 		
 		let fullWidth : CGFloat = CGFloat(self.pet.petImageUrls.count) * self.imageContainerScrollView.frame.width;
-		for (var i = 0; i < self.pet.petImageUrls.count; i++) {
+		for (i, petImageUrl) in self.pet.petImageUrls.enumerate() {
 			var xOffset = self.imageContainerScrollView.frame.width * CGFloat(i);
 			
 			if (xOffset != 0) {
@@ -37,7 +37,7 @@ class PetListingDetailViewController: UIViewController {
 			let currentFrameOfScreen = CGRectMake(xOffset, 0, self.imageContainerScrollView.frame.width, self.imageContainerScrollView.frame.height);
 			let petImageCell = UINib(nibName: "ImageGalleryView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! ImageGalleryView;
 			petImageCell.frame = currentFrameOfScreen;
-			petImageCell.updateWithPet(pet.petImageUrls[i]);
+			petImageCell.updateWithPet(petImageUrl);
 			self.imageContainerScrollView.addSubview(petImageCell);
 		}
 		
