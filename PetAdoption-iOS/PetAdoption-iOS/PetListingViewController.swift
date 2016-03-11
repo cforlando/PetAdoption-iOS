@@ -16,16 +16,16 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	
 	var petData : [Pet] = [];
 	let collectionViewCellId = "normal-cell";
-    var viewControllerTitle: String = "Home"
+	var viewControllerTitle: String = "Home"
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PetListingViewController.showPetDetails(_:)), name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: "showPetDetails:", name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
 	}
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		self.title = NSLocalizedString(viewControllerTitle, comment: "");
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.title = NSLocalizedString("Home", comment: "");
 		self.collectionView.delegate = self;
 		self.collectionView.dataSource = self;
 		self.collectionView.collectionViewLayout = CustomHomeCollectionViewFlowLayout();
@@ -33,34 +33,32 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 		let normalCellView = UINib(nibName: "PetImageCollectionViewCell", bundle: nil);
 		self.collectionView.registerNib(normalCellView, forCellWithReuseIdentifier: collectionViewCellId);
 		
-        if self.petData.isEmpty {
-            //Load some data (fake data for now)
-            let result = ServiceVendor.petService.findAllPets()
-            self.petData = result.petsFound;
-        }
-        
-        if let viewControllers = self.navigationController?.viewControllers {
-            if viewControllers.count > 1 {
-                if viewControllers[viewControllers.count-2] is SearchViewController {
-                    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Results", style: .Plain, target: nil, action: nil)
-                }
-            }
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+		//Load some data (fake data for now)
+		let petService = FindPetsService();
+		petService.execute({ (result) -> Void in
+			if (result.code == .Success) {
+				self.petData = result.petsFound;
+				self.collectionView.reloadData();
+			}
+			else {
+				//TODO: Handle error case
+			}
+		});
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 	
 	
 	// MARK: - NSNotification listeners
 	func showPetDetails(notification : NSNotification) {
-        let visible = (self.isViewLoaded() && self.view.window != nil)
-        if visible {
-            let pet = notification.object as! Pet;
-            self.performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: pet);
-        }
+		let visible = (self.isViewLoaded() && self.view.window != nil)
+		if visible {
+			let pet = notification.object as! Pet;
+			self.performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: pet);
+		}
 	}
 	
 	// MARK: - Navigation delegate
@@ -70,7 +68,7 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 			detailsVC.pet = sender as! Pet;
 		}
 	}
-
+	
 	
 	// MARK: - UICollectionViewDataSource and Delegate
 	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -82,7 +80,7 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	}
 	
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-	
+		
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellId, forIndexPath: indexPath) as? PetImageCollectionViewCell;
 		let pet = petData[indexPath.row];
 		cell!.updateWithPet(pet);

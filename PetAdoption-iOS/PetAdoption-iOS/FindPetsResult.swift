@@ -8,6 +8,6 @@
 
 import UIKit
 
-class FindPetsResult: NSObject {
+class FindPetsResult: BaseResult {
 	var petsFound : [Pet] = [];
 }

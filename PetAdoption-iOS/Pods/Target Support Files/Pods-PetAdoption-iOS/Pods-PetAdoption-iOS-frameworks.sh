@@ -84,16 +84,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/MGBoxKit/MGBoxKit.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/MGEvents/MGEvents.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/MGMushParser/MGMushParser.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "Pods-PetAdoption-iOS/MBProgressHUD.framework"
+  install_framework "Pods-PetAdoption-iOS/MGBoxKit.framework"
+  install_framework "Pods-PetAdoption-iOS/MGEvents.framework"
+  install_framework "Pods-PetAdoption-iOS/MGMushParser.framework"
+  install_framework "Pods-PetAdoption-iOS/SDWebImage.framework"
+  install_framework "Pods-PetAdoption-iOS/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/MGBoxKit/MGBoxKit.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/MGEvents/MGEvents.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/MGMushParser/MGMushParser.framework"
-  install_framework "$CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "Pods-PetAdoption-iOS/MBProgressHUD.framework"
+  install_framework "Pods-PetAdoption-iOS/MGBoxKit.framework"
+  install_framework "Pods-PetAdoption-iOS/MGEvents.framework"
+  install_framework "Pods-PetAdoption-iOS/MGMushParser.framework"
+  install_framework "Pods-PetAdoption-iOS/SDWebImage.framework"
+  install_framework "Pods-PetAdoption-iOS/XLForm.framework"
 fi
