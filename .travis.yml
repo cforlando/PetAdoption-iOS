@@ -2,7 +2,7 @@ language: objective-c
 
 before_install:
   - rvm use system
-  - gem install cocoapods -v '0.39.0'
+  - sudo gem install cocoapods -v '0.39.0'
 
 osx-image: xcode7.2
 xcode_workspace: PetAdoption-iOS/PetAdoption-iOS.xcworkspace
