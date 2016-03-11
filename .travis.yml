@@ -2,3 +2,4 @@ language: objective-c
 osx-image: xcode7.2
 xcode_workspace: PetAdoption-iOS/PetAdoption-iOS.xcworkspace
 xcode_sdk: iphonesimulator9.2
+podfile: PetAdoption-iOS/Podfile
