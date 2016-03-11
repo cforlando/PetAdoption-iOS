@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y2q-eu-IsN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10112" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y2q-eu-IsN">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
     </dependencies>
     <scenes>
         <!--Search View Controller-->
@@ -16,9 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="9IH-nW-hWh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-JT-qiu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HfA-0I-WzQ" firstAttribute="top" secondItem="Mde-JT-qiu" secondAttribute="bottom" id="5MN-dG-JE0"/>
+                            <constraint firstItem="Mde-JT-qiu" firstAttribute="top" secondItem="9IH-nW-hWh" secondAttribute="top" id="H4u-2U-NUh"/>
+                            <constraint firstAttribute="trailing" secondItem="Mde-JT-qiu" secondAttribute="trailing" id="Y8v-d1-Trm"/>
+                            <constraint firstItem="Mde-JT-qiu" firstAttribute="leading" secondItem="9IH-nW-hWh" secondAttribute="leading" id="azK-j2-xms"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u6H-Mb-0dv"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mde-JT-qiu" id="vrO-GJ-Ljz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUb-bw-1Vr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

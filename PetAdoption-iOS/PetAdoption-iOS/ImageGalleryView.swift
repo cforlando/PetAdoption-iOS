@@ -13,7 +13,7 @@ class ImageGalleryView: UIView {
 	
 	func updateWithPet(imageUrl: String) {
 		let url = NSURL(string: imageUrl);
-	self.imagePlacholderImageView.sd_setImageWithURL(url);
+        self.imagePlacholderImageView.sd_setImageWithURL(url);
 	}
 	
     /*
