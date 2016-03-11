@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cforlando/PetAdoption-iOS.svg?branch=master)](https://travis-ci.org/cforlando/PetAdoption-iOS)
+
 ## Build Instructions
 First, please ensure you fork the `master` branch of this repository on <a href="https://github.com/cforlando/PetAdoption-iOS">Code for Orlando's Github project</a>.
 
