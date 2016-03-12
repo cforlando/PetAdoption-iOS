@@ -21,14 +21,18 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder);
 		NSNotificationCenter.defaultCenter().addObserver(self, selector: "showPetDetails:", name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
+
 	}
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.title = NSLocalizedString("Home", comment: "");
+		self.navigationItem.title = NSLocalizedString("Town Of Lady Lake", comment: "");
 		self.collectionView.delegate = self;
 		self.collectionView.dataSource = self;
+		self.collectionView.backgroundColor = UIColor.groupTableViewBackgroundColor();
 		self.collectionView.collectionViewLayout = CustomHomeCollectionViewFlowLayout();
+		self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0);
 		
 		let normalCellView = UINib(nibName: "PetImageCollectionViewCell", bundle: nil);
 		self.collectionView.registerNib(normalCellView, forCellWithReuseIdentifier: collectionViewCellId);
@@ -80,8 +84,10 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	}
 	
 	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-		
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellId, forIndexPath: indexPath) as? PetImageCollectionViewCell;
+	
+	
+		
 		let pet = petData[indexPath.row];
 		cell!.updateWithPet(pet);
 		

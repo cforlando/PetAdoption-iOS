@@ -18,6 +18,7 @@ class Pet: NSObject {
     }
     
     var petName : String!
+	var petAttributeText: String?;
     var petImageUrls : [String]!
     
     var petSpecies : String!

@@ -15,16 +15,34 @@ class FindPetsService: NSObject {
 			//Should do an API request, instead, we'll be using test data
 			let result = FindPetsResult();
 			let fakePetImages = [
-				"http://a.dilcdn.com/bl/wp-content/uploads/sites/8/2012/09/02-11.jpg",
-				"https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a.jpeg",
-				"http://dailytekkcom.c.presscdn.com/wp-content/uploads/2015/07/Grumpy_Cat_Endorsement-017d7-ULFU.jpg",
-				"https://s-media-cache-ak0.pinimg.com/originals/5b/f0/7e/5bf07e12df991f3c01d73110b131a5fa.jpg"
+				"https://40.media.tumblr.com/tumblr_lszizpc70p1r4reyqo1_400.jpg",
+				"https://www.petfinder.com/wp-content/uploads/2012/11/99059361-choose-cat-litter-632x475.jpg",
+				"https://www.petfinder.com/wp-content/uploads/2012/11/152177319-declawing-cats-632x475-e1354303246526-632x353.jpg",
+				"https://drpem3xzef3kf.cloudfront.net/photos/pets/34616851/1/?bust=1457267217&width=632&no_scale_up=1",
+				"https://drpem3xzef3kf.cloudfront.net/photos/pets/34599481/3/?bust=1457574231&width=632&no_scale_up=1"
+			];
+			
+			let fakePetNames = [
+				"Sunny & Eliza",
+				"Grumpy",
+				"Athena",
+				"Kuda",
+				"Skye"
+			];
+			
+			let fakePetAttributeConcat = [
+				"Cat - Male & Female - 4 Months - Ocelot",
+				"Cat - Female - 1yr - Mixed",
+				"Cat - Male - 2yr - Mixed",
+				"Dog - Female - Baby - Shepherd Mix",
+				"Dog - Female - Baby - Shepherd Mix"
 			];
 			
 			var fakePetImageIndex = 0;
 			for (var i = 0; i < 10; i++) {
 				let pet = Pet();
-				pet.petName = "Nice Cat \(i)";
+				pet.petName = fakePetNames[fakePetImageIndex];
+				pet.petAttributeText = fakePetAttributeConcat[fakePetImageIndex];
 				pet.petImageUrls = [
 					fakePetImages[fakePetImageIndex],
 					fakePetImages[fakePetImageIndex]

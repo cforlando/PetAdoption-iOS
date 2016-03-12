@@ -19,10 +19,8 @@ class CustomHomeCollectionViewFlowLayout: UICollectionViewFlowLayout {
 			
 		}
 		get {
-			let numberOfColumns: CGFloat = 2;
-			
-			let itemWidth = (CGRectGetWidth(self.collectionView!.frame) - (numberOfColumns - 1)) / numberOfColumns
-			return CGSizeMake(itemWidth, itemWidth)
+			let itemWidth = CGRectGetWidth(self.collectionView!.frame) * 0.95;
+			return CGSizeMake(itemWidth, itemWidth * 0.6);
 		}
 	}
  
@@ -32,8 +30,8 @@ class CustomHomeCollectionViewFlowLayout: UICollectionViewFlowLayout {
 	}
  
 	func setupLayout() {
-		minimumInteritemSpacing = 1
-		minimumLineSpacing = 1
+		minimumInteritemSpacing = 10
+		minimumLineSpacing = 10
 		scrollDirection = .Vertical
 	}
 }

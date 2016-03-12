@@ -15,8 +15,12 @@ class PetImageCollectionViewCell: UICollectionViewCell {
 	@IBOutlet var petNameTextContainer: UIView!
 	@IBOutlet var petImageView: UIImageView!
 	@IBOutlet var petNameText: UILabel!
+	@IBOutlet var petNameAttributeSubLabel: UILabel!
 	
-	private var didSetTapEvent = false;
+	@IBOutlet var shadowView: UIView!
+	
+	private var didDoInitialSetup = false;
+	
 	var pet : Pet!;
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -26,16 +30,44 @@ class PetImageCollectionViewCell: UICollectionViewCell {
 	func updateWithPet(pet: Pet) {
 		self.pet = pet;
 		self.petNameText.text = pet.petName;
+		self.petNameAttributeSubLabel.text = pet.petAttributeText;
 		self.petImageView.sd_setImageWithURL(NSURL(string: pet.petImageUrls[0]), placeholderImage: UIImage(named: "Image Placeholder"));
 		self.petImageView.contentMode = UIViewContentMode.ScaleAspectFill;
 		
-		if (!didSetTapEvent) {
-			didSetTapEvent = true;
+		if (!didDoInitialSetup) {
+			self.layer.borderWidth = 0.25;
+			self.layer.borderColor = UIColor(white: 0.7, alpha: 1).CGColor;
+			didDoInitialSetup = true;
 			let imageTapGesture = UITapGestureRecognizer(target: self, action:"didTap");
 			let labelTapGesture = UITapGestureRecognizer(target: self, action:"didTap");
 			self.petImageView.addGestureRecognizer(imageTapGesture);
 			self.petNameTextContainer.addGestureRecognizer(labelTapGesture);
+			self.setBackgroundGradient();
+			self.setShadowToCell();
 		}
+	}
+	
+	private func setBackgroundGradient() {
+		self.setNeedsLayout();
+		self.layoutIfNeeded();
+		self.petNameTextContainer.setNeedsLayout();
+		self.petNameTextContainer.layoutIfNeeded();
+		self.petNameTextContainer.backgroundColor = UIColor.clearColor();
+		
+		let gradient: CAGradientLayer = CAGradientLayer();
+		gradient.frame = self.petNameTextContainer.bounds;
+		gradient.colors = [UIColor(white: 0.3, alpha: 0).CGColor, UIColor.themePrimaryColor().CGColor];
+		gradient.locations = [0.05, 1];
+		
+		self.petNameTextContainer.layer.insertSublayer(gradient, atIndex: 0);
+	}
+	
+	private func setShadowToCell() {
+		self.shadowView.backgroundColor = UIColor(white: 1, alpha: 1);
+		self.shadowView.layer.shadowOpacity = 0.3;
+		self.shadowView.layer.shadowColor = UIColor.blackColor().CGColor;
+		self.shadowView.layer.shadowOffset = CGSizeMake(0, 0);
+		self.shadowView.layer.shouldRasterize = true;
 	}
 	
 	@objc

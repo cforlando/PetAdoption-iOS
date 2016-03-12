@@ -13,6 +13,18 @@
 		BFCD4E4B1C8F8BB700F50B72 /* Shelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCD4E4A1C8F8BB700F50B72 /* Shelter.swift */; };
 		D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */; };
 		D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013BFA61C717935007C8808 /* ImageGalleryView.swift */; };
+		D040884B1C94B6CC00A53389 /* ThemeColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D040884A1C94B6CC00A53389 /* ThemeColorExtension.swift */; };
+		D04088511C94BE8600A53389 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04088501C94BE8600A53389 /* FontExtension.swift */; };
+		D040885C1C94BEE000A53389 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088521C94BEE000A53389 /* OpenSans-Bold.ttf */; };
+		D040885D1C94BEE000A53389 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088531C94BEE000A53389 /* OpenSans-BoldItalic.ttf */; };
+		D040885E1C94BEE000A53389 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088541C94BEE000A53389 /* OpenSans-ExtraBold.ttf */; };
+		D040885F1C94BEE000A53389 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088551C94BEE000A53389 /* OpenSans-ExtraBoldItalic.ttf */; };
+		D04088601C94BEE000A53389 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088561C94BEE000A53389 /* OpenSans-Italic.ttf */; };
+		D04088611C94BEE000A53389 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088571C94BEE000A53389 /* OpenSans-Light.ttf */; };
+		D04088621C94BEE000A53389 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088581C94BEE000A53389 /* OpenSans-LightItalic.ttf */; };
+		D04088631C94BEE000A53389 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04088591C94BEE000A53389 /* OpenSans-Regular.ttf */; };
+		D04088641C94BEE000A53389 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D040885A1C94BEE000A53389 /* OpenSans-Semibold.ttf */; };
+		D04088651C94BEE000A53389 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D040885B1C94BEE000A53389 /* OpenSans-SemiboldItalic.ttf */; };
 		D083E4821C9339EF00F7D1C9 /* SearchForPetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D083E4811C9339EF00F7D1C9 /* SearchForPetService.swift */; };
 		D083E4841C933A0E00F7D1C9 /* PetFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D083E4831C933A0E00F7D1C9 /* PetFilters.swift */; };
 		D083E4861C933A9700F7D1C9 /* SearchForPetResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D083E4851C933A9700F7D1C9 /* SearchForPetResult.swift */; };
@@ -68,6 +80,18 @@
 		BFCD4E4A1C8F8BB700F50B72 /* Shelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelter.swift; sourceTree = "<group>"; };
 		D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageGalleryView.xib; sourceTree = "<group>"; };
 		D013BFA61C717935007C8808 /* ImageGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryView.swift; sourceTree = "<group>"; };
+		D040884A1C94B6CC00A53389 /* ThemeColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeColorExtension.swift; sourceTree = "<group>"; };
+		D04088501C94BE8600A53389 /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		D04088521C94BEE000A53389 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		D04088531C94BEE000A53389 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "../OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D04088541C94BEE000A53389 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "../OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D04088551C94BEE000A53389 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		D04088561C94BEE000A53389 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "../OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		D04088571C94BEE000A53389 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D04088581C94BEE000A53389 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "../OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		D04088591C94BEE000A53389 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D040885A1C94BEE000A53389 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		D040885B1C94BEE000A53389 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiboldItalic.ttf"; path = "../OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		D083E4811C9339EF00F7D1C9 /* SearchForPetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchForPetService.swift; sourceTree = "<group>"; };
 		D083E4831C933A0E00F7D1C9 /* PetFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetFilters.swift; sourceTree = "<group>"; };
 		D083E4851C933A9700F7D1C9 /* SearchForPetResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchForPetResult.swift; sourceTree = "<group>"; };
@@ -146,6 +170,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D04088491C94B6C200A53389 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D040884A1C94B6CC00A53389 /* ThemeColorExtension.swift */,
+				D04088501C94BE8600A53389 /* FontExtension.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		D040884F1C94BD6100A53389 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D04088521C94BEE000A53389 /* OpenSans-Bold.ttf */,
+				D04088531C94BEE000A53389 /* OpenSans-BoldItalic.ttf */,
+				D04088541C94BEE000A53389 /* OpenSans-ExtraBold.ttf */,
+				D04088551C94BEE000A53389 /* OpenSans-ExtraBoldItalic.ttf */,
+				D04088561C94BEE000A53389 /* OpenSans-Italic.ttf */,
+				D04088571C94BEE000A53389 /* OpenSans-Light.ttf */,
+				D04088581C94BEE000A53389 /* OpenSans-LightItalic.ttf */,
+				D04088591C94BEE000A53389 /* OpenSans-Regular.ttf */,
+				D040885A1C94BEE000A53389 /* OpenSans-Semibold.ttf */,
+				D040885B1C94BEE000A53389 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D0950ABB1C618C2F002E198C = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +222,8 @@
 		D0950AC61C618C2F002E198C /* PetAdoption-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D040884F1C94BD6100A53389 /* Resources */,
+				D04088491C94B6C200A53389 /* Util */,
 				D769DE381C62E986008C0BF8 /* Storyboards */,
 				D0950B0E1C61A5D5002E198C /* Nibs */,
 				D0950B0B1C619877002E198C /* CustomComponents */,
@@ -418,16 +470,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D040885C1C94BEE000A53389 /* OpenSans-Bold.ttf in Resources */,
+				D040885F1C94BEE000A53389 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */,
+				D04088601C94BEE000A53389 /* OpenSans-Italic.ttf in Resources */,
 				D0950AD21C618C2F002E198C /* LaunchScreen.storyboard in Resources */,
 				D0950ACF1C618C2F002E198C /* Assets.xcassets in Resources */,
 				D0950AF61C618CE4002E198C /* Podfile in Resources */,
 				D0950ACD1C618C2F002E198C /* Main.storyboard in Resources */,
+				D04088621C94BEE000A53389 /* OpenSans-LightItalic.ttf in Resources */,
+				D040885D1C94BEE000A53389 /* OpenSans-BoldItalic.ttf in Resources */,
 				D0950B101C61A5F3002E198C /* PetImageCollectionViewCell.xib in Resources */,
+				D04088641C94BEE000A53389 /* OpenSans-Semibold.ttf in Resources */,
+				D04088611C94BEE000A53389 /* OpenSans-Light.ttf in Resources */,
 				D769DE401C62EDB1008C0BF8 /* PetListings.storyboard in Resources */,
 				D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */,
 				D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */,
+				D04088651C94BEE000A53389 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */,
+				D04088631C94BEE000A53389 /* OpenSans-Regular.ttf in Resources */,
+				D040885E1C94BEE000A53389 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +571,7 @@
 				D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */,
 				D0950B131C61A667002E198C /* PetImageCollectionViewCell.swift in Sources */,
 				D0950AFF1C619162002E198C /* LostPetViewController.swift in Sources */,
+				D04088511C94BE8600A53389 /* FontExtension.swift in Sources */,
 				D0950B0A1C6193C0002E198C /* FindPetsResult.swift in Sources */,
 				D0950AC81C618C2F002E198C /* AppDelegate.swift in Sources */,
 				D0950B0D1C6198C2002E198C /* CustomHomeCollectionViewFlowLayout.swift in Sources */,
@@ -517,6 +580,7 @@
 				D083E4881C933A9E00F7D1C9 /* BaseResult.swift in Sources */,
 				D083E4821C9339EF00F7D1C9 /* SearchForPetService.swift in Sources */,
 				D0950B011C619172002E198C /* InfoViewController.swift in Sources */,
+				D040884B1C94B6CC00A53389 /* ThemeColorExtension.swift in Sources */,
 				D083E4861C933A9700F7D1C9 /* SearchForPetResult.swift in Sources */,
 				D083E4841C933A0E00F7D1C9 /* PetFilters.swift in Sources */,
 			);
