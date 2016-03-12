@@ -17,9 +17,11 @@ class SearchViewController: XLFormViewController {
 		super.viewDidLoad()
 		
 		let clearButton = UIBarButtonItem(title: "Clear", style: .Plain, target: self, action: "clearSearch")
+        clearButton.tintColor = UIColor.whiteColor()
 		self.navigationItem.leftBarButtonItem = clearButton
 		
 		let searchButton = UIBarButtonItem(title: "Search", style: .Plain, target: self, action: "searchPets")
+        searchButton.tintColor = UIColor.whiteColor()
 		self.navigationItem.rightBarButtonItem = searchButton
 		
 		let searchForm = buildSearchForm()
@@ -33,7 +35,7 @@ class SearchViewController: XLFormViewController {
 	}
 	
 	func searchPets() {
-		let formValues = self.form.formValues()
+		_ = self.form.formValues()
 		self.navigationItem.leftBarButtonItem!.enabled = false
 		self.navigationItem.rightBarButtonItem!.enabled = false
 		let progressHud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
@@ -90,19 +92,31 @@ class SearchViewController: XLFormViewController {
 		
 		row = XLFormRowDescriptor(tag: Pet.Tag.petSpecies, rowType: XLFormRowDescriptorTypeSelectorSegmentedControl, title:"Species")
 		row.selectorOptions = PetFilters.species
+        row.cellConfigAtConfigure["backgroundColor"] = UIColor.clearColor()
+        row.cellConfig["textLabel.textColor"] = UIColor.whiteColor()
+        row.cellConfig["segmentedControl.tintColor"] = UIColor.whiteColor()
 		section.addFormRow(row)
 		
 		row = XLFormRowDescriptor(tag: Pet.Tag.petBreed, rowType: XLFormRowDescriptorTypeText, title: "Breed")
+        row.cellConfigAtConfigure["backgroundColor"] = UIColor.clearColor()
+        row.cellConfig["textLabel.textColor"] = UIColor.whiteColor()
 		section.addFormRow(row)
 		
 		row = XLFormRowDescriptor(tag: Pet.Tag.petSize, rowType: XLFormRowDescriptorTypeSelectorSegmentedControl, title: "Size")
 		row.selectorOptions = PetFilters.sizes
+        row.cellConfigAtConfigure["backgroundColor"] = UIColor.clearColor()
+        row.cellConfig["textLabel.textColor"] = UIColor.whiteColor()
+        row.cellConfig["segmentedControl.tintColor"] = UIColor.whiteColor()
 		section.addFormRow(row)
 		
 		row = XLFormRowDescriptor(tag: Pet.Tag.petDateOfArrival, rowType: XLFormRowDescriptorTypeDateTimeInline, title: "Arrival")
+        row.cellConfigAtConfigure["backgroundColor"] = UIColor.clearColor()
+        row.cellConfig["textLabel.textColor"] = UIColor.whiteColor()
 		section.addFormRow(row)
 		
 		row = XLFormRowDescriptor(tag: Pet.Tag.distanceFromShelter, rowType: XLFormRowDescriptorTypeDecimal, title: "Max distance")
+        row.cellConfigAtConfigure["backgroundColor"] = UIColor.clearColor()
+        row.cellConfig["textLabel.textColor"] = UIColor.whiteColor()
 		section.addFormRow(row)
 		
 		return form
