@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9M6-g6-hfq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9M6-g6-hfq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -29,7 +29,7 @@
         <scene sceneID="HLZ-4x-wt1">
             <objects>
                 <viewControllerPlaceholder storyboardName="PetListings" id="3T6-j1-HO0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Mes-tW-Ryy"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home Filled" id="Mes-tW-Ryy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Mu-Rd-qQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,7 +39,7 @@
         <scene sceneID="yec-fD-otx">
             <objects>
                 <viewControllerPlaceholder storyboardName="Info" id="tnp-0k-wAa" userLabel="Info" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="D7P-bf-tcm"/>
+                    <tabBarItem key="tabBarItem" title="About" image="About" selectedImage="About Filled" id="D7P-bf-tcm"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEh-HV-Nrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +49,7 @@
         <scene sceneID="bny-Js-OrI">
             <objects>
                 <viewControllerPlaceholder storyboardName="Search" id="lLO-Cv-9K2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fSr-cZ-d8y"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" selectedImage="Search Filled" id="fSr-cZ-d8y"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tw9-Ye-Vjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,11 +59,21 @@
         <scene sceneID="Vsv-K1-n75">
             <objects>
                 <viewControllerPlaceholder storyboardName="LostPet" id="wpj-E6-3A6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kJf-ca-RLp"/>
+                    <tabBarItem key="tabBarItem" title="Lost Pet" image="Lost Pet" selectedImage="Lost Pet Filled" id="kJf-ca-RLp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Few-Gb-MOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-367.5" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="About" width="25" height="25"/>
+        <image name="About Filled" width="25" height="25"/>
+        <image name="Home" width="25" height="25"/>
+        <image name="Home Filled" width="25" height="25"/>
+        <image name="Lost Pet" width="25" height="25"/>
+        <image name="Lost Pet Filled" width="25" height="25"/>
+        <image name="Search" width="25" height="25"/>
+        <image name="Search Filled" width="25" height="25"/>
+    </resources>
 </document>

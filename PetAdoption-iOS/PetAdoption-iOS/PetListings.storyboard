@@ -102,11 +102,11 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsV-lq-6Ts">
                                                 <rect key="frame" x="143" y="105" width="115" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="231" id="6g2-F9-EYB"/>
                                             <constraint firstItem="vsV-lq-6Ts" firstAttribute="centerY" secondItem="pQs-fl-OaU" secondAttribute="centerY" id="b38-wo-LKO"/>
@@ -186,7 +186,7 @@
         <scene sceneID="04q-kY-qOv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qib-KM-1M4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="4Sm-8X-sG1"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home Filled" id="4Sm-8X-sG1"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UeG-gj-h8p">
@@ -204,6 +204,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home" width="25" height="25"/>
+        <image name="Home Filled" width="25" height="25"/>
         <image name="Image Placeholder" width="200" height="200"/>
     </resources>
 </document>
