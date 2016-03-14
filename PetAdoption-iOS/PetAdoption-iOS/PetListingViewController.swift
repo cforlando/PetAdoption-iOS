@@ -37,6 +37,8 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 		let normalCellView = UINib(nibName: "PetImageCollectionViewCell", bundle: nil);
 		self.collectionView.registerNib(normalCellView, forCellWithReuseIdentifier: collectionViewCellId);
 		
+		
+		
 		//Load some data (fake data for now)
 		let petService = FindPetsService();
 		petService.execute({ (result) -> Void in

@@ -10,6 +10,7 @@ import UIKit
 
 class ImageGalleryView: UIView {
 	@IBOutlet var imagePlacholderImageView: UIImageView!
+	static let nibName = "ImageGalleryView";
 	
 	func updateWithPet(imageUrl: String) {
 		let url = NSURL(string: imageUrl);

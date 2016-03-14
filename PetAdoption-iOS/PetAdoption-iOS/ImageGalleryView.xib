@@ -14,7 +14,7 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSH-s0-PG7" userLabel="Image View Placeholder">
                     <rect key="frame" x="0.0" y="0.0" width="475" height="271"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bEK-As-Rvj">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bEK-As-Rvj">
                             <rect key="frame" x="0.0" y="0.0" width="475" height="271"/>
                         </imageView>
                     </subviews>

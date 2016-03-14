@@ -64,7 +64,7 @@ class PetImageCollectionViewCell: UICollectionViewCell {
 	
 	private func setShadowToCell() {
 		self.shadowView.backgroundColor = UIColor(white: 1, alpha: 1);
-		self.shadowView.layer.shadowOpacity = 0.3;
+		self.shadowView.layer.shadowOpacity = 0.2;
 		self.shadowView.layer.shadowColor = UIColor.blackColor().CGColor;
 		self.shadowView.layer.shadowOffset = CGSizeMake(0, 0);
 		self.shadowView.layer.shouldRasterize = true;

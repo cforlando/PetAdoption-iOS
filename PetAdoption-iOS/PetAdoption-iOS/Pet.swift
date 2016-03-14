@@ -27,4 +27,17 @@ class Pet: NSObject {
     var petDateOfArrival: NSDate!
     
     var petShelter: Shelter!
+	
+	var petAttributes : [PetAttribute]!;
+}
+
+class PetAttribute {
+	let attributeTitle : String;
+	let attributeValue : String;
+	
+	init(title: String, value: String)
+	{
+		self.attributeTitle = title;
+		self.attributeValue = value;
+	}
 }

@@ -45,7 +45,17 @@ class FindPetsService: NSObject {
 				pet.petAttributeText = fakePetAttributeConcat[fakePetImageIndex];
 				pet.petImageUrls = [
 					fakePetImages[fakePetImageIndex],
+					fakePetImages[fakePetImageIndex],
+					fakePetImages[fakePetImageIndex],
 					fakePetImages[fakePetImageIndex]
+				];
+				pet.petAttributes = [
+					PetAttribute(title: "Breed", value: "Mixed"),
+					PetAttribute(title: "Sex", value: "Male"),
+					PetAttribute(title: "Age", value: "1 year"),
+					PetAttribute(title: "Contact Name", value: "Marco Ledesma"),
+					PetAttribute(title: "Contact Phone", value: "555-555-5555"),
+					PetAttribute(title: "Location", value: "33 Real Address, Orlando FL"),
 				];
 				
 				fakePetImageIndex++;
