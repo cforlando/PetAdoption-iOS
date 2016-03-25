@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="0Ns-vc-jTB"/>
                         <viewControllerLayoutGuide type="bottom" id="KTd-vE-MJw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9Zg-Qy-LvX">
+                    <view key="view" contentMode="scaleToFill" id="9Zg-Qy-LvX" customClass="BackgroundView" customModule="PetAdoption_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -22,14 +22,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiv-Lh-gWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="1132"/>
+            <point key="canvasLocation" x="951" y="1132"/>
         </scene>
         <!--Lost Pet-->
         <scene sceneID="ecD-Tj-Txl">
             <objects>
                 <navigationController id="fZ3-X8-9zA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lost Pet" image="Lost Pet" selectedImage="Lost Pet Filled" id="jDy-0N-HHS" userLabel="Lost Pet"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kdC-zf-ovg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kdC-zf-ovg" customClass="TransparentNavBar" customModule="PetAdoption_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

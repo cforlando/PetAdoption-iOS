@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--About Pet Adoption App-->
         <scene sceneID="zvl-Ks-YW8">
@@ -18,15 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-NF-zTR">
-                                <rect key="frame" x="473" y="562" width="107" height="30"/>
-                                <state key="normal" title="Send Feedback"/>
-                                <connections>
-                                    <action selector="sendFeedback:" destination="McP-S4-WE2" eventType="touchUpInside" id="xMR-Yi-wrA"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="von-06-PMD">
-                                <rect key="frame" x="32" y="72" width="536" height="482"/>
+                                <rect key="frame" x="20" y="72" width="560" height="482"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">This app was lovingly crafted for Lady Lake by the fine volunteers of Code for Orlando.
 
@@ -42,10 +40,17 @@ Ad per movet facete, ius vide deseruisse concludaturque no. Qui et nusquam repre
 
 Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipscing an. Mel phaedrum perpetua dissentias at. Ex sit sint brute. Ei suas nibh laudem nam, ne tation phaedrum vis, mei ex evertitur similique. Ius decore nemore aperiri id, vix ut numquam platonem referrentur.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-NF-zTR">
+                                <rect key="frame" x="473" y="562" width="107" height="30"/>
+                                <state key="normal" title="Send Feedback"/>
+                                <connections>
+                                    <action selector="sendFeedback:" destination="McP-S4-WE2" eventType="touchUpInside" id="xMR-Yi-wrA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -53,8 +58,8 @@ Ad esse aeque albucius est. Ea duo adhuc iusto fastidii, duo intellegat sadipsci
                             <constraint firstItem="aq3-NF-zTR" firstAttribute="top" secondItem="von-06-PMD" secondAttribute="bottom" constant="8" id="M8E-WH-GUm"/>
                             <constraint firstItem="98J-MB-cro" firstAttribute="top" secondItem="aq3-NF-zTR" secondAttribute="bottom" constant="8" id="T77-Ba-tvx"/>
                             <constraint firstItem="von-06-PMD" firstAttribute="top" secondItem="zfH-G2-AVk" secondAttribute="bottom" constant="8" id="Zg9-Lx-n0M"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="von-06-PMD" secondAttribute="trailing" constant="12" id="ba6-2z-sjO"/>
-                            <constraint firstItem="von-06-PMD" firstAttribute="leading" secondItem="CbM-9t-ObS" secondAttribute="leadingMargin" constant="12" id="uqZ-1C-kmN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="von-06-PMD" secondAttribute="trailing" id="ba6-2z-sjO"/>
+                            <constraint firstItem="von-06-PMD" firstAttribute="leading" secondItem="CbM-9t-ObS" secondAttribute="leadingMargin" id="uqZ-1C-kmN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About Pet Adoption App" id="xbf-ON-Hrt"/>
