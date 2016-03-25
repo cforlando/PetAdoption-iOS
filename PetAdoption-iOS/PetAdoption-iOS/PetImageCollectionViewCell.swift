@@ -38,8 +38,8 @@ class PetImageCollectionViewCell: UICollectionViewCell {
 			self.layer.borderWidth = 0.25;
 			self.layer.borderColor = UIColor(white: 0.7, alpha: 1).CGColor;
 			didDoInitialSetup = true;
-			let imageTapGesture = UITapGestureRecognizer(target: self, action:"didTap");
-			let labelTapGesture = UITapGestureRecognizer(target: self, action:"didTap");
+			let imageTapGesture = UITapGestureRecognizer(target: self, action:#selector(PetImageCollectionViewCell.didTap));
+			let labelTapGesture = UITapGestureRecognizer(target: self, action:#selector(PetImageCollectionViewCell.didTap));
 			self.petImageView.addGestureRecognizer(imageTapGesture);
 			self.petNameTextContainer.addGestureRecognizer(labelTapGesture);
 			self.setBackgroundGradient();

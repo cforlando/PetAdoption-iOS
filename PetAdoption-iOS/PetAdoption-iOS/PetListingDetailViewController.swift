@@ -42,7 +42,7 @@ class PetListingDetailViewController: UIViewController {
 		self.additionalDetailsTableView.delegate = self;
 		self.additionalDetailsTableView.dataSource = self;
 		
-		let adoptButton : UIBarButtonItem = UIBarButtonItem(title: "Adopt!", style: UIBarButtonItemStyle.Plain, target: self, action: "adoptButtonTapped");
+		let adoptButton : UIBarButtonItem = UIBarButtonItem(title: "Adopt!", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PetListingDetailViewController.adoptButtonTapped));
 		self.navigationItem.rightBarButtonItem = adoptButton;
 		
 		self.setBackgroundGradient();

@@ -39,7 +39,7 @@ class FindPetsService: NSObject {
 			];
 			
 			var fakePetImageIndex = 0;
-			for (var i = 0; i < 10; i++) {
+			for _ in 0..<10 {
 				let pet = Pet();
 				pet.petName = fakePetNames[fakePetImageIndex];
 				pet.petAttributeText = fakePetAttributeConcat[fakePetImageIndex];
@@ -58,7 +58,7 @@ class FindPetsService: NSObject {
 					PetAttribute(title: "Location", value: "33 Real Address, Orlando FL"),
 				];
 				
-				fakePetImageIndex++;
+				fakePetImageIndex += 1;
 				
 				if (fakePetImageIndex >= fakePetImages.count)
 				{

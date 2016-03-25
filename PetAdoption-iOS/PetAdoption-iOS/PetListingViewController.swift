@@ -20,7 +20,7 @@ class PetListingViewController: UIViewController, UICollectionViewDelegate, UICo
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: "showPetDetails:", name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PetListingViewController.showPetDetails(_:)), name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
 
 	}
 	

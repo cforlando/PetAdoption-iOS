@@ -16,11 +16,11 @@ class SearchViewController: XLFormViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let clearButton = UIBarButtonItem(title: "Clear", style: .Plain, target: self, action: "clearSearch")
+		let clearButton = UIBarButtonItem(title: "Clear", style: .Plain, target: self, action: #selector(SearchViewController.clearSearch))
         clearButton.tintColor = UIColor.whiteColor()
 		self.navigationItem.leftBarButtonItem = clearButton
 		
-		let searchButton = UIBarButtonItem(title: "Search", style: .Plain, target: self, action: "searchPets")
+		let searchButton = UIBarButtonItem(title: "Search", style: .Plain, target: self, action: #selector(SearchViewController.searchPets))
         searchButton.tintColor = UIColor.whiteColor()
 		self.navigationItem.rightBarButtonItem = searchButton
 		
