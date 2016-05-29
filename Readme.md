@@ -1,5 +1,5 @@
 #Pet Adoption for iOS[![Build Status](https://travis-ci.org/cforlando/PetAdoption-iOS.svg?branch=master)](https://travis-ci.org/cforlando/PetAdoption-iOS)
---
+
 ##About
 --
 **Pet Adoption** is an iOS app being built for the Town of Lady Lake, Florida to assist citizens in adopting animals for local shelters.
