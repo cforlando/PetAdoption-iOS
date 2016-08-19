@@ -1,7 +1,7 @@
 language: objective-c
 
 before_install:
-  - rvm use system
+  - rvm install 2.2.2
   - sudo gem install cocoapods -v '0.39.0'
 
 osx-image: xcode7.2
