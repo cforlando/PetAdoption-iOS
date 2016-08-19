@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-PetAdoption-iOS/Alamofire.framework"
   install_framework "Pods-PetAdoption-iOS/MBProgressHUD.framework"
   install_framework "Pods-PetAdoption-iOS/MGBoxKit.framework"
   install_framework "Pods-PetAdoption-iOS/MGEvents.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PetAdoption-iOS/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-PetAdoption-iOS/Alamofire.framework"
   install_framework "Pods-PetAdoption-iOS/MBProgressHUD.framework"
   install_framework "Pods-PetAdoption-iOS/MGBoxKit.framework"
   install_framework "Pods-PetAdoption-iOS/MGEvents.framework"

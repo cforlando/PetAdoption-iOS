@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 platform :ios, '9.0'
@@ -7,4 +8,5 @@ target 'PetAdoption-iOS' do
   pod 'MBProgressHUD'
   pod 'SDWebImage'
   pod 'XLForm'
+  pod 'Alamofire', '~> 3.4'
 end
