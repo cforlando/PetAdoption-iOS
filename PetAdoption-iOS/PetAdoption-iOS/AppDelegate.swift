@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PetAdoptionTransportKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
