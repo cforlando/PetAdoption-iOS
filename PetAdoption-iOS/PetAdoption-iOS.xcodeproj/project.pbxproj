@@ -52,7 +52,6 @@
 		D4F2A7401D6A081F00E92647 /* PetAdoptionTransportKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A73F1D6A081F00E92647 /* PetAdoptionTransportKitTests.swift */; };
 		D4F2A7441D6A081F00E92647 /* PetAdoptionTransportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2A72F1D6A081F00E92647 /* PetAdoptionTransportKit.framework */; };
 		D4F2A7451D6A081F00E92647 /* PetAdoptionTransportKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2A72F1D6A081F00E92647 /* PetAdoptionTransportKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D4F2A74E1D6A084B00E92647 /* PTKRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A74D1D6A084B00E92647 /* PTKRequestManager.swift */; };
 		D4F2A7511D6A0D6800E92647 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2A7501D6A0D6800E92647 /* Alamofire.framework */; };
 		D4F2A7531D6A1E3C00E92647 /* PTKAgeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7521D6A1E3C00E92647 /* PTKAgeRange.swift */; };
 		D4F2A7551D6A1E6000E92647 /* PTKHouseTrained.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7541D6A1E6000E92647 /* PTKHouseTrained.swift */; };
@@ -74,6 +73,7 @@
 		D4F2A77A1D6A2CC000E92647 /* PTKPetShelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7791D6A2CC000E92647 /* PTKPetShelter.swift */; };
 		D4F2A7841D6A4D6100E92647 /* PTKMicrochip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7831D6A4D6100E92647 /* PTKMicrochip.swift */; };
 		D4F2A7861D6A811600E92647 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7851D6A811600E92647 /* DateExtension.swift */; };
+		D4F2A7891D6A95E200E92647 /* PTKRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7881D6A95E200E92647 /* PTKRequestManager.swift */; };
 		D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE391C62E9AE008C0BF8 /* Info.storyboard */; };
 		D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */; };
 		D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */; };
@@ -188,7 +188,6 @@
 		D4F2A7381D6A081F00E92647 /* PetAdoptionTransportKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetAdoptionTransportKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F2A73F1D6A081F00E92647 /* PetAdoptionTransportKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptionTransportKitTests.swift; sourceTree = "<group>"; };
 		D4F2A7411D6A081F00E92647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4F2A74D1D6A084B00E92647 /* PTKRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PTKRequestManager.swift; path = ../../../../../Desktop/PTKRequestManager.swift; sourceTree = "<group>"; };
 		D4F2A74F1D6A099B00E92647 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		D4F2A7501D6A0D6800E92647 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PetAdoption-iOS-etpahjapkfgmvghajmjlabyjaprb/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		D4F2A7521D6A1E3C00E92647 /* PTKAgeRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTKAgeRange.swift; sourceTree = "<group>"; };
@@ -211,6 +210,7 @@
 		D4F2A7791D6A2CC000E92647 /* PTKPetShelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTKPetShelter.swift; sourceTree = "<group>"; };
 		D4F2A7831D6A4D6100E92647 /* PTKMicrochip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTKMicrochip.swift; sourceTree = "<group>"; };
 		D4F2A7851D6A811600E92647 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D4F2A7881D6A95E200E92647 /* PTKRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTKRequestManager.swift; sourceTree = "<group>"; };
 		D769DE391C62E9AE008C0BF8 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LostPet.storyboard; sourceTree = "<group>"; };
 		D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -471,7 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				D4F2A7311D6A081F00E92647 /* PetAdoptionTransportKit.h */,
-				D4F2A74D1D6A084B00E92647 /* PTKRequestManager.swift */,
+				D4F2A7881D6A95E200E92647 /* PTKRequestManager.swift */,
 				D4F2A7621D6A1F8300E92647 /* Enums */,
 				D4F2A7871D6A813300E92647 /* Extensions */,
 				D4F2A7691D6A205C00E92647 /* Protocols */,
@@ -868,13 +868,13 @@
 				D4F2A75D1D6A1EDC00E92647 /* PTKCrateTrained.swift in Sources */,
 				D4F2A7861D6A811600E92647 /* DateExtension.swift in Sources */,
 				D4F2A7641D6A1FEF00E92647 /* Behavior.swift in Sources */,
-				D4F2A74E1D6A084B00E92647 /* PTKRequestManager.swift in Sources */,
 				D4F2A7591D6A1EAB00E92647 /* PTKMedicalShotStatus.swift in Sources */,
 				D4F2A7721D6A22EA00E92647 /* PTKDeclawed.swift in Sources */,
 				D4F2A7761D6A2C3700E92647 /* Location.swift in Sources */,
 				D4F2A7551D6A1E6000E92647 /* PTKHouseTrained.swift in Sources */,
 				D4F2A7531D6A1E3C00E92647 /* PTKAgeRange.swift in Sources */,
 				D4F2A76D1D6A20D200E92647 /* PTKPet.swift in Sources */,
+				D4F2A7891D6A95E200E92647 /* PTKRequestManager.swift in Sources */,
 				D4F2A7701D6A21B800E92647 /* PTKActivityLevel.swift in Sources */,
 				D4F2A75B1D6A1EC500E92647 /* PTKMicrochipStatus.swift in Sources */,
 				D4F2A7661D6A200300E92647 /* Medical.swift in Sources */,
@@ -1228,6 +1228,7 @@
 				D4F2A7471D6A081F00E92647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4F2A74C1D6A081F00E92647 /* Build configuration list for PBXNativeTarget "PetAdoptionTransportKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1236,6 +1237,7 @@
 				D4F2A7491D6A081F00E92647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
