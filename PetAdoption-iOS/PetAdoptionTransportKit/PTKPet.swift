@@ -46,9 +46,16 @@ private let PTKSpecialNeedsKey = "specialNeeds"
 private let PTKSpeciesKey = "species"
 
 //**********************************************************************************************************************
+// MARK: - Equatable Protocol
+
+public func ==(lhs: PTKPet, rhs: PTKPet) -> Bool {
+    return lhs.petId == rhs.petId
+}
+
+//**********************************************************************************************************************
 // MARK: - Stuct Implementation
 
-public struct PTKPet: SpecieDetails, Behaviour, Medical, Location, CustomStringConvertible {
+public struct PTKPet: SpecieDetails, Behaviour, Medical, Location, CustomStringConvertible, Equatable {
     public let activityLevel: PTKActivityLevel
     public let age: PTKAgeRange
     public let color: String
@@ -121,21 +128,6 @@ public struct PTKPet: SpecieDetails, Behaviour, Medical, Location, CustomStringC
         } else {
             self.locationCoordinates = nil
         }
-        
     }
 }
 
-//**********************************************************************************************************************
-// MARK: - Internal Extension
-
-extension NSDateFormatter {
-    class func ISO8601Formatter() -> NSDateFormatter {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-        
-        // A time zone will probably need to be added for the correct date to appear.
-        // Assuming Eastern Standard Time until told otherwise.
-        dateFormatter.timeZone = NSTimeZone(name: "EST")
-        return dateFormatter
-    }
-}

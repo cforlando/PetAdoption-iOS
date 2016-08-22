@@ -73,6 +73,7 @@
 		D4F2A7781D6A2CA500E92647 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F2A7771D6A2CA500E92647 /* MapKit.framework */; };
 		D4F2A77A1D6A2CC000E92647 /* PTKPetShelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7791D6A2CC000E92647 /* PTKPetShelter.swift */; };
 		D4F2A7841D6A4D6100E92647 /* PTKMicrochip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7831D6A4D6100E92647 /* PTKMicrochip.swift */; };
+		D4F2A7861D6A811600E92647 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2A7851D6A811600E92647 /* DateExtension.swift */; };
 		D769DE3A1C62E9AE008C0BF8 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE391C62E9AE008C0BF8 /* Info.storyboard */; };
 		D769DE3C1C62EA82008C0BF8 /* LostPet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */; };
 		D769DE3E1C62EB6A008C0BF8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */; };
@@ -209,6 +210,7 @@
 		D4F2A7771D6A2CA500E92647 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D4F2A7791D6A2CC000E92647 /* PTKPetShelter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTKPetShelter.swift; sourceTree = "<group>"; };
 		D4F2A7831D6A4D6100E92647 /* PTKMicrochip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PTKMicrochip.swift; sourceTree = "<group>"; };
+		D4F2A7851D6A811600E92647 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		D769DE391C62E9AE008C0BF8 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		D769DE3B1C62EA82008C0BF8 /* LostPet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LostPet.storyboard; sourceTree = "<group>"; };
 		D769DE3D1C62EB6A008C0BF8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 				D4F2A7311D6A081F00E92647 /* PetAdoptionTransportKit.h */,
 				D4F2A74D1D6A084B00E92647 /* PTKRequestManager.swift */,
 				D4F2A7621D6A1F8300E92647 /* Enums */,
+				D4F2A7871D6A813300E92647 /* Extensions */,
 				D4F2A7691D6A205C00E92647 /* Protocols */,
 				D4F2A76E1D6A211300E92647 /* Structs */,
 				D4F2A7331D6A081F00E92647 /* Info.plist */,
@@ -524,6 +527,14 @@
 				D4F2A7791D6A2CC000E92647 /* PTKPetShelter.swift */,
 			);
 			name = Structs;
+			sourceTree = "<group>";
+		};
+		D4F2A7871D6A813300E92647 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2A7851D6A811600E92647 /* DateExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D769DE381C62E986008C0BF8 /* Storyboards */ = {
@@ -855,6 +866,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4F2A75D1D6A1EDC00E92647 /* PTKCrateTrained.swift in Sources */,
+				D4F2A7861D6A811600E92647 /* DateExtension.swift in Sources */,
 				D4F2A7641D6A1FEF00E92647 /* Behavior.swift in Sources */,
 				D4F2A74E1D6A084B00E92647 /* PTKRequestManager.swift in Sources */,
 				D4F2A7591D6A1EAB00E92647 /* PTKMedicalShotStatus.swift in Sources */,
@@ -1111,7 +1123,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PetAdoptionTransportKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1134,7 +1146,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PetAdoptionTransportKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
