@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol Behaviour {
+public protocol Behavior {
     var activityLevel: PTKActivityLevel { get }
     var crateTrained: PTKCrateTrained { get }
     var isGoodWithCats: Bool { get }
