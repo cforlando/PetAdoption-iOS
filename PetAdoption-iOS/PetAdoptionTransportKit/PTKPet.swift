@@ -55,7 +55,7 @@ public func ==(lhs: PTKPet, rhs: PTKPet) -> Bool {
 //**********************************************************************************************************************
 // MARK: - Stuct Implementation
 
-public struct PTKPet: SpecieDetails, Behaviour, Medical, Location, CustomStringConvertible, Equatable {
+public struct PTKPet: SpecieDetails, Behavior, Medical, Location, CustomStringConvertible, Equatable {
     public let activityLevel: PTKActivityLevel
     public let age: PTKAgeRange
     public let color: String
