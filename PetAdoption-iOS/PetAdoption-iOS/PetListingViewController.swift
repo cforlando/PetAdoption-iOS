@@ -7,93 +7,122 @@
 //
 
 import UIKit
+import Toast_Swift
+import PetAdoptionTransportKit
 
-class PetListingViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-	static let SEGUE_TO_PET_DETAILS_ID = "segueToPetDetails";
-	
-	
-	@IBOutlet weak var collectionView: UICollectionView!
-	
-	var petData : [Pet] = [];
-	let collectionViewCellId = "normal-cell";
-	var viewControllerTitle: String = "Home"
-	
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder);
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PetListingViewController.showPetDetails(_:)), name: PetImageCollectionViewCell.DID_TAP_ON_PET_CELL_NOTIFICATION, object: nil);
+class PetListingViewController: UIViewController
+{
+    ////////////////////////////////////////////////////////////
+    // MARK: - Constants
+    ////////////////////////////////////////////////////////////
 
-	}
-	
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		self.navigationItem.title = NSLocalizedString("Town Of Lady Lake", comment: "");
-		self.collectionView.delegate = self;
-		self.collectionView.dataSource = self;
-		self.collectionView.backgroundColor = UIColor.groupTableViewBackgroundColor();
-		self.collectionView.collectionViewLayout = CustomHomeCollectionViewFlowLayout();
-		self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0);
+    static let SEGUE_TO_PET_DETAILS_ID = "segueToPetDetails"
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - IBOutlets
+    ////////////////////////////////////////////////////////////
+
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - Properties
+    ////////////////////////////////////////////////////////////
+
+    var petData = [PTKPet]()
+    var viewControllerTitle = "Home"
+    let requestManager = PTKRequestManager.sharedInstance()
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - View Controller Life Cycle
+    ////////////////////////////////////////////////////////////
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        self.collectionView.collectionViewLayout = CustomHomeCollectionViewFlowLayout()
+
+        requestManager.request(AllPetsWithcompletion:
+        { pets, error in
+            if let error = error
+            {
+                self.view.makeToast(error.localizedDescription)
+            }
+            else
+            {
+                if let pets = pets
+                {
+                    self.petData = pets
+                    self.collectionView.reloadData()
+                }
+            }
+        })
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = NSLocalizedString("Town Of Lady Lake", comment: "")
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = NSLocalizedString("Back", comment: "")
+    }
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - Navigation
+    ////////////////////////////////////////////////////////////
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if let vc = segue.destinationViewController as? PetListingDetailViewController
+            where segue.identifier == PetListingViewController.SEGUE_TO_PET_DETAILS_ID,
+           let indexPath = sender as? NSIndexPath
+        {
+            vc.pet = self.petData[indexPath.row]
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////
+
+extension PetListingViewController : UICollectionViewDelegate, UICollectionViewDataSource
+{
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return self.petData.count
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PetCell.reuseIdentifier, forIndexPath: indexPath) as! PetCell
+        let pet = petData[indexPath.row]
+        cell.configureCell(with: pet)
 		
-		let normalCellView = UINib(nibName: "PetImageCollectionViewCell", bundle: nil);
-		self.collectionView.registerNib(normalCellView, forCellWithReuseIdentifier: collectionViewCellId);
-		
-		
-		
-		//Load some data (fake data for now)
-		let petService = FindPetsService();
-		petService.execute({ (result) -> Void in
-			if (result.code == .Success) {
-				self.petData = result.petsFound;
-				self.collectionView.reloadData();
-			}
-			else {
-				//TODO: Handle error case
-			}
-		});
-	}
-	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-	
-	
-	// MARK: - NSNotification listeners
-	func showPetDetails(notification : NSNotification) {
-		let visible = (self.isViewLoaded() && self.view.window != nil)
-		if visible {
-			let pet = notification.object as! Pet;
-			self.performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: pet);
-		}
-	}
-	
-	// MARK: - Navigation delegate
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if (segue.identifier == PetListingViewController.SEGUE_TO_PET_DETAILS_ID) {
-			let detailsVC = segue.destinationViewController as! PetListingDetailViewController;
-			detailsVC.pet = sender as! Pet;
-		}
-	}
-	
-	
-	// MARK: - UICollectionViewDataSource and Delegate
-	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-		return 1;
-	}
-	
-	func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return self.petData.count;
-	}
-	
-	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellId, forIndexPath: indexPath) as? PetImageCollectionViewCell;
-	
-	
-		
-		let pet = petData[indexPath.row];
-		cell!.updateWithPet(pet);
-		
-		return cell!;
-	}
-	
+        return cell
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: indexPath)
+    }
 }
