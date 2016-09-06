@@ -94,7 +94,7 @@ public class PTKRequestManager: NSObject {
                     complete(image: nil, error: error)
                     return
                 }
-                
+                                
                 complete(image: image, error: response.result.error)
             } else {
                 complete(image: nil, error: response.result.error)
