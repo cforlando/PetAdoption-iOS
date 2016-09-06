@@ -74,9 +74,9 @@ class PetListingViewController: UIViewController
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if let vc = segue.destinationViewController as? PetListingDetailViewController
+        if let vc = segue.destinationViewController as? PetListingDetailVC
             where segue.identifier == PetListingViewController.SEGUE_TO_PET_DETAILS_ID,
-           let indexPath = sender as? NSIndexPath
+            let indexPath = sender as? NSIndexPath
         {
             vc.pet = self.petData[indexPath.row]
         }
