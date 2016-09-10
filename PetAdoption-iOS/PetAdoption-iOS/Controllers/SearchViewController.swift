@@ -8,10 +8,10 @@
 
 import UIKit
 
-import XLForm
-import MBProgressHUD
+//import XLForm
+//import MBProgressHUD
 
-class SearchViewController: XLFormViewController {
+class SearchViewController: UIViewController {
 /*
 	override func viewDidLoad() {
 		super.viewDidLoad()
