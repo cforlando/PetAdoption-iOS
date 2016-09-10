@@ -31,6 +31,14 @@ pod 'MGEvents'
 }];
 ```
 
+Or in Swift: 
+
+```swift
+button.onControlEvent(.TouchUpInside) {
+    print("you touched me!")
+}
+```
+
 ### Custom Events and Triggers
 
 ```objc
@@ -47,4 +55,4 @@ Then trigger the event:
 
 ### Further Options
 
-See the [API reference](http://www.bigpaua.com/MGEvents/index.html) for more details.
+See the [API reference](http://cocoadocs.org/docsets/MGEvents) for more details.

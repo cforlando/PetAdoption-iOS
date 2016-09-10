@@ -18,19 +18,31 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
 
 #pragma mark - Custom events
 
-- (void)on:(NSString *)eventName do:(Block)handler {
+- (void)on:(NSString *)eventName do:(MGBlock)handler {
   [self on:eventName do:handler once:NO context:NO];
 }
 
-- (void)on:(NSString *)eventName doOnce:(Block)handler {
+- (void)onAnyOf:(NSArray *)eventNames do:(MGBlock)handler {
+    for (NSString *eventName in eventNames) {
+        [self on:eventName do:handler];
+    }
+}
+
+- (void)on:(NSString *)eventName doOnce:(MGBlock)handler {
   [self on:eventName do:handler once:YES context:NO];
 }
 
-- (void)on:(NSString *)eventName doWithContext:(BlockWithContext)handler {
-  [self on:eventName do:(Block)handler once:NO context:YES];
+- (void)on:(NSString *)eventName doWithContext:(MGBlockWithContext)handler {
+  [self on:eventName do:(MGBlock)handler once:NO context:YES];
 }
 
-- (void)on:(NSString *)eventName do:(Block)handler once:(BOOL)once
+- (void)onAnyOf:(NSArray *)eventNames doWithContext:(MGBlockWithContext)handler {
+    for (NSString *eventName in eventNames) {
+        [self on:eventName doWithContext:handler];
+    }
+}
+
+- (void)on:(NSString *)eventName do:(MGBlock)handler once:(BOOL)once
    context:(BOOL)isContextBlock {
 
   // get all handlers for this event type
@@ -48,15 +60,27 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
   }
 }
 
-- (void)when:(id)object does:(NSString *)eventName do:(Block)handler {
+- (void)when:(id)object does:(NSString *)eventName do:(MGBlock)handler {
     [self when:object does:eventName do:handler context:NO];
 }
 
-- (void)when:(id)object does:(NSString *)eventName doWithContext:(BlockWithContext)handler {
-    [self when:object does:eventName do:(Block)handler context:YES];
+- (void)when:(id)object doesAnyOf:(NSArray *)eventNames do:(MGBlock)handler {
+    for (NSString *eventName in eventNames) {
+        [self when:object does:eventName do:handler];
+    }
 }
 
-- (void)when:(NSObject *)object does:(NSString *)eventName do:(Block)handler
+- (void)when:(id)object does:(NSString *)eventName doWithContext:(MGBlockWithContext)handler {
+    [self when:object does:eventName do:(MGBlock)handler context:YES];
+}
+
+- (void)when:(id)object doesAnyOf:(NSArray *)eventNames doWithContext:(MGBlockWithContext)handler {
+    for (NSString *eventName in eventNames) {
+        [self when:object does:eventName doWithContext:handler];
+    }
+}
+
+- (void)when:(NSObject *)object does:(NSString *)eventName do:(MGBlock)handler
       context:(BOOL)isContextBlock {
 
     // get the proxy handlers array
@@ -85,8 +109,35 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
     [theirHandlers addObject:[MGWeakHandler handlerWithDict:handlerDict]];
 }
 
+- (void)whenAny:(Class)objectOfClass does:(NSString *)eventName do:(MGBlock)handler {
+    [self when:objectOfClass does:[NSObject globalMGEventNameFor:eventName] do:handler];
+}
+
+- (void)whenAny:(Class)objectOfClass doesAnyOf:(NSArray *)eventNames do:(MGBlock)handler {
+    NSMutableArray *mangledEventNames = NSMutableArray.new;
+    for (NSString *eventName in eventNames) {
+        [mangledEventNames addObject:[NSObject globalMGEventNameFor:eventName]];
+    }
+    [self when:objectOfClass doesAnyOf:mangledEventNames.copy do:handler];
+}
+
+- (void)whenAny:(Class)objectOfClass does:(NSString *)eventName doWithContext:(MGBlockWithContext)handler {
+    [self when:objectOfClass does:[NSObject globalMGEventNameFor:eventName] doWithContext:handler];
+}
+
+- (void)whenAny:(Class)objectOfClass doesAnyOf:(NSArray *)eventNames doWithContext:(MGBlockWithContext)handler {
+    NSMutableArray *mangledEventNames = NSMutableArray.new;
+    for (NSString *eventName in eventNames) {
+        [mangledEventNames addObject:[NSObject globalMGEventNameFor:eventName]];
+    }
+    [self when:objectOfClass doesAnyOf:mangledEventNames.copy doWithContext:handler];
+}
+
 - (void)trigger:(NSString *)eventName {
-  [self trigger:eventName withContext:nil];
+    [self trigger:eventName withContext:nil];
+    if (!class_isMetaClass(object_getClass(self))) {
+        [self.class trigger:[NSObject globalMGEventNameFor:eventName]];
+    }
 }
 
 - (void)trigger:(NSString *)eventName withContext:(id)context {
@@ -100,21 +151,24 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
             continue;
         }
         if (handlerDict[@"blockWithContext"]) {
-            BlockWithContext block = handlerDict[@"blockWithContext"];
+            MGBlockWithContext block = handlerDict[@"blockWithContext"];
             block(context);
         } else if (handlerDict[@"block"]) {
-            Block block = handlerDict[@"block"];
+            MGBlock block = handlerDict[@"block"];
             block();
         }
         if ([handlerDict[@"once"] boolValue]) {
             [handlers removeObject:handler];
         }
     }
+    if (!class_isMetaClass(object_getClass(self))) {
+        [self.class trigger:[NSObject globalMGEventNameFor:eventName] withContext:context];
+    }
 }
 
 #pragma mark - Property observing
 
-- (void)onChangeOf:(NSString *)keypath do:(Block)block {
+- (void)onChangeOf:(NSString *)keypath do:(MGBlock)block {
 
   // get observers for this keypath
   NSMutableArray *observers = self.MGObservers[keypath];
@@ -127,12 +181,18 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
   // make and store an observer
   MGObserver *observer = [MGObserver observerFor:self keypath:keypath block:block];
   [observers addObject:observer];
-    
+
   __unsafe_unretained id _self = self;
   __unsafe_unretained id _observer = observer;
   observer.onDealloc = ^{
       [_self removeObserver:_observer forKeyPath:keypath];
   };
+}
+
+- (void)onChangeOfAny:(NSArray *)keypaths do:(MGBlock)block {
+  for (NSString *keypath in keypaths) {
+    [self onChangeOf:keypath do:block];
+  }
 }
 
 #pragma mark - Getters
@@ -155,9 +215,13 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
   return observers;
 }
 
-- (Block)onDealloc {
+- (MGBlock)onDealloc {
   MGDeallocAction *wrapper = objc_getAssociatedObject(self, MGDeallocActionKey);
   return wrapper.block;
+}
+
++ (NSString *)globalMGEventNameFor:(NSString *)objectEvent {
+    return [objectEvent stringByAppendingString:@"-MGGlobalEvent"];
 }
 
 #pragma mark - Setters
@@ -172,7 +236,7 @@ static char *MGDeallocActionKey = "MGDeallocActionKey";
       OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)setOnDealloc:(Block)block {
+- (void)setOnDealloc:(MGBlock)block {
   MGDeallocAction *wrapper = objc_getAssociatedObject(self, MGDeallocActionKey);
   if (!wrapper) {
     wrapper = MGDeallocAction.new;
