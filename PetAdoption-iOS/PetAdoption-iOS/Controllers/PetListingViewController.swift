@@ -47,14 +47,15 @@ class PetListingViewController: UIViewController
         self.collectionView.dataSource = self
         self.collectionView.alwaysBounceVertical = true
         self.collectionView.backgroundColor = UIColor.groupTableViewBackgroundColor()
-        self.collectionView.collectionViewLayout = CustomHomeCollectionViewFlowLayout()
+        self.collectionView.collectionViewLayout = HomePortraitCollectionViewLayout()
         
         refreshControl.addTarget(self, action: #selector(refreshTriggered), forControlEvents: .ValueChanged)
         self.collectionView.addSubview(refreshControl)
         
         loadPets()
-
     }
+
+    ////////////////////////////////////////////////////////////
 
     override func viewWillAppear(animated: Bool)
     {
@@ -62,10 +63,27 @@ class PetListingViewController: UIViewController
         self.navigationItem.title = NSLocalizedString("Town Of Lady Lake", comment: "")
     }
 
+    ////////////////////////////////////////////////////////////
+
     override func viewWillDisappear(animated: Bool)
     {
         super.viewWillDisappear(animated)
         self.navigationItem.title = NSLocalizedString("Back", comment: "")
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator)
+    {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+
+        let currentOrientation = UIDevice.currentDevice().orientation
+        let newLayout = UIDeviceOrientationIsLandscape(currentOrientation) ? HomeLandscapeCollectionViewLayout() : HomePortraitCollectionViewLayout()
+
+        coordinator.animateAlongsideTransition(nil)
+        { context in
+            self.collectionView.setCollectionViewLayout(newLayout, animated: true)
+        }
     }
 
     ////////////////////////////////////////////////////////////
@@ -106,7 +124,6 @@ class PetListingViewController: UIViewController
     func refreshTriggered() {
         loadPets()
     }
-
 }
 
 ////////////////////////////////////////////////////////////

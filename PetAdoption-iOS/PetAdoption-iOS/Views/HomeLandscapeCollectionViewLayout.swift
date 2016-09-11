@@ -1,14 +1,14 @@
 //
-//  CustomHomeCollectionViewFlowLayout.swift
+//  HomeLandscapeCollectionViewLayout.swift
 //  PetAdoption-iOS
 //
-//  Created by Marco Ledesma on 2/2/16.
+//  Created by Keli'i Martin on 9/10/16.
 //  Copyright © 2016 Code For Orlando. All rights reserved.
 //
 
 import UIKit
 
-class CustomHomeCollectionViewFlowLayout: UICollectionViewFlowLayout
+class HomeLandscapeCollectionViewLayout: UICollectionViewFlowLayout
 {
     ////////////////////////////////////////////////////////////
     // MARK: - Properties
@@ -16,14 +16,10 @@ class CustomHomeCollectionViewFlowLayout: UICollectionViewFlowLayout
 
     override var itemSize: CGSize
     {
-        set
-        {
-
-        }
-
+        set { }
         get
         {
-            let itemWidth = CGRectGetWidth(self.collectionView!.frame) / 2.0;
+            let itemWidth = CGRectGetWidth(self.collectionView!.frame) / 3.0;
             return CGSizeMake(itemWidth, itemWidth);
         }
     }
@@ -32,26 +28,26 @@ class CustomHomeCollectionViewFlowLayout: UICollectionViewFlowLayout
     // MARK: - Initializers
     ////////////////////////////////////////////////////////////
 
-	override init()
+    override init()
     {
-		super.init()
-		setupLayout()
-	}
+        super.init()
+        self.setupLayout()
+    }
 
     ////////////////////////////////////////////////////////////
 
-	required init?(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
-		super.init(coder: aDecoder)
-		setupLayout()
-	}
+        super.init(coder: aDecoder)
+        self.setupLayout()
+    }
 
     ////////////////////////////////////////////////////////////
- 
-	func setupLayout()
+
+    func setupLayout()
     {
-		minimumInteritemSpacing = 0
-		minimumLineSpacing = 0
-		scrollDirection = .Vertical
-	}
+        self.minimumInteritemSpacing = 0
+        self.minimumLineSpacing = 0
+        self.scrollDirection = .Vertical
+    }
 }
