@@ -10,8 +10,8 @@
 		4200BBCD1D6BCFD1003C00A7 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4200BBCC1D6BCFD1003C00A7 /* AlamofireImage.framework */; };
 		42070E091D7470A100B02BA2 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42070E081D7470A100B02BA2 /* DescriptionCell.swift */; };
 		420FD5761D6F255A00E5DD89 /* PetListingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FD5751D6F255A00E5DD89 /* PetListingDetailVC.swift */; };
-		428A90A91D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428A90A81D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift */; };
 		4226D9D21D8439C100B0DAA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4226D9D11D8439C100B0DAA7 /* Alamofire.framework */; };
+		428A90A91D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428A90A81D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift */; };
 		42ACC1AD1D68A8A3001C7C83 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACC1AC1D68A8A3001C7C83 /* ReusableView.swift */; };
 		42BC91261D67C7DA00B3B8FD /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BC91251D67C7DA00B3B8FD /* PetCell.swift */; };
 		42C2522A1C8881DE00B2BE6D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C252291C8881DE00B2BE6D /* BackgroundView.swift */; };
@@ -132,8 +132,8 @@
 		4200BBCC1D6BCFD1003C00A7 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = "Pods/../build/Debug-iphoneos/AlamofireImage.framework"; sourceTree = "<group>"; };
 		42070E081D7470A100B02BA2 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionCell.swift; path = Views/DescriptionCell.swift; sourceTree = "<group>"; };
 		420FD5751D6F255A00E5DD89 /* PetListingDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PetListingDetailVC.swift; path = Controllers/PetListingDetailVC.swift; sourceTree = "<group>"; };
-		428A90A81D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeLandscapeCollectionViewLayout.swift; path = Views/HomeLandscapeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		4226D9D11D8439C100B0DAA7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/PetAdoption-iOS-dlpwrkpryvmpaicjeebwlxojsljc/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		428A90A81D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeLandscapeCollectionViewLayout.swift; path = Views/HomeLandscapeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		42ACC1AC1D68A8A3001C7C83 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = Protocols/ReusableView.swift; sourceTree = "<group>"; };
 		42BC91251D67C7DA00B3B8FD /* PetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PetCell.swift; path = Views/PetCell.swift; sourceTree = "<group>"; };
 		42C252291C8881DE00B2BE6D /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundView.swift; path = Views/BackgroundView.swift; sourceTree = "<group>"; };
@@ -661,13 +661,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Code For Orlando";
 				TargetAttributes = {
 					D0950AC31C618C2F002E198C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 4X359D924E;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					D0950AD71C618C2F002E198C = {
 						CreatedOnToolsVersion = 7.2;
@@ -681,12 +681,12 @@
 					};
 					D4F2A72E1D6A081F00E92647 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 					};
 					D4F2A7371D6A081F00E92647 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 4X359D924E;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						TestTargetID = D0950AC31C618C2F002E198C;
 					};
 				};
@@ -1065,7 +1065,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AAD5FEFC48F2F2A23F42E1D /* Pods-PetAdoption-iOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4X359D924E;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1076,7 +1076,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1084,7 +1084,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB77A283D0B7D820C44F8CAD /* Pods-PetAdoption-iOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4X359D924E;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1095,7 +1095,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1176,7 +1176,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1206,7 +1206,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1222,7 +1222,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetAdoption-iOS.app/PetAdoption-iOS";
 			};
 			name = Debug;
@@ -1237,7 +1237,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetAdoption-iOS.app/PetAdoption-iOS";
 			};
 			name = Release;

@@ -16,9 +16,9 @@ private let PTKBaseURL = "http://cfo-pet-adoption-server.eastus.cloudapp.azure.c
 private let PTKGetSpecies = "\(PTKBaseURL)species"
 private let PTKGetPets = "\(PTKBaseURL)list"
 
-public typealias PTKRequestSpeciesComplete = (species: [PTKSpecieType]?, error: NSError?) -> Void
-public typealias PTKRequestPetsComplete = (pets: [PTKPet]?, error: NSError?) -> Void
-public typealias PTKRequestImageComplete = (image: UIImage?, error: NSError?) -> Void
+public typealias PTKRequestSpeciesComplete = (_ species: [PTKSpecieType]?, _ error: NSError?) -> Void
+public typealias PTKRequestPetsComplete = (_ pets: [PTKPet]?, _ error: NSError?) -> Void
+public typealias PTKRequestImageComplete = (_ image: UIImage?, _ error: NSError?) -> Void
 
 public class PTKRequestManager: NSObject {
 
@@ -79,7 +79,7 @@ public class PTKRequestManager: NSObject {
      */
     public func request(specieTypesWithCompletion complete: PTKRequestSpeciesComplete) {
         Alamofire.request(.GET, PTKGetSpecies).responseJSON { (response: Response<AnyObject, NSError>) in
-            if let species = response.result.value as? [String] where response.result.isSuccess {
+            if let species = response.result.value as? [String], response.result.isSuccess {
                 let types = species.map { PTKSpecieType(type: $0) }
                 complete(species: types, error: response.result.error)
             } else {

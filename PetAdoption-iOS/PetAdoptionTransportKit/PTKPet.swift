@@ -126,7 +126,7 @@ public struct PTKPet: SpecieDetails, Behavior, Medical, Location, CustomStringCo
         self.type = json[PTKSpeciesKey] as? String ?? "Unknown"
         self.worms = PTKHeartwormTestStatus(string: wormStatus)
         
-        if let latitude = latitudes?.first, longitude = longitudes?.first {
+        if let latitude = latitudes?.first, let longitude = longitudes?.first {
             self.locationCoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         } else {
             self.locationCoordinates = nil

@@ -50,7 +50,7 @@ public struct PTKPetShelter: Location {
         let latitudes = json[PTKShelterGeoLatKey] as? [CLLocationDegrees]
         let longitudes = json[PTKShelterGeoLonKey] as? [CLLocationDegrees]
         
-        if let latitude = latitudes?.first, longitude = longitudes?.first {
+        if let latitude = latitudes?.first, let longitude = longitudes?.first {
             self.locationCoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         } else {
             self.locationCoordinates = nil
