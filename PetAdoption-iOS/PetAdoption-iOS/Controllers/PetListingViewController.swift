@@ -46,10 +46,10 @@ class PetListingViewController: UIViewController
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.alwaysBounceVertical = true
-        self.collectionView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        self.collectionView.backgroundColor = UIColor.groupTableViewBackground
         self.collectionView.collectionViewLayout = HomePortraitCollectionViewLayout()
         
-        refreshControl.addTarget(self, action: #selector(refreshTriggered), forControlEvents: .ValueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshTriggered), for: .valueChanged)
         self.collectionView.addSubview(refreshControl)
         
         loadPets()
@@ -57,7 +57,7 @@ class PetListingViewController: UIViewController
 
     ////////////////////////////////////////////////////////////
 
-    override func viewWillAppear(animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
         self.navigationItem.title = NSLocalizedString("Town Of Lady Lake", comment: "")
@@ -65,7 +65,7 @@ class PetListingViewController: UIViewController
 
     ////////////////////////////////////////////////////////////
 
-    override func viewWillDisappear(animated: Bool)
+    override func viewWillDisappear(_ animated: Bool)
     {
         super.viewWillDisappear(animated)
         self.navigationItem.title = NSLocalizedString("Back", comment: "")
@@ -73,14 +73,14 @@ class PetListingViewController: UIViewController
 
     ////////////////////////////////////////////////////////////
 
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator)
     {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        super.viewWillTransition(to: size, with: coordinator)
 
-        let currentOrientation = UIDevice.currentDevice().orientation
+        let currentOrientation = UIDevice.current.orientation
         let newLayout = UIDeviceOrientationIsLandscape(currentOrientation) ? HomeLandscapeCollectionViewLayout() : HomePortraitCollectionViewLayout()
 
-        coordinator.animateAlongsideTransition(nil)
+        coordinator.animate(alongsideTransition: nil)
         { context in
             self.collectionView.setCollectionViewLayout(newLayout, animated: true)
         }
@@ -90,11 +90,10 @@ class PetListingViewController: UIViewController
     // MARK: - Navigation
     ////////////////////////////////////////////////////////////
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if let vc = segue.destinationViewController as? PetListingDetailVC
-            where segue.identifier == PetListingViewController.SEGUE_TO_PET_DETAILS_ID,
-            let indexPath = sender as? NSIndexPath
+        if let vc = segue.destination as? PetListingDetailVC, segue.identifier == PetListingViewController.SEGUE_TO_PET_DETAILS_ID,
+            let indexPath = sender as? IndexPath
         {
             vc.pet = self.petData[indexPath.row]
         }
@@ -130,23 +129,23 @@ class PetListingViewController: UIViewController
 
 extension PetListingViewController : UICollectionViewDelegate, UICollectionViewDataSource
 {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         return 1
     }
 
     ////////////////////////////////////////////////////////////
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return self.petData.count
     }
 
     ////////////////////////////////////////////////////////////
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PetCell.reuseIdentifier, forIndexPath: indexPath) as! PetCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PetCell.reuseIdentifier, for: indexPath) as! PetCell
         let pet = petData[indexPath.row]
         cell.configureCell(with: pet)
 		
@@ -155,8 +154,8 @@ extension PetListingViewController : UICollectionViewDelegate, UICollectionViewD
 
     ////////////////////////////////////////////////////////////
 
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        performSegueWithIdentifier(PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: indexPath)
+        performSegue(withIdentifier: PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: indexPath)
     }
 }

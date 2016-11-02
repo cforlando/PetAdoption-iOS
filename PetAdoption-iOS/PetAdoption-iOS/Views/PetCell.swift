@@ -45,7 +45,7 @@ public class PetCell: UICollectionViewCell, ReusableView
     {
         self.pet = pet
         self.petNameLabel.text = pet.name
-        configureImage(self.frame)
+        configureImage(frame: self.frame)
     }
 
     ////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ public class PetCell: UICollectionViewCell, ReusableView
     private func configureImage(frame: CGRect)
     {
         reset()
-        loadImage(frame.width, height: frame.height)
+        loadImage(width: frame.width, height: frame.height)
     }
 
     ////////////////////////////////////////////////////////////
@@ -74,7 +74,7 @@ public class PetCell: UICollectionViewCell, ReusableView
         {
             self.request = PTKRequestManager.sharedInstance().request(imageAtPath: imageUrl)
             { image, error in
-                self.populateCell(image)
+                self.populateCell(image: image)
             }
         }
     }

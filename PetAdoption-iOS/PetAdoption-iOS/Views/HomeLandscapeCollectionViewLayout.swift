@@ -19,8 +19,8 @@ class HomeLandscapeCollectionViewLayout: UICollectionViewFlowLayout
         set { }
         get
         {
-            let itemWidth = CGRectGetWidth(self.collectionView!.frame) / 3.0;
-            return CGSizeMake(itemWidth, itemWidth);
+            let itemWidth = self.collectionView!.frame.width / 3.0;
+            return CGSize(width: itemWidth, height: itemWidth);
         }
     }
 
@@ -48,6 +48,6 @@ class HomeLandscapeCollectionViewLayout: UICollectionViewFlowLayout
     {
         self.minimumInteritemSpacing = 0
         self.minimumLineSpacing = 0
-        self.scrollDirection = .Vertical
+        self.scrollDirection = .vertical
     }
 }
