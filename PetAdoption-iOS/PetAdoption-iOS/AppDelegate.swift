@@ -50,14 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		navBar.tintColor = UIColor.themeTintColor()
 		navBar.titleTextAttributes = [
 			NSForegroundColorAttributeName : UIColor.themeNavBarTitleColor(),
-			NSFontAttributeName: UIFont.themeNormalFontOfSize(size: 17.0)]
+			NSFontAttributeName: UIFont.themeNormalFont(ofSize: 17.0)]
 		
 		navBar.barStyle = .black
 		
 		UIButton.appearance().tintColor = UIColor.themeTintColor()
 		UIBarButtonItem.appearance().tintColor = UIColor.themeTintColor()
 		UITabBar.appearance().tintColor = UIColor.themePrimaryColor()
-		UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:UIFont.themeNormalFontOfSize(size: 10.0)], for: UIControlState.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:UIFont.themeNormalFont(ofSize: 10.0)], for: UIControlState.normal)
 	}
 }
 

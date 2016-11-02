@@ -373,7 +373,6 @@
 				D769DE381C62E986008C0BF8 /* Storyboards */,
 				D0950B0E1C61A5D5002E198C /* Nibs */,
 				42BC91241D67C7AF00B3B8FD /* Views */,
-				D0950B0B1C619877002E198C /* CustomComponents */,
 				D0950AF71C618D86002E198C /* ViewControllers */,
 				D0950AC71C618C2F002E198C /* AppDelegate.swift */,
 				D0950ACE1C618C2F002E198C /* Assets.xcassets */,
@@ -410,13 +409,6 @@
 				D0E5367C1C7041F3004794D8 /* PetListings */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		D0950B0B1C619877002E198C /* CustomComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CustomComponents;
 			sourceTree = "<group>";
 		};
 		D0950B0E1C61A5D5002E198C /* Nibs */ = {

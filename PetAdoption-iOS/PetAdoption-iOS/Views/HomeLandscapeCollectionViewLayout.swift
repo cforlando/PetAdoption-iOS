@@ -19,7 +19,8 @@ class HomeLandscapeCollectionViewLayout: UICollectionViewFlowLayout
         set { }
         get
         {
-            let itemWidth = self.collectionView!.frame.width / 3.0;
+            guard let collectionView = self.collectionView else { return CGSize.zero }
+            let itemWidth = collectionView.frame.width / 3.0;
             return CGSize(width: itemWidth, height: itemWidth);
         }
     }

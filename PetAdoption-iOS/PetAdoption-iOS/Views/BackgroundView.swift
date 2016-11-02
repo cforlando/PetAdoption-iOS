@@ -24,12 +24,12 @@ class BackgroundView: UIView
 
         //// Background Drawing
         let backgroundPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
-        context!.saveGState()
+        context?.saveGState()
         backgroundPath.addClip()
-        context!.drawLinearGradient(gradient!,
+        context?.drawLinearGradient(gradient!,
                                     start: CGPoint(x: 160, y: 0),
                                     end: CGPoint(x: 160, y: 568),
                                     options: [.drawsBeforeStartLocation, .drawsAfterEndLocation])
-        context!.restoreGState()
+        context?.restoreGState()
     }
 }

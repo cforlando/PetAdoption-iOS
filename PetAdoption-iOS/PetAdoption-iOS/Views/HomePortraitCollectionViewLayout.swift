@@ -19,7 +19,8 @@ class HomePortraitCollectionViewLayout: UICollectionViewFlowLayout
         set { }
         get
         {
-            let itemWidth = self.collectionView!.frame.width / 2.0;
+            guard let collectionView = self.collectionView else { return CGSize.zero }
+            let itemWidth = collectionView.frame.width / 2.0;
             return CGSize(width: itemWidth, height: itemWidth);
         }
     }
