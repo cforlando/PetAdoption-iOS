@@ -20,8 +20,8 @@ John Li (johnliglobal@gmail.com) (slack: johnleeroy)
 
 ## Requirements
 ------
-- Xcode v7.3
-- Cocoapods
+- Xcode v8.0
+- Cocoapods v1.1.1
 
 If you do not have CocoaPods installed, you can do so by opening Terminal and entering: `sudo gem install cocoapods`.  Once you have done that, navigate to the project directory and run `pod install`.  Make sure you open the .xcworkspace for the project.
 

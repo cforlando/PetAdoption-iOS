@@ -18,7 +18,7 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barStyle = .Black
+        self.navigationController?.navigationBar.barStyle = .black
     }
 
     ////////////////////////////////////////////////////////////
@@ -28,7 +28,7 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
         super.viewDidLayoutSubviews()
         if let about = aboutText
         {
-            about.setContentOffset(CGPointZero, animated: false)
+            about.setContentOffset(CGPoint.zero, animated: false)
         }
     }
 
@@ -46,7 +46,7 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail()
         {
-            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            self.present(mailComposeViewController, animated: true, completion: nil)
         }
         else
         {
@@ -71,19 +71,19 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate
 
     func showSendMailErrorAlert()
     {
-        let alertController = UIAlertController(title: "Could not send email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+        let alertController = UIAlertController(title: "Could not send email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
 
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 
     ////////////////////////////////////////////////////////////
     // MARK: - MFMailComposeViewControllerDelegate
 
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
     {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 
 }

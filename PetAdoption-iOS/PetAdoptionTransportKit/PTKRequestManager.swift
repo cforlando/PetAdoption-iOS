@@ -16,9 +16,9 @@ private let PTKBaseURL = "http://cfo-pet-adoption-server.eastus.cloudapp.azure.c
 private let PTKGetSpecies = "\(PTKBaseURL)species"
 private let PTKGetPets = "\(PTKBaseURL)list"
 
-public typealias PTKRequestSpeciesComplete = (species: [PTKSpecieType]?, error: NSError?) -> Void
-public typealias PTKRequestPetsComplete = (pets: [PTKPet]?, error: NSError?) -> Void
-public typealias PTKRequestImageComplete = (image: UIImage?, error: NSError?) -> Void
+public typealias PTKRequestSpeciesComplete = (_ species: [PTKSpecieType]?, _ error: NSError?) -> Void
+public typealias PTKRequestPetsComplete = (_ pets: [PTKPet]?, _ error: NSError?) -> Void
+public typealias PTKRequestImageComplete = (_ image: UIImage?, _ error: NSError?) -> Void
 
 public class PTKRequestManager: NSObject {
 
@@ -46,12 +46,12 @@ public class PTKRequestManager: NSObject {
         ]
      ]
      */
-    public func request(AllPetsWithcompletion complete: PTKRequestPetsComplete) {
-        Alamofire.request(.GET, PTKGetPets).responseJSON { (response: Response<AnyObject, NSError>) in
+    public func request(AllPetsWithcompletion complete: @escaping PTKRequestPetsComplete) {
+        Alamofire.request(PTKGetPets).responseJSON { (response) in
             if response.result.isSuccess {
                 guard let json = response.result.value as? [[String: AnyObject]] else {
                     let error = NSError(domain: "com.petadoption.petadoptiontransportkit.requestallpets", code: 1, userInfo: ["JSON":"Malformed JSON response"])
-                    complete(pets: nil, error: error)
+                    complete(nil, error)
                     return
                 }
                 
@@ -61,10 +61,10 @@ public class PTKRequestManager: NSObject {
                     pets.append(PTKPet(json: entry))
                 }
                 
-                complete(pets: pets, error: nil)
+                complete(pets, nil)
                 
             } else {
-                complete(pets: nil, error: response.result.error)
+                complete(nil, response.result.error as NSError?)
             }
         }
     }
@@ -77,35 +77,35 @@ public class PTKRequestManager: NSObject {
         "cat"
      ]
      */
-    public func request(specieTypesWithCompletion complete: PTKRequestSpeciesComplete) {
-        Alamofire.request(.GET, PTKGetSpecies).responseJSON { (response: Response<AnyObject, NSError>) in
-            if let species = response.result.value as? [String] where response.result.isSuccess {
+    public func request(specieTypesWithCompletion complete: @escaping PTKRequestSpeciesComplete) {
+        Alamofire.request(PTKGetSpecies).responseJSON { (response) in
+            if let species = response.result.value as? [String], response.result.isSuccess {
                 let types = species.map { PTKSpecieType(type: $0) }
-                complete(species: types, error: response.result.error)
+                complete(types, response.result.error as NSError?)
             } else {
-                complete(species: nil, error: response.result.error)
+                complete(nil, response.result.error as NSError?)
             }
         }
     }
     
-    public func request(imageAtPath aPath: String, completion complete: PTKRequestImageComplete) -> Request? {
+    public func request(imageAtPath aPath: String, completion complete: @escaping PTKRequestImageComplete) -> Request? {
         
-        if let cachedImage = self.imageCache.imageWithIdentifier(aPath) {
-            complete(image: cachedImage, error: nil)
+        if let cachedImage = self.imageCache.image(withIdentifier: aPath) {
+            complete(cachedImage, nil)
             return nil
         } else {
-            return Alamofire.request(.GET, aPath).responseImage { (response: Response<Image, NSError>) in
+            return Alamofire.request(aPath).responseImage { (response) in
                 if response.result.isSuccess {
                     guard let image = response.result.value else {
                         let error = NSError(domain: "com.petadoption.petadoptiontransportkit.requestimage", code: 2, userInfo: ["Data":"response was a success, but data is missing", "url":aPath])
-                        complete(image: nil, error: error)
+                        complete(nil, error)
                         return
                     }
                     
-                    self.imageCache.addImage(image, withIdentifier: aPath)
-                    complete(image: image, error: response.result.error)
+                    self.imageCache.add(image, withIdentifier: aPath)
+                    complete(image, response.result.error as NSError?)
                 } else {
-                    complete(image: nil, error: response.result.error)
+                    complete(nil, response.result.error as NSError?)
                 }
             }
             

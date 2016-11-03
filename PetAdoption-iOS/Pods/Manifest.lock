@@ -1,39 +1,24 @@
 PODS:
-  - Alamofire (3.4.1)
-  - AlamofireImage (2.4.1):
-    - Alamofire (~> 3.3)
-  - MBProgressHUD (0.9.2)
-  - MGBoxKit (8.0.0):
-    - MGEvents
-    - MGMushParser
-  - MGEvents (1.0.3)
-  - MGMushParser (1.2.1)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
-  - Toast-Swift (1.3.0)
-  - XLForm (3.1.1)
+  - Alamofire (4.0.1)
+  - AlamofireImage (3.1.0):
+    - Alamofire (~> 4.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.4)
-  - AlamofireImage (~> 2.0)
-  - MBProgressHUD
-  - MGBoxKit
+  - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.0)
   - SDWebImage
-  - Toast-Swift (~> 1.3.0)
-  - XLForm
+  - Toast-Swift (~> 2.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
-  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MGBoxKit: ec903e5c62d1b11481d2b3b8a7d5c5c6a9355b65
-  MGEvents: 739ea3e582a8df05bd1044500c7fb6d8f7aff5c8
-  MGMushParser: e5f80531a96a086694103592db4cbad3ffd78fa5
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
-  Toast-Swift: 25c3d98db42dc70d9a77b5006ee000e0becb458e
-  XLForm: c9ee7e0f859341279bfd894f9589a9d25c23e4df
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 739c635d3ba16586973b2dd041afa1cedc761bc6
+PODFILE CHECKSUM: bca21d7fab3dd1ec52a7f4c08907e0a99197c33b
 
 COCOAPODS: 1.1.1

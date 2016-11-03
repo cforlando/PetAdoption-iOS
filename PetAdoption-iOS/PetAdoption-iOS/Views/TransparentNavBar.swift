@@ -11,17 +11,17 @@ import UIKit
 @IBDesignable
 class TransparentNavBar: UINavigationBar
 {
-    override func drawRect(rect: CGRect)
+    override func draw(_ rect: CGRect)
     {
-        self.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.setBackgroundImage(UIImage(), for: .default)
         self.shadowImage = UIImage()
-        self.translucent = true
+        self.isTranslucent = true
 
         // Change the font and size of nav bar text
         if let navBarFont = UIFont(name: "OpenSans-Regular", size: 18.0)
         {
             let navBarAttributesDictionary: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.whiteColor(),
+                NSForegroundColorAttributeName: UIColor.white,
                 NSFontAttributeName: navBarFont
             ]
 

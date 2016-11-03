@@ -66,7 +66,7 @@ public struct PTKPet: SpecieDetails, Behavior, Medical, Location, CustomStringCo
     public let hairLength: String
     public let houseTrained: PTKHouseTrained
     public let imageURLPaths: Set<String>
-    public let intakeDate: NSDate?
+    public let intakeDate: Date?
     public let isGoodWithCats: Bool
     public let isGoodWithDogs: Bool
     public let isGoodWithKids: Bool
@@ -100,7 +100,7 @@ public struct PTKPet: SpecieDetails, Behavior, Medical, Location, CustomStringCo
         
         // property initialisation
         self.activityLevel = PTKActivityLevel(rawValue: activity) ?? .Unknown
-        self.age = PTKAgeRange(string: age) ?? .Unknown
+        self.age = PTKAgeRange(string: age) 
         self.color = json[PTKColorKey] as? String ?? "Unknown"
         self.crateTrained = PTKCrateTrained(rawValue: crateTrainedString) ?? .Unknown
         self.declawed = PTKDeclawed(rawValue: declawed) ?? .Unknown
@@ -109,7 +109,7 @@ public struct PTKPet: SpecieDetails, Behavior, Medical, Location, CustomStringCo
         self.hairLength = json[PTKHairLengthKey] as? String ?? ""
         self.houseTrained = PTKHouseTrained(rawValue: houseTrainedString) ?? .Unknown
         self.imageURLPaths = Set<String>(imageURLPaths)
-        self.intakeDate = NSDateFormatter.ISO8601Formatter().dateFromString(date)
+        self.intakeDate = DateFormatter.ISO8601Formatter().date(from: date)
         self.isGoodWithCats = json[PTKGoodWithCatsKey] as? Bool ?? false
         self.isGoodWithDogs = json[PTKGoodWithDogsKey] as? Bool ?? false
         self.isGoodWithKids = json[PTKGoodWithKidsKey] as? Bool ?? false
@@ -126,7 +126,7 @@ public struct PTKPet: SpecieDetails, Behavior, Medical, Location, CustomStringCo
         self.type = json[PTKSpeciesKey] as? String ?? "Unknown"
         self.worms = PTKHeartwormTestStatus(string: wormStatus)
         
-        if let latitude = latitudes?.first, longitude = longitudes?.first {
+        if let latitude = latitudes?.first, let longitude = longitudes?.first {
             self.locationCoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         } else {
             self.locationCoordinates = nil

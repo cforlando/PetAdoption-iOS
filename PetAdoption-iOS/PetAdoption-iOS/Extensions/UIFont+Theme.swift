@@ -9,12 +9,12 @@
 import UIKit
 
 extension UIFont {
-	static func themeLightFontOfSize(size: CGFloat) -> UIFont {
+	static func themeLightFont(ofSize size: CGFloat) -> UIFont {
 		return UIFont(name: "OpenSans-Light", size: size)!;
 
 	}
 	
-	static func themeNormalFontOfSize(size: CGFloat) -> UIFont {
+	static func themeNormalFont(ofSize size: CGFloat) -> UIFont {
 		return UIFont(name: "OpenSans", size: size)!;
 		}
 }

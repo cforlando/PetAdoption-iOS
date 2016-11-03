@@ -15,6 +15,6 @@ extension ReusableView where Self: UIView
 {
     static var reuseIdentifier: String
     {
-        return String(self)
+        return String(describing: self)
     }
 }

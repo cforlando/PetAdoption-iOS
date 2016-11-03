@@ -116,9 +116,9 @@ class PetListingDetailVC: UITableViewController
         var intakeDateString = ""
         if let intakeDate = pet.intakeDate
         {
-            let formatter = NSDateFormatter()
-            formatter.dateStyle = .LongStyle
-            intakeDateString = formatter.stringFromDate(intakeDate)
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            intakeDateString = formatter.string(from: intakeDate)
         }
         else
         {
@@ -153,30 +153,30 @@ class PetListingDetailVC: UITableViewController
 
         self.imageContainerViewHeightConstraint.constant = self.imageContainerScrollView.frame.width * 0.6
 
-        let fullWidth : CGFloat = CGFloat(pet.imageURLPaths.count ?? 0) * self.imageContainerScrollView.frame.width
+        let fullWidth : CGFloat = CGFloat(pet.imageURLPaths.count) * self.imageContainerScrollView.frame.width
 
-        for (index, petImageUrl) in pet.imageURLPaths.enumerate()
+        for (index, petImageUrl) in pet.imageURLPaths.enumerated()
         {
             let xOffset = self.imageContainerScrollView.frame.width * CGFloat(index)
 
-            let currentFrameOfScreen = CGRectMake(xOffset, 0, self.imageContainerScrollView.frame.width, self.imageContainerScrollView.frame.height)
-            if let petImageCell = UINib(nibName: ImageGalleryView.nibName, bundle: nil).instantiateWithOwner(self, options: nil)[0] as? ImageGalleryView
+            let currentFrameOfScreen = CGRect(x: xOffset, y: 0, width: self.imageContainerScrollView.frame.width, height: self.imageContainerScrollView.frame.height)
+            if let petImageCell = UINib(nibName: ImageGalleryView.nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as? ImageGalleryView
             {
                 petImageCell.frame = currentFrameOfScreen
                 petImageCell.clipsToBounds = true
-                petImageCell.updateWithPet(petImageUrl)
+                petImageCell.updateWithPet(imageUrl: petImageUrl)
                 self.imageContainerScrollView.addSubview(petImageCell)
             }
         }
 
-        self.imageContainerScrollView.contentSize = CGSizeMake(fullWidth, self.imageContainerScrollView.frame.height)
+        self.imageContainerScrollView.contentSize = CGSize(width: fullWidth, height: self.imageContainerScrollView.frame.height)
     }
 
     ////////////////////////////////////////////////////////////
     // MARK: - UIScrollViewDelegate
     ////////////////////////////////////////////////////////////
 
-    override func scrollViewDidEndDecelerating(scrollView: UIScrollView)
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
     {
         if (scrollView == self.imageContainerScrollView)
         {
@@ -195,14 +195,14 @@ class PetListingDetailVC: UITableViewController
     // MARK: - UITableViewDelegate
     ////////////////////////////////////////////////////////////
 
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return self.estimatedRowHeight
     }
 
     ////////////////////////////////////////////////////////////
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return UITableViewAutomaticDimension
     }
@@ -211,14 +211,14 @@ class PetListingDetailVC: UITableViewController
     // MARK: - UITableViewDataSource
     ////////////////////////////////////////////////////////////
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    override func numberOfSections(in tableView: UITableView) -> Int
     {
         return self.dataSource.count
     }
 
     ////////////////////////////////////////////////////////////
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         switch section
         {
@@ -237,7 +237,7 @@ class PetListingDetailVC: UITableViewController
 
     ////////////////////////////////////////////////////////////
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let sectionNumber = indexPath.section
         let rowNumber = indexPath.row
@@ -247,15 +247,15 @@ class PetListingDetailVC: UITableViewController
         switch (sectionNumber)
         {
             case Sections.description.rawValue:
-                if let descriptionCell = tableView.dequeueReusableCellWithIdentifier(DescriptionCell.reuseIdentifier) as? DescriptionCell
+                if let descriptionCell = tableView.dequeueReusableCell(withIdentifier: DescriptionCell.reuseIdentifier) as? DescriptionCell
                 {
                     descriptionCell.descriptionLabel.text = item.value ?? ""
                     return descriptionCell
                 }
             default:
-                if let normalCell = tableView.dequeueReusableCellWithIdentifier("NormalCell")
+                if let normalCell = tableView.dequeueReusableCell(withIdentifier: "NormalCell")
                 {
-                    normalCell.textLabel?.text = item.name ?? ""
+                    normalCell.textLabel?.text = item.name 
                     normalCell.detailTextLabel?.text = item.value ?? ""
                     return normalCell
                 }
@@ -266,7 +266,7 @@ class PetListingDetailVC: UITableViewController
 
     ////////////////////////////////////////////////////////////
 
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         switch (section)
         {

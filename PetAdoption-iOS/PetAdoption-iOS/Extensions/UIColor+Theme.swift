@@ -14,11 +14,11 @@ extension UIColor {
 	}
 	
 	static func themeTintColor() -> UIColor {
-		return UIColor.whiteColor();
+		return UIColor.white;
 	}
 	
 	static func themeNavBarTitleColor() -> UIColor {
-		return UIColor.whiteColor();
+		return UIColor.white;
 	}
 	
 }
