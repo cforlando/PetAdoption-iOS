@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4200BBCD1D6BCFD1003C00A7 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4200BBCC1D6BCFD1003C00A7 /* AlamofireImage.framework */; };
 		42070E091D7470A100B02BA2 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42070E081D7470A100B02BA2 /* DescriptionCell.swift */; };
 		420FD5761D6F255A00E5DD89 /* PetListingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FD5751D6F255A00E5DD89 /* PetListingDetailVC.swift */; };
-		4226D9D21D8439C100B0DAA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4226D9D11D8439C100B0DAA7 /* Alamofire.framework */; };
 		428A90A91D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428A90A81D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift */; };
 		42ACC1AD1D68A8A3001C7C83 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ACC1AC1D68A8A3001C7C83 /* ReusableView.swift */; };
 		42BC91261D67C7DA00B3B8FD /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BC91251D67C7DA00B3B8FD /* PetCell.swift */; };
@@ -239,8 +237,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4226D9D21D8439C100B0DAA7 /* Alamofire.framework in Frameworks */,
-				4200BBCD1D6BCFD1003C00A7 /* AlamofireImage.framework in Frameworks */,
 				D4F2A7781D6A2CA500E92647 /* MapKit.framework in Frameworks */,
 				97C5226AC9AFB7547023F371 /* Pods_PetAdoptionTransportKit.framework in Frameworks */,
 			);
@@ -1156,10 +1152,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PetAdoptionTransportKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -1187,10 +1180,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PetAdoptionTransportKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
