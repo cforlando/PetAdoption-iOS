@@ -21,8 +21,8 @@ class TransparentNavBar: UINavigationBar
         if let navBarFont = UIFont(name: "OpenSans-Regular", size: 18.0)
         {
             let navBarAttributesDictionary: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.white,
-                NSFontAttributeName: navBarFont
+                NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+                NSAttributedStringKey.font.rawValue: navBarFont
             ]
 
             self.titleTextAttributes = navBarAttributesDictionary

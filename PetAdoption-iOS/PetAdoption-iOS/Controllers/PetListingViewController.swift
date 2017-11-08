@@ -120,7 +120,7 @@ class PetListingViewController: UIViewController
         })
     }
     
-    func refreshTriggered() {
+    @objc func refreshTriggered() {
         loadPets()
     }
 }
