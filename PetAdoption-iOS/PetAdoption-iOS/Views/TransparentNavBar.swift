@@ -20,9 +20,9 @@ class TransparentNavBar: UINavigationBar
         // Change the font and size of nav bar text
         if let navBarFont = UIFont(name: "OpenSans-Regular", size: 18.0)
         {
-            let navBarAttributesDictionary: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.white,
-                NSFontAttributeName: navBarFont
+            let navBarAttributesDictionary: [NSAttributedStringKey: AnyObject]? = [
+                NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+                NSAttributedStringKey.font.rawValue: navBarFont
             ]
 
             self.titleTextAttributes = navBarAttributesDictionary
