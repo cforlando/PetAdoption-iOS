@@ -8,6 +8,8 @@
 
 import UIKit
 import PetAdoptionTransportKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		self.applyDefaultAppStyles()
+        Fabric.with([Crashlytics.self])
 		
 		return true
 	}
@@ -49,15 +52,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		navBar.barTintColor = UIColor.themePrimaryColor()
 		navBar.tintColor = UIColor.themeTintColor()
 		navBar.titleTextAttributes = [
-			NSForegroundColorAttributeName : UIColor.themeNavBarTitleColor(),
-			NSFontAttributeName: UIFont.themeNormalFont(ofSize: 17.0)]
+			NSAttributedStringKey.foregroundColor : UIColor.themeNavBarTitleColor(),
+			NSAttributedStringKey.font: UIFont.themeNormalFont(ofSize: 17.0)]
 		
 		navBar.barStyle = .black
 		
 		UIButton.appearance().tintColor = UIColor.themeTintColor()
 		UIBarButtonItem.appearance().tintColor = UIColor.themeTintColor()
 		UITabBar.appearance().tintColor = UIColor.themePrimaryColor()
-        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:UIFont.themeNormalFont(ofSize: 10.0)], for: UIControlState.normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font:UIFont.themeNormalFont(ofSize: 10.0)], for: UIControlState.normal)
 	}
 }
 

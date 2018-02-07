@@ -15,6 +15,14 @@
 		42C2522A1C8881DE00B2BE6D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C252291C8881DE00B2BE6D /* BackgroundView.swift */; };
 		42C2522C1C8899BD00B2BE6D /* TransparentNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2522B1C8899BD00B2BE6D /* TransparentNavBar.swift */; };
 		90ADBC339006BDDE435B71C4 /* Pods_PetAdoption_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCC61B47493AD9AFC8BA810 /* Pods_PetAdoption_iOS.framework */; };
+		94381A3D200594600002A649 /* PFPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A3C200594600002A649 /* PFPet.swift */; };
+		94381A4520059A7D0002A649 /* PFAnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A4420059A7D0002A649 /* PFAnimalType.swift */; };
+		94381A4720059AD70002A649 /* PFPetOptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A4620059AD70002A649 /* PFPetOptionType.swift */; };
+		94381A4920059B260002A649 /* PFPetSizeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A4820059B260002A649 /* PFPetSizeType.swift */; };
+		94381A4B20059B520002A649 /* PFPetAgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A4A20059B520002A649 /* PFPetAgeType.swift */; };
+		94586CAB2007AE57002B6084 /* PFPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAA2007AE57002B6084 /* PFPhoto.swift */; };
+		94586CAD2007AF6E002B6084 /* PFContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAC2007AF6E002B6084 /* PFContact.swift */; };
+		94586CAF200822BF002B6084 /* PFGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAE200822BF002B6084 /* PFGender.swift */; };
 		97C5226AC9AFB7547023F371 /* Pods_PetAdoptionTransportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB921F8A0328C363307C66E /* Pods_PetAdoptionTransportKit.framework */; };
 		D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */; };
 		D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013BFA61C717935007C8808 /* ImageGalleryView.swift */; };
@@ -139,6 +147,14 @@
 		5FCC61B47493AD9AFC8BA810 /* Pods_PetAdoption_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetAdoption_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAD5FEFC48F2F2A23F42E1D /* Pods-PetAdoption-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		925933A48637FAFF5BE6240D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94381A3C200594600002A649 /* PFPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPet.swift; sourceTree = "<group>"; };
+		94381A4420059A7D0002A649 /* PFAnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFAnimalType.swift; sourceTree = "<group>"; };
+		94381A4620059AD70002A649 /* PFPetOptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPetOptionType.swift; sourceTree = "<group>"; };
+		94381A4820059B260002A649 /* PFPetSizeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPetSizeType.swift; sourceTree = "<group>"; };
+		94381A4A20059B520002A649 /* PFPetAgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPetAgeType.swift; sourceTree = "<group>"; };
+		94586CAA2007AE57002B6084 /* PFPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPhoto.swift; sourceTree = "<group>"; };
+		94586CAC2007AF6E002B6084 /* PFContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFContact.swift; sourceTree = "<group>"; };
+		94586CAE200822BF002B6084 /* PFGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFGender.swift; sourceTree = "<group>"; };
 		AB77A283D0B7D820C44F8CAD /* Pods-PetAdoption-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CBB921F8A0328C363307C66E /* Pods_PetAdoptionTransportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetAdoptionTransportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageGalleryView.xib; path = Nibs/ImageGalleryView.xib; sourceTree = "<group>"; };
@@ -314,6 +330,37 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		94381A3B20058E100002A649 /* PetFinderAPI */ = {
+			isa = PBXGroup;
+			children = (
+				94381A4320059A710002A649 /* Structs */,
+				94381A4220059A660002A649 /* Enums */,
+			);
+			name = PetFinderAPI;
+			sourceTree = "<group>";
+		};
+		94381A4220059A660002A649 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				94381A4420059A7D0002A649 /* PFAnimalType.swift */,
+				94381A4620059AD70002A649 /* PFPetOptionType.swift */,
+				94381A4820059B260002A649 /* PFPetSizeType.swift */,
+				94381A4A20059B520002A649 /* PFPetAgeType.swift */,
+				94586CAE200822BF002B6084 /* PFGender.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		94381A4320059A710002A649 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				94381A3C200594600002A649 /* PFPet.swift */,
+				94586CAA2007AE57002B6084 /* PFPhoto.swift */,
+				94586CAC2007AF6E002B6084 /* PFContact.swift */,
+			);
+			name = Structs;
+			sourceTree = "<group>";
+		};
 		B244AA826A3F48D774E89670 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +499,7 @@
 		D4F2A7301D6A081F00E92647 /* PetAdoptionTransportKit */ = {
 			isa = PBXGroup;
 			children = (
+				94381A3B20058E100002A649 /* PetFinderAPI */,
 				D4F2A7311D6A081F00E92647 /* PetAdoptionTransportKit.h */,
 				D4F2A7881D6A95E200E92647 /* PTKRequestManager.swift */,
 				D4F2A7621D6A1F8300E92647 /* Enums */,
@@ -556,6 +604,7 @@
 				D4F2A74B1D6A081F00E92647 /* Embed Frameworks */,
 				54807806C786D58271CBD0A4 /* [CP] Embed Pods Frameworks */,
 				049FF039C6FED370024547AD /* [CP] Copy Pods Resources */,
+				94133DA2202932D600D97D89 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -649,34 +698,34 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Code For Orlando";
 				TargetAttributes = {
 					D0950AC31C618C2F002E198C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 4X359D924E;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0910;
 					};
 					D0950AD71C618C2F002E198C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 4X359D924E;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0910;
 						TestTargetID = D0950AC31C618C2F002E198C;
 					};
 					D0950AE21C618C2F002E198C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 4X359D924E;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0910;
 						TestTargetID = D0950AC31C618C2F002E198C;
 					};
 					D4F2A72E1D6A081F00E92647 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0910;
 					};
 					D4F2A7371D6A081F00E92647 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 4X359D924E;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0910;
 						TestTargetID = D0950AC31C618C2F002E198C;
 					};
 				};
@@ -803,15 +852,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -835,6 +882,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		94133DA2202932D600D97D89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ec93e378b8f26aacc8cb5cdfea04174855bb7a9f 5ce3add3fd74d7153b6829756033ab38f204af34f5b83666d90b4b4354446185";
 		};
 		A1E5A57010B48C954549AC4E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -897,26 +957,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94381A4920059B260002A649 /* PFPetSizeType.swift in Sources */,
 				D4F2A75D1D6A1EDC00E92647 /* PTKCrateTrained.swift in Sources */,
 				D4F2A7861D6A811600E92647 /* DateExtension.swift in Sources */,
 				D4F2A7641D6A1FEF00E92647 /* Behavior.swift in Sources */,
+				94586CAF200822BF002B6084 /* PFGender.swift in Sources */,
 				D4F2A7591D6A1EAB00E92647 /* PTKMedicalShotStatus.swift in Sources */,
 				D4F2A7721D6A22EA00E92647 /* PTKDeclawed.swift in Sources */,
 				D4F2A7761D6A2C3700E92647 /* Location.swift in Sources */,
 				D4F2A7551D6A1E6000E92647 /* PTKHouseTrained.swift in Sources */,
+				94381A3D200594600002A649 /* PFPet.swift in Sources */,
+				94381A4720059AD70002A649 /* PFPetOptionType.swift in Sources */,
 				D4F2A7531D6A1E3C00E92647 /* PTKAgeRange.swift in Sources */,
 				D4F2A76D1D6A20D200E92647 /* PTKPet.swift in Sources */,
 				D4F2A7891D6A95E200E92647 /* PTKRequestManager.swift in Sources */,
+				94381A4520059A7D0002A649 /* PFAnimalType.swift in Sources */,
 				D4F2A7701D6A21B800E92647 /* PTKActivityLevel.swift in Sources */,
 				D4F2A75B1D6A1EC500E92647 /* PTKMicrochipStatus.swift in Sources */,
 				D4F2A7661D6A200300E92647 /* Medical.swift in Sources */,
 				D4F2A75F1D6A1EF100E92647 /* PTKGender.swift in Sources */,
+				94586CAB2007AE57002B6084 /* PFPhoto.swift in Sources */,
 				D4F2A77A1D6A2CC000E92647 /* PTKPetShelter.swift in Sources */,
 				D4F2A7611D6A1F3B00E92647 /* PTKCreateTrainedStatus.swift in Sources */,
 				D4F2A7681D6A203E00E92647 /* SpecieType.swift in Sources */,
 				D4F2A76B1D6A20B800E92647 /* PTKSpecieType.swift in Sources */,
 				D4F2A7571D6A1E9200E92647 /* PTKHeartwormTestStatus.swift in Sources */,
+				94586CAD2007AF6E002B6084 /* PFContact.swift in Sources */,
 				D4F2A7841D6A4D6100E92647 /* PTKMicrochip.swift in Sources */,
+				94381A4B20059B520002A649 /* PFPetAgeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -986,14 +1054,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1033,14 +1107,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1072,6 +1152,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4X359D924E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1081,7 +1162,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1091,6 +1173,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4X359D924E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1100,7 +1183,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1113,7 +1197,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetAdoption-iOS.app/PetAdoption-iOS";
 			};
 			name = Debug;
@@ -1127,7 +1212,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetAdoption-iOS.app/PetAdoption-iOS";
 			};
 			name = Release;
@@ -1140,7 +1226,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "PetAdoption-iOS";
 				USES_XCTRUNNER = YES;
 			};
@@ -1154,7 +1241,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "PetAdoption-iOS";
 				USES_XCTRUNNER = YES;
 			};
@@ -1182,7 +1270,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1209,7 +1298,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1225,7 +1315,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetAdoption-iOS.app/PetAdoption-iOS";
 			};
 			name = Debug;
@@ -1240,7 +1331,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeForOrlando.PetAdoptionTransportKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PetAdoption-iOS.app/PetAdoption-iOS";
 			};
 			name = Release;
