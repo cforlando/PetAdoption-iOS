@@ -25,6 +25,11 @@ John Li (johnliglobal@gmail.com) (slack: johnleeroy)
 
 If you do not have CocoaPods installed, you can do so by opening Terminal and entering: `sudo gem install cocoapods`.  Once you have done that, navigate to the project directory and run `pod install`.  Make sure you open the .xcworkspace for the project.
 
+### IMPORTANT NOTE TO CONTRIBUTORS
+v1.0 of the Pet Adoption app uses the PetFinder API. As such, an API key is required.  This project does not include an API key by default, so you **will** need to get one.  You can get a free developers API key for PetFinder at https://www.petfinder.com/developers/api-key.  You will need to create a free account in order to get an API key.
+
+Once you have your API key, you will need to create an `apikey.plist` file.  For your convenience, there is a file called `apikey.plist.example` provided.  Simply create a copy of this file, rename it to `apikey.plist`, open it, and enter your API key into the appropriate place.  `apikey.plist` is include in the `.gitignore` file, so you don't need to worry about removing this file before submitting pull requests but please make sure that you don't remove the `apikey.plist.example` file in your PRs.
+
 ## Want to contribute?
 ------
 If you'd like to contribute, check out our [Contributing](CONTRIBUTING.md) page for more details.

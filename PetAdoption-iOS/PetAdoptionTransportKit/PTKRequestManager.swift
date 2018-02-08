@@ -27,8 +27,6 @@ public typealias PTKRequestImageComplete = (_ image: UIImage?, _ error: NSError?
 private let PFBaseURL = "http://api.petfinder.com/"
 private let PFPetFind = "\(PFBaseURL)pet.find"
 
-private let API_KEY = "ca74980f2ab686e10a43095a87d24d45"
-
 public typealias PFRequestPetsComplete = (_ pets: [PFPet]?, _ error: Error?) -> Void
 
 public class PTKRequestManager: NSObject {
@@ -82,7 +80,7 @@ public class PTKRequestManager: NSObject {
     
     public func request(PetFinderPetsFrom location: String, withCompletion completion: @escaping PFRequestPetsComplete) {
         let parameters = [
-            "key" : API_KEY,
+            "key" : getApiKey(),
             "format" : "json",
             "location" : location
         ]
@@ -147,5 +145,23 @@ public class PTKRequestManager: NSObject {
             }
             
         }
+    }
+    
+    private func getApiKey() -> String {
+        guard let path = Bundle.main.path(forResource: "apikey", ofType: "plist") else {
+            fatalError("You seem to be missing an apikey.plist file.  This is required to store your API key for PetFinder.  You may use apikey.plist.example as a starting point to creating this file.")
+        }
+        
+        if let plist = NSDictionary(contentsOfFile: path) {
+            if let apikey = plist["petfinder_api_key"] as? String {
+                if apikey.isEmpty {
+                    print("The API key appears to be missing from your apikey.plist file.  Please make sure there is a valid API key there.")
+                }
+                
+                return apikey
+            }
+        }
+        
+        fatalError("There does not appear to be a valid PetFinder API key.")
     }
 }
