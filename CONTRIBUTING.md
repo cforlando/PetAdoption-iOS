@@ -8,7 +8,7 @@ We encourage anyone who is interested in contributing to Pet Adoption to do so! 
 Our repository has two main branches: `master` and `develop`.  `master` is reserved for releases and, as such, only administrators are allowed to merge into master.  All current work is done off the `develop` branch.
 
 ### Code for Orlando Members
-If you are currently a member of Code for Orlando (ie. you have access to the Code for Orlando Github repo), we ask that you create a branch off of `develop`.  You can do this by using the command `git checkout -b [name-of-branch]`. (Make sure you do this from `develop`).  You can name the branch anything you'd like, but we encourage a GitFlow style branch name: `feature/[what-did-you-work-on]`.  When you are ready to commit, push your changes using the command `git push origin [name-of-branch]` and then submit a pull request.  If you are working on a specific issue (which you should be! :P ), reference the issue number in the pull request.
+If you are currently a member of Code for Orlando (ie. you have access to the Code for Orlando Github repo), we ask that you create a branch off of `develop`.  You can do this by using the command `git checkout -b [name-of-branch]`. You can name the branch anything you'd like, but we encourage a GitFlow style branch name: `feature/[what-did-you-work-on]`.  When you are ready to commit, push your changes using the command `git push origin [name-of-branch]` and then submit a pull request.  If you are working on a specific issue (which you should be! :P ), reference the issue number in the pull request.
 
 By following these guidelines, we will be able to perform code reviews on all commits before merging with the `develop` branch!
 
