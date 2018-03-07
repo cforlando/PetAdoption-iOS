@@ -57,6 +57,10 @@ class PetListingViewController: UIViewController
         {
             loadPets()
         }
+        else
+        {
+            presentZipCodeAlertController()
+        }
     }
 
     ////////////////////////////////////////////////////////////
