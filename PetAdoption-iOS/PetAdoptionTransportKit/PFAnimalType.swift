@@ -18,6 +18,7 @@ public enum PFAnimalType: String, CustomStringConvertible
     case horse = "Horse"
     case rabbit = "Rabbit"
     case reptile = "Reptile"
+    case unknown
 
     public var description: String
     {
@@ -31,6 +32,7 @@ public enum PFAnimalType: String, CustomStringConvertible
             case .horse: return "Horse"
             case .rabbit: return "Rabbit"
             case .reptile: return "Reptile"
+            case .unknown: return "Unknown"
         }
     }
 }

@@ -12,6 +12,7 @@ public enum PFGender: String, CustomStringConvertible
 {
     case male = "M"
     case female = "F"
+    case unknown
     
     public var description: String
     {
@@ -19,6 +20,7 @@ public enum PFGender: String, CustomStringConvertible
         {
             case .male: return "Male"
             case .female: return "Female"
+            case .unknown: return "Unknown"
         }
     }
 }
