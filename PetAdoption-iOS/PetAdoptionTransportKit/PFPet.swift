@@ -31,10 +31,10 @@ public struct PFPet
     init(json: JSON)
     {
         self.name = json["name"]["$t"].string ?? ""
-        self.animalType = PFAnimalType(rawValue: json["animal"]["$t"].stringValue)!
-        self.age = PFPetAgeType(rawValue: json["age"]["$t"].stringValue)!
-        self.sex = PFGender(rawValue: json["sex"]["$t"].stringValue)!
-        self.size = PFPetSizeType(rawValue: json["size"]["$t"].stringValue)!
+        self.animalType = PFAnimalType(rawValue: json["animal"]["$t"].stringValue) ?? .unknown
+        self.age = PFPetAgeType(rawValue: json["age"]["$t"].stringValue) ?? .unknown
+        self.sex = PFGender(rawValue: json["sex"]["$t"].stringValue) ?? .unknown
+        self.size = PFPetSizeType(rawValue: json["size"]["$t"].stringValue) ?? .unknown
         self.description = json["description"]["$t"].string ?? ""
         self.status = json["status"]["$t"].string ?? ""
         self.contact = PFContact(json: json["contact"])
@@ -89,7 +89,7 @@ public struct PFPet
         {
             self.breeds.append(breed)
         }
-        else if let breeds = json["breed"]["breed"].array
+        else if let breeds = json["breeds"]["breed"].array
         {
             for breedJson in breeds
             {

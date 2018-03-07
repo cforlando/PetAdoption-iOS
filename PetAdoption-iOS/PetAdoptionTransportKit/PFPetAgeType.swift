@@ -14,4 +14,5 @@ public enum PFPetAgeType: String
     case young = "Young"
     case adult = "Adult"
     case senior = "Senior"
+    case unknown
 }
