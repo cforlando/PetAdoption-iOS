@@ -14,6 +14,7 @@ public enum PFPetSizeType: String, CustomStringConvertible
     case medium = "M"
     case large = "L"
     case xlarge = "XL"
+    case unknown
     
     public var description: String
     {
@@ -23,6 +24,7 @@ public enum PFPetSizeType: String, CustomStringConvertible
             case .medium: return "Medium"
             case .large: return "Large"
             case .xlarge: return "Extra Large"
+            case .unknown: return "Unknown"
         }
     }
 }
