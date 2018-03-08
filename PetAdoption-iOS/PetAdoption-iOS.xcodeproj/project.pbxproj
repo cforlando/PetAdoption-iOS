@@ -894,7 +894,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" ec93e378b8f26aacc8cb5cdfea04174855bb7a9f 5ce3add3fd74d7153b6829756033ab38f204af34f5b83666d90b4b4354446185";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ec01996362ce555e215240573ed73fade4f9a26d b4b3635b8356fd3f8d7a989c502e26b557fa06a3d3e3abd9306ae88d1834538e";
 		};
 		A1E5A57010B48C954549AC4E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1160,7 +1160,7 @@
 				);
 				INFOPLIST_FILE = "PetAdoption-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cfo.petadoption;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -1181,7 +1181,7 @@
 				);
 				INFOPLIST_FILE = "PetAdoption-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.codefororlando.PetAdoption-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cfo.petadoption;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
