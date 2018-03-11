@@ -23,6 +23,8 @@
 		94586CAB2007AE57002B6084 /* PFPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAA2007AE57002B6084 /* PFPhoto.swift */; };
 		94586CAD2007AF6E002B6084 /* PFContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAC2007AF6E002B6084 /* PFContact.swift */; };
 		94586CAF200822BF002B6084 /* PFGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAE200822BF002B6084 /* PFGender.swift */; };
+		94EA0483202BCF5B00AFCF55 /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94EA0482202BCF5B00AFCF55 /* apikey.plist */; };
+		94EA0484202BCF5B00AFCF55 /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94EA0482202BCF5B00AFCF55 /* apikey.plist */; };
 		97C5226AC9AFB7547023F371 /* Pods_PetAdoptionTransportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB921F8A0328C363307C66E /* Pods_PetAdoptionTransportKit.framework */; };
 		D013BFA51C716B7E007C8808 /* ImageGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */; };
 		D013BFA71C717935007C8808 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D013BFA61C717935007C8808 /* ImageGalleryView.swift */; };
@@ -155,6 +157,7 @@
 		94586CAA2007AE57002B6084 /* PFPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPhoto.swift; sourceTree = "<group>"; };
 		94586CAC2007AF6E002B6084 /* PFContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFContact.swift; sourceTree = "<group>"; };
 		94586CAE200822BF002B6084 /* PFGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFGender.swift; sourceTree = "<group>"; };
+		94EA0482202BCF5B00AFCF55 /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
 		AB77A283D0B7D820C44F8CAD /* Pods-PetAdoption-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CBB921F8A0328C363307C66E /* Pods_PetAdoptionTransportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetAdoptionTransportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageGalleryView.xib; path = Nibs/ImageGalleryView.xib; sourceTree = "<group>"; };
@@ -421,6 +424,7 @@
 				D0950ACE1C618C2F002E198C /* Assets.xcassets */,
 				D0950AD01C618C2F002E198C /* LaunchScreen.storyboard */,
 				D0950AD31C618C2F002E198C /* Info.plist */,
+				94EA0482202BCF5B00AFCF55 /* apikey.plist */,
 			);
 			path = "PetAdoption-iOS";
 			sourceTree = "<group>";
@@ -766,6 +770,7 @@
 				D0950AF61C618CE4002E198C /* Podfile in Resources */,
 				D0950ACD1C618C2F002E198C /* Main.storyboard in Resources */,
 				D04088621C94BEE000A53389 /* OpenSans-LightItalic.ttf in Resources */,
+				94EA0483202BCF5B00AFCF55 /* apikey.plist in Resources */,
 				D040885D1C94BEE000A53389 /* OpenSans-BoldItalic.ttf in Resources */,
 				D04088641C94BEE000A53389 /* OpenSans-Semibold.ttf in Resources */,
 				D04088611C94BEE000A53389 /* OpenSans-Light.ttf in Resources */,
@@ -797,6 +802,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EA0484202BCF5B00AFCF55 /* apikey.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
