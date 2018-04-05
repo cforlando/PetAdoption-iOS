@@ -127,6 +127,16 @@ class PetListingViewController: UIViewController
     ////////////////////////////////////////////////////////////
     // MARK: - Helper Functions
     ////////////////////////////////////////////////////////////
+    func zipCodeIsValid(str:String) -> Bool {
+        let zipRegEx = "^\\d{5}([ \\-]\\d{4})?"
+        let zipCodeTest = NSPredicate(format:"SELF MATCHES %@", zipRegEx)
+        return zipCodeTest.evaluate(with: str)
+    }
+    
+    weak var actionToEnable : UIAlertAction?
+    func textChanged(_ sender:UITextField) {
+        self.actionToEnable?.isEnabled = zipCodeIsValid(str: sender.text!)
+    }
     
     func presentZipCodeAlertController()
     {
@@ -144,15 +154,22 @@ class PetListingViewController: UIViewController
             self.loadPets()
         }
         
+        
+        
         alertController.addTextField
             { textField in
                 textField.placeholder = "Zip Code"
                 textField.keyboardType = .numberPad
+                textField.addTarget(self, action: #selector(self.textChanged(_:)), for: .editingChanged)
         }
         
         alertController.addAction(cancelAction)
         alertController.addAction(zipCodeAction)
+        self.actionToEnable = zipCodeAction
+        zipCodeAction.isEnabled = false
         self.present(alertController, animated: true, completion: nil)
+        
+        
     }
     
     ////////////////////////////////////////////////////////////
