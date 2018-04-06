@@ -26,8 +26,9 @@ public typealias PTKRequestImageComplete = (_ image: UIImage?, _ error: NSError?
 // PetFinder API
 private let PFBaseURL = "http://api.petfinder.com/"
 private let PFPetFind = "\(PFBaseURL)pet.find"
+private let defaultCount = 50
 
-public typealias PFRequestPetsComplete = (_ pets: [PFPet]?, _ error: Error?) -> Void
+public typealias PFRequestPetsComplete = (_ pets: [PFPet]?, _ lastOffset: String?, _ error: Error?) -> Void
 
 public class PTKRequestManager: NSObject {
 
@@ -78,29 +79,39 @@ public class PTKRequestManager: NSObject {
         }
     }
     
-    public func request(PetFinderPetsFrom location: String, withCompletion completion: @escaping PFRequestPetsComplete) {
-        let parameters = [
+    public func request(PetFinderPetsFrom location: String, offset: String?, withCompletion completion: @escaping PFRequestPetsComplete) {
+        var parameters: [String: Any] =
+        [
             "key" : getApiKey(),
             "format" : "json",
-            "location" : location
+            "location" : location,
+            "count" : defaultCount
         ]
+        
+        if let offset = offset
+        {
+            parameters["offset"] = offset
+        }
         
         Alamofire.request(PFPetFind, method: .get, parameters: parameters).responseJSON { response in
             switch response.result
             {
-            case .success:
-                if let value = response.result.value {
-                    var pets = [PFPet]()
-                    let fullResponse = JSON(value)
-                    for (_, subJson) in fullResponse["petfinder"]["pets"]["pet"] {
-                        let pet = PFPet(json: subJson)
-                        pets.append(pet)
+                case .success:
+                    if let value = response.result.value
+                    {
+                        var pets = [PFPet]()
+                        let fullResponse = JSON(value)
+                        let lastOffset = fullResponse["petfinder"]["lastOffset"]["$t"].stringValue
+                        for (_, subJson) in fullResponse["petfinder"]["pets"]["pet"]
+                        {
+                            let pet = PFPet(json: subJson)
+                            pets.append(pet)
+                        }
+                        completion(pets, lastOffset, nil)
                     }
-                    completion(pets, nil)
+                case .failure(let error):
+                    completion(nil, nil, error)
                 }
-            case .failure(let error):
-                completion(nil, error)
-            }
         }
     }
     

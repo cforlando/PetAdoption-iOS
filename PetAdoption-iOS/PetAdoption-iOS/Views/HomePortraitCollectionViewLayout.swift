@@ -50,5 +50,6 @@ class HomePortraitCollectionViewLayout: UICollectionViewFlowLayout
 		self.minimumInteritemSpacing = 0
 		self.minimumLineSpacing = 0
 		self.scrollDirection = .vertical
+        self.footerReferenceSize = CGSize(width: 0, height: 60)
 	}
 }
