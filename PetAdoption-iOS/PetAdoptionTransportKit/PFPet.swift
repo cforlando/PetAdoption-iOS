@@ -55,7 +55,7 @@ public struct PFPet
                     case .noKids: self.isGoodWithKids = false
                     case .noDogs: self.isGoodWithDogs = false
                     case .noCats: self.isGoodWithCats = false
-                    default: print("")
+                    default: break
                 }
             }
         }
@@ -75,7 +75,7 @@ public struct PFPet
                             case .noKids: self.isGoodWithKids = false
                             case .noDogs: self.isGoodWithDogs = false
                             case .noCats: self.isGoodWithCats = false
-                            default: print("")
+                            default: break
                         }
                     }
 

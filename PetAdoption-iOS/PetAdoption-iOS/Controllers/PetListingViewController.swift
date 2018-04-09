@@ -10,8 +10,6 @@ import UIKit
 import PetAdoptionTransportKit
 import AlamofireImage
 
-let ZIPCODE_KEY = "ZIPCODE"
-
 class PetListingViewController: UIViewController
 {
     ////////////////////////////////////////////////////////////
@@ -33,8 +31,11 @@ class PetListingViewController: UIViewController
     var petData = [PFPet]()
     var viewControllerTitle = "Home"
     let requestManager = PTKRequestManager.sharedInstance()
+    var lastOffset: String?
 
     let refreshControl = UIRefreshControl()
+    var isLastPage = false
+    @objc weak var actionToEnable : UIAlertAction?
 
     ////////////////////////////////////////////////////////////
     // MARK: - View Controller Life Cycle
@@ -53,9 +54,9 @@ class PetListingViewController: UIViewController
         refreshControl.addTarget(self, action: #selector(refreshTriggered), for: .valueChanged)
         self.collectionView.addSubview(refreshControl)
         
-        if let _ = UserDefaults.standard.string(forKey: ZIPCODE_KEY)
+        if let _ = UserDefaults.standard.string(forKey: Constants.ZIPCODE_KEY)
         {
-            loadPets()
+            loadPets(offset: lastOffset)
         }
         else
         {
@@ -68,7 +69,7 @@ class PetListingViewController: UIViewController
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        if let zipCode = UserDefaults.standard.string(forKey: ZIPCODE_KEY)
+        if let zipCode = UserDefaults.standard.string(forKey: Constants.ZIPCODE_KEY)
         {
             setNavigationTitle("Pets near \(zipCode)")
         }
@@ -127,17 +128,23 @@ class PetListingViewController: UIViewController
     ////////////////////////////////////////////////////////////
     // MARK: - Helper Functions
     ////////////////////////////////////////////////////////////
-    func zipCodeIsValid(str:String) -> Bool {
+
+    func zipCodeIsValid(str:String) -> Bool
+    {
         let zipRegEx = "^\\d{5}([ \\-]\\d{4})?"
         let zipCodeTest = NSPredicate(format:"SELF MATCHES %@", zipRegEx)
         return zipCodeTest.evaluate(with: str)
     }
-    
-    weak var actionToEnable : UIAlertAction?
-    func textChanged(_ sender:UITextField) {
+
+    ////////////////////////////////////////////////////////////
+
+    @objc func textChanged(_ sender:UITextField)
+    {
         self.actionToEnable?.isEnabled = zipCodeIsValid(str: sender.text!)
     }
-    
+
+    ////////////////////////////////////////////////////////////
+
     func presentZipCodeAlertController()
     {
         let alertController = UIAlertController(title: "Set Location", message: "Please enter your zip code", preferredStyle: .alert)
@@ -148,16 +155,14 @@ class PetListingViewController: UIViewController
             let zipText = alertController.textFields![0]
             if let zipCode = zipText.text
             {
-                UserDefaults.standard.set(zipCode, forKey: ZIPCODE_KEY)
+                UserDefaults.standard.set(zipCode, forKey: Constants.ZIPCODE_KEY)
                 self.setNavigationTitle("Pets near \(zipCode)")
             }
             self.loadPets()
         }
         
-        
-        
         alertController.addTextField
-            { textField in
+        { textField in
                 textField.placeholder = "Zip Code"
                 textField.keyboardType = .numberPad
                 textField.addTarget(self, action: #selector(self.textChanged(_:)), for: .editingChanged)
@@ -168,8 +173,6 @@ class PetListingViewController: UIViewController
         self.actionToEnable = zipCodeAction
         zipCodeAction.isEnabled = false
         self.present(alertController, animated: true, completion: nil)
-        
-        
     }
     
     ////////////////////////////////////////////////////////////
@@ -181,11 +184,16 @@ class PetListingViewController: UIViewController
     
     ////////////////////////////////////////////////////////////
 
-    func loadPets()
+    func loadPets(offset: String? = nil)
     {
-        guard let zipCode = UserDefaults.standard.string(forKey: ZIPCODE_KEY) else { return }
-        requestManager.request(PetFinderPetsFrom: zipCode)
-        { pets, error in
+        // reset will be used to determine if we need to empty our data source,
+        // the assumption being that if we are not passing an offset to this function,
+        // then we are either refreshing the list or creating a new list from a new zip code
+        let reset = (offset == nil) ? true : false
+        
+        guard let zipCode = UserDefaults.standard.string(forKey: Constants.ZIPCODE_KEY) else { return }
+        requestManager.request(PetFinderPetsFrom: zipCode, offset: offset)
+        { pets, lastOffset, error in
             if let error = error
             {
                 print(error.localizedDescription)
@@ -194,8 +202,18 @@ class PetListingViewController: UIViewController
             {
                 if let pets = pets
                 {
-                    self.petData = pets
+                    if reset
+                    {
+                        self.petData = [PFPet]()
+                    }
+                    
+                    self.petData += pets
                     self.collectionView.reloadData()
+                }
+                
+                if let lastOffset = lastOffset
+                {
+                    self.lastOffset = lastOffset
                 }
             }
             
@@ -212,16 +230,11 @@ class PetListingViewController: UIViewController
 }
 
 ////////////////////////////////////////////////////////////
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+////////////////////////////////////////////////////////////
 
 extension PetListingViewController : UICollectionViewDelegate, UICollectionViewDataSource
 {
-    func numberOfSections(in collectionView: UICollectionView) -> Int
-    {
-        return 1
-    }
-
-    ////////////////////////////////////////////////////////////
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return self.petData.count
@@ -243,5 +256,43 @@ extension PetListingViewController : UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         performSegue(withIdentifier: PetListingViewController.SEGUE_TO_PET_DETAILS_ID, sender: indexPath)
+    }
+    
+    ////////////////////////////////////////////////////////////
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath)
+    {
+        if indexPath.item == self.petData.count - 1,
+            let lastOffset = self.lastOffset,
+            let offset = Int(lastOffset) // this conversion is here simply to accommodate for the comparison below
+        {
+            if offset < Constants.MAX_SEARCH_RESULTS
+            {
+                loadPets(offset: lastOffset)
+                self.isLastPage = false
+            }
+            else
+            {
+                self.isLastPage = true
+            }
+        }
+    }
+    
+    ////////////////////////////////////////////////////////////
+
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
+        let loadingView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: LoadingPetsView.reuseIdentifier, for: indexPath) as! LoadingPetsView
+        
+        if self.isLastPage
+        {
+            loadingView.activityIndicator.stopAnimating()
+        }
+        else
+        {
+            loadingView.activityIndicator.startAnimating()
+        }
+        
+        return loadingView
     }
 }
