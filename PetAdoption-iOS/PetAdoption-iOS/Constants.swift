@@ -1,0 +1,24 @@
+//
+//  Constants.swift
+//  PetAdoption-iOS
+//
+//  Created by Kelii Martin on 3/18/18.
+//  Copyright © 2018 Code For Orlando. All rights reserved.
+//
+
+import Foundation
+
+public struct Constants
+{
+    ////////////////////////////////////////////////////////////
+    // MARK: - UserDefaults Keys
+    ////////////////////////////////////////////////////////////
+    
+    public static let ZIPCODE_KEY: String = "ZIPCODE"
+    
+    ////////////////////////////////////////////////////////////
+    // MARK: - Other constants
+    ////////////////////////////////////////////////////////////
+
+    public static let MAX_SEARCH_RESULTS = 2000
+}

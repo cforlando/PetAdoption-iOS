@@ -15,6 +15,8 @@
 		42C2522A1C8881DE00B2BE6D /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C252291C8881DE00B2BE6D /* BackgroundView.swift */; };
 		42C2522C1C8899BD00B2BE6D /* TransparentNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C2522B1C8899BD00B2BE6D /* TransparentNavBar.swift */; };
 		90ADBC339006BDDE435B71C4 /* Pods_PetAdoption_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCC61B47493AD9AFC8BA810 /* Pods_PetAdoption_iOS.framework */; };
+		942F6A6A205F46CD00F3179F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F6A69205F46CD00F3179F /* Constants.swift */; };
+		942F6A6B205F46CD00F3179F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F6A69205F46CD00F3179F /* Constants.swift */; };
 		94381A3D200594600002A649 /* PFPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A3C200594600002A649 /* PFPet.swift */; };
 		94381A4520059A7D0002A649 /* PFAnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A4420059A7D0002A649 /* PFAnimalType.swift */; };
 		94381A4720059AD70002A649 /* PFPetOptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94381A4620059AD70002A649 /* PFPetOptionType.swift */; };
@@ -23,6 +25,7 @@
 		94586CAB2007AE57002B6084 /* PFPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAA2007AE57002B6084 /* PFPhoto.swift */; };
 		94586CAD2007AF6E002B6084 /* PFContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAC2007AF6E002B6084 /* PFContact.swift */; };
 		94586CAF200822BF002B6084 /* PFGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94586CAE200822BF002B6084 /* PFGender.swift */; };
+		94A366432076F87E00E95524 /* LoadingPetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A366412076F87E00E95524 /* LoadingPetsView.swift */; };
 		94EA0483202BCF5B00AFCF55 /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94EA0482202BCF5B00AFCF55 /* apikey.plist */; };
 		94EA0484202BCF5B00AFCF55 /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94EA0482202BCF5B00AFCF55 /* apikey.plist */; };
 		97C5226AC9AFB7547023F371 /* Pods_PetAdoptionTransportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB921F8A0328C363307C66E /* Pods_PetAdoptionTransportKit.framework */; };
@@ -149,6 +152,7 @@
 		5FCC61B47493AD9AFC8BA810 /* Pods_PetAdoption_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetAdoption_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AAD5FEFC48F2F2A23F42E1D /* Pods-PetAdoption-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		925933A48637FAFF5BE6240D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		942F6A69205F46CD00F3179F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		94381A3C200594600002A649 /* PFPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPet.swift; sourceTree = "<group>"; };
 		94381A4420059A7D0002A649 /* PFAnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFAnimalType.swift; sourceTree = "<group>"; };
 		94381A4620059AD70002A649 /* PFPetOptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPetOptionType.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		94586CAA2007AE57002B6084 /* PFPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFPhoto.swift; sourceTree = "<group>"; };
 		94586CAC2007AF6E002B6084 /* PFContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFContact.swift; sourceTree = "<group>"; };
 		94586CAE200822BF002B6084 /* PFGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFGender.swift; sourceTree = "<group>"; };
+		94A366412076F87E00E95524 /* LoadingPetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingPetsView.swift; path = Views/LoadingPetsView.swift; sourceTree = "<group>"; };
 		94EA0482202BCF5B00AFCF55 /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
 		AB77A283D0B7D820C44F8CAD /* Pods-PetAdoption-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetAdoption-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetAdoption-iOS/Pods-PetAdoption-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CBB921F8A0328C363307C66E /* Pods_PetAdoptionTransportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetAdoptionTransportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,6 +328,8 @@
 		42BC91241D67C7AF00B3B8FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D013BFA61C717935007C8808 /* ImageGalleryView.swift */,
+				94A366412076F87E00E95524 /* LoadingPetsView.swift */,
 				D0950B0C1C6198C2002E198C /* HomePortraitCollectionViewLayout.swift */,
 				428A90A81D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift */,
 				42C2522B1C8899BD00B2BE6D /* TransparentNavBar.swift */,
@@ -331,6 +338,14 @@
 				42070E081D7470A100B02BA2 /* DescriptionCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		942F6A68205F46B600F3179F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				942F6A69205F46CD00F3179F /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		94381A3B20058E100002A649 /* PetFinderAPI */ = {
@@ -413,6 +428,7 @@
 		D0950AC61C618C2F002E198C /* PetAdoption-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				942F6A68205F46B600F3179F /* Utilities */,
 				42ACC1AB1D68A88C001C7C83 /* Protocols */,
 				42ACC1A81D689C82001C7C83 /* Extensions */,
 				D040884F1C94BD6100A53389 /* Resources */,
@@ -462,7 +478,6 @@
 			isa = PBXGroup;
 			children = (
 				D013BFA41C716B7E007C8808 /* ImageGalleryView.xib */,
-				D013BFA61C717935007C8808 /* ImageGalleryView.swift */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -702,7 +717,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Code For Orlando";
 				TargetAttributes = {
 					D0950AC31C618C2F002E198C = {
@@ -925,6 +940,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E536791C70405D004794D8 /* SearchViewController.swift in Sources */,
+				942F6A6A205F46CD00F3179F /* Constants.swift in Sources */,
 				42ACC1AD1D68A8A3001C7C83 /* ReusableView.swift in Sources */,
 				42C2522C1C8899BD00B2BE6D /* TransparentNavBar.swift in Sources */,
 				42C2522A1C8881DE00B2BE6D /* BackgroundView.swift in Sources */,
@@ -938,6 +954,7 @@
 				428A90A91D8441D5006B4259 /* HomeLandscapeCollectionViewLayout.swift in Sources */,
 				D0950B0D1C6198C2002E198C /* HomePortraitCollectionViewLayout.swift in Sources */,
 				D0950AFB1C619146002E198C /* PetListingViewController.swift in Sources */,
+				94A366432076F87E00E95524 /* LoadingPetsView.swift in Sources */,
 				D0950B011C619172002E198C /* InfoViewController.swift in Sources */,
 				D040884B1C94B6CC00A53389 /* UIColor+Theme.swift in Sources */,
 			);
@@ -968,6 +985,7 @@
 				D4F2A7861D6A811600E92647 /* DateExtension.swift in Sources */,
 				D4F2A7641D6A1FEF00E92647 /* Behavior.swift in Sources */,
 				94586CAF200822BF002B6084 /* PFGender.swift in Sources */,
+				942F6A6B205F46CD00F3179F /* Constants.swift in Sources */,
 				D4F2A7591D6A1EAB00E92647 /* PTKMedicalShotStatus.swift in Sources */,
 				D4F2A7721D6A22EA00E92647 /* PTKDeclawed.swift in Sources */,
 				D4F2A7761D6A2C3700E92647 /* Location.swift in Sources */,
@@ -1064,12 +1082,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1117,12 +1137,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

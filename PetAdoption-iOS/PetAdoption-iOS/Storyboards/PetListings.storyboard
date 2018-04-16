@@ -33,7 +33,7 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VV9-WR-ags">
                                     <size key="itemSize" width="142" height="135"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -90,6 +90,23 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LoadingPetsView" id="hhc-6g-crD" customClass="LoadingPetsView" customModule="PetAdoption_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="135" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-7z-kzD">
+                                            <rect key="frame" x="169" y="6.5" width="37" height="37"/>
+                                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZVA-7z-kzD" firstAttribute="centerX" secondItem="hhc-6g-crD" secondAttribute="centerX" id="lnw-qQ-J2L"/>
+                                        <constraint firstItem="ZVA-7z-kzD" firstAttribute="centerY" secondItem="hhc-6g-crD" secondAttribute="centerY" id="qis-y5-p07"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="activityIndicator" destination="ZVA-7z-kzD" id="xdL-bc-t1i"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
