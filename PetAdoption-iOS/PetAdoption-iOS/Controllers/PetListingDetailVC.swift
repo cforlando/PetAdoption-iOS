@@ -8,6 +8,8 @@
 
 import UIKit
 import PetAdoptionTransportKit
+import MessageUI
+import Foundation
 
 enum Sections: Int
 {
@@ -27,7 +29,7 @@ struct SectionItem
 
 ////////////////////////////////////////////////////////////
 
-class PetListingDetailVC: UITableViewController
+class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDelegate
 {
     ////////////////////////////////////////////////////////////
     // MARK: - IBOutlets
@@ -174,6 +176,33 @@ class PetListingDetailVC: UITableViewController
 
         self.imageContainerScrollView.contentSize = CGSize(width: fullWidth, height: self.imageContainerScrollView.frame.height)
     }
+    
+    ////////////////////////////////////////////////////////////
+    // MARK: - Email Logic
+    ////////////////////////////////////////////////////////////
+    
+    func configureMailController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+//        let emailString = SectionItem(name: "E-mail", value: pet?.contact.email) as! String
+        let emailString = pet?.contact.email
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients([emailString!])
+        mailComposerVC.setSubject("Adoption!")
+        mailComposerVC.setMessageBody("Hello! I'm interested in giving this pet a new home!", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func displayEmailError() {
+        let sendEmailErrorAlert = UIAlertController(title: "Could not send email", message: nil, preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
+        sendEmailErrorAlert.addAction(dismiss)
+        self.present(sendEmailErrorAlert, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 
     ////////////////////////////////////////////////////////////
     // MARK: - UIScrollViewDelegate
@@ -241,6 +270,7 @@ class PetListingDetailVC: UITableViewController
     ////////////////////////////////////////////////////////////
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+        // cellforrowat populates the tableview
     {
         let sectionNumber = indexPath.section
         let rowNumber = indexPath.row
@@ -268,6 +298,36 @@ class PetListingDetailVC: UITableViewController
     }
 
     ////////////////////////////////////////////////////////////
+    
+    
+    ////////////////////////////////////////////////////////////
+    // MARK: - UITableViewDataSource
+    ////////////////////////////////////////////////////////////
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let sectionNumber = indexPath.section
+        let rowNumber = indexPath.row
+        
+//        if indexPath?.section == 3 && indexPath?.row == 1 {
+//            print("IS THIS WORKING IS THIS WORKING IS THIS WORKING")
+//        }
+
+        if sectionNumber == 3 && rowNumber == 1 {
+         let mailComposeViewController = configureMailController()
+            if MFMailComposeViewController.canSendMail() {
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            } else {
+                displayEmailError()
+            }
+        }
+
+}
+    
+
+    ////////////////////////////////////////////////////////////
+
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
