@@ -181,16 +181,17 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
     // MARK: - Email Logic
     ////////////////////////////////////////////////////////////
     
-    func configureMailController() -> MFMailComposeViewController {
+    func configureMailController() -> MFMailComposeViewController? {
+        guard let pet = pet, pet.contact.email != "" else { return nil }
         let mailComposerVC = MFMailComposeViewController()
-        let emailString = pet?.contact.email
-        mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients([emailString!])
-        mailComposerVC.setSubject("Adoption!")
-        mailComposerVC.setMessageBody("Hello! I'm interested in giving this pet a new home!", isHTML: false)
-        
-        return mailComposerVC
+            let emailString = pet.contact.email
+            mailComposerVC.mailComposeDelegate = self
+            mailComposerVC.setToRecipients([emailString])
+            mailComposerVC.setSubject("Adoption!")
+            mailComposerVC.setMessageBody("Hello! I'm interested in giving this pet a new home!", isHTML: false)
+            return mailComposerVC
     }
+
     
     func displayEmailError() {
         let sendEmailErrorAlert = UIAlertController(title: "Could not send email", message: nil, preferredStyle: .alert)
@@ -202,6 +203,21 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
+    
+    ////////////////////////////////////////////////////////////
+    // MARK: - Phone Logic
+    ////////////////////////////////////////////////////////////
+    
+//    func callCellPushed(sender: AnyObject) {
+//        if let url = URL(string: "tel://\(pet?.contact.phone)") {
+//            if #available(iOS 10.0, *) {
+//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//            } else {
+//                print("Unable to send call.")
+//            }
+//        }
+//    }
+//
 
     ////////////////////////////////////////////////////////////
     // MARK: - UIScrollViewDelegate
@@ -295,32 +311,26 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
         return UITableViewCell()
     }
 
-    ////////////////////////////////////////////////////////////
-    
-    
-    ////////////////////////////////////////////////////////////
-    // MARK: - UITableViewDataSource
-    ////////////////////////////////////////////////////////////
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let sectionNumber = indexPath.section
         let rowNumber = indexPath.row
+        
         if sectionNumber == 3 && rowNumber == 1 {
             let mailComposeViewController = configureMailController()
             if MFMailComposeViewController.canSendMail() {
-                self.present(mailComposeViewController, animated: true, completion: nil)
+                self.present((mailComposeViewController)!, animated: true, completion: nil)
             } else {
                 displayEmailError()
             }
         }
 
+//        If the return type for configureMailController() is optional like I suggested above,
+//        you can wrap all of this code in an if let and only try to
+//        present the controller if there is actually an email address.
+//
+
 }
-    
-
-    ////////////////////////////////////////////////////////////
-
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
@@ -338,4 +348,5 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
                 return nil
         }
     }
+
 }
