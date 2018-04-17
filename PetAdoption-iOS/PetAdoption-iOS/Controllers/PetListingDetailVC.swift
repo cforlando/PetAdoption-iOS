@@ -183,7 +183,6 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
     
     func configureMailController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-//        let emailString = SectionItem(name: "E-mail", value: pet?.contact.email) as! String
         let emailString = pet?.contact.email
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients([emailString!])
@@ -270,7 +269,6 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
     ////////////////////////////////////////////////////////////
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-        // cellforrowat populates the tableview
     {
         let sectionNumber = indexPath.section
         let rowNumber = indexPath.row
@@ -309,13 +307,8 @@ class PetListingDetailVC: UITableViewController, MFMailComposeViewControllerDele
 
         let sectionNumber = indexPath.section
         let rowNumber = indexPath.row
-        
-//        if indexPath?.section == 3 && indexPath?.row == 1 {
-//            print("IS THIS WORKING IS THIS WORKING IS THIS WORKING")
-//        }
-
         if sectionNumber == 3 && rowNumber == 1 {
-         let mailComposeViewController = configureMailController()
+            let mailComposeViewController = configureMailController()
             if MFMailComposeViewController.canSendMail() {
                 self.present(mailComposeViewController, animated: true, completion: nil)
             } else {
