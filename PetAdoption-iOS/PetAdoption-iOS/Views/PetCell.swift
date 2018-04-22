@@ -76,6 +76,8 @@ public class PetCell: UICollectionViewCell, ReusableView
             { image, error in
                 self.populateCell(image: image)
             }
+        } else {
+            self.activityIndicator.stopAnimating()
         }
     }
 
