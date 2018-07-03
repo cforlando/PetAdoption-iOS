@@ -263,8 +263,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fka-Nd-Q1g">
+                                <rect key="frame" x="0.0" y="289" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="0lj-pZ-GKY"/>
+                                    <constraint firstAttribute="height" constant="30" id="5k3-sb-OY9"/>
+                                </constraints>
+                                <state key="normal" title="http://www.codefororlando.com">
+                                    <color key="titleColor" red="0.2244985998" green="0.6251985431" blue="0.32303506139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="codeForOrlandoTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="fl4-a8-Yb3"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Built with love by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKL-GD-H1G">
-                                <rect key="frame" x="20" y="74" width="374" height="21"/>
+                                <rect key="frame" x="20" y="79" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bQ0-Nt-nae"/>
                                 </constraints>
@@ -272,36 +285,15 @@
                                 <color key="textColor" red="0.2244985998" green="0.6251985431" blue="0.32303506139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@codefororlando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqD-Fc-6x9">
-                                <rect key="frame" x="20" y="259" width="374" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="bZw-Gw-BcI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.2244985998" green="0.6251985431" blue="0.32303506139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0W-3c-zMT">
-                                <rect key="frame" x="20" y="300" width="374" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="kE5-pp-AYC"/>
-                                </constraints>
-                                <state key="normal" title="http://www.codefororlando.com">
-                                    <color key="titleColor" red="0.2244985998" green="0.6251985431" blue="0.32303506139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="codeForOrlandoTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="Wrf-tf-JqX"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cfo logo" translatesAutoresizingMaskIntoConstraints="NO" id="hog-XN-Uby">
-                                <rect key="frame" x="87" y="103" width="240" height="128"/>
+                                <rect key="frame" x="87" y="108" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8FB-H8-wDL"/>
                                     <constraint firstAttribute="width" constant="240" id="C3X-jZ-egv"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EEo-8X-6JB">
-                                <rect key="frame" x="82.666666666666671" y="347" width="248.66666666666663" height="180"/>
+                                <rect key="frame" x="82.666666666666671" y="326" width="248.66666666666663" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCN-WC-egN">
                                         <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="46.666666666666664"/>
@@ -310,6 +302,9 @@
                                         <state key="normal" title="RATE OUR APP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rateAppTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="yaK-at-CxD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-gn-s1k">
                                         <rect key="frame" x="0.0" y="66.666666666666686" width="248.66666666666666" height="46.666666666666657"/>
@@ -319,6 +314,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="openSourceCodeTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="kgO-Qx-tZU"/>
                                             <action selector="sourceCodeTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="I9d-Vg-ewD"/>
                                         </connections>
                                     </button>
@@ -329,29 +325,45 @@
                                         <state key="normal" title="LICENSES">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openLicensesTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="P3X-Dz-teK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="82Y-BB-aqj"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0W-3c-zMT">
+                                <rect key="frame" x="20" y="236" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5x7-Pr-I6O"/>
+                                </constraints>
+                                <state key="normal" title="@codefororlando">
+                                    <color key="titleColor" red="0.2244985998" green="0.6251985431" blue="0.32303506139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="codeForOrlandoTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="Wrf-tf-JqX"/>
+                                    <action selector="twitterTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="BcD-Q2-X2P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tqD-Fc-6x9" firstAttribute="top" secondItem="hog-XN-Uby" secondAttribute="bottom" constant="28" id="51T-Tn-uZK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S0W-3c-zMT" secondAttribute="trailing" id="6TC-aL-k7D"/>
-                            <constraint firstItem="S0W-3c-zMT" firstAttribute="top" secondItem="tqD-Fc-6x9" secondAttribute="bottom" constant="20" id="9mm-5H-ZWi"/>
+                            <constraint firstItem="S0W-3c-zMT" firstAttribute="top" secondItem="hog-XN-Uby" secondAttribute="bottom" id="Ahc-pJ-gKc"/>
                             <constraint firstItem="EEo-8X-6JB" firstAttribute="width" secondItem="I14-Bi-0Rk" secondAttribute="width" multiplier="0.6" id="CXk-Gn-0D5"/>
-                            <constraint firstItem="EEo-8X-6JB" firstAttribute="top" secondItem="S0W-3c-zMT" secondAttribute="bottom" constant="17" id="L2H-gl-4Sq"/>
                             <constraint firstItem="gKL-GD-H1G" firstAttribute="leading" secondItem="I14-Bi-0Rk" secondAttribute="leadingMargin" id="Ovw-Hh-RzU"/>
+                            <constraint firstItem="Fka-Nd-Q1g" firstAttribute="top" secondItem="S0W-3c-zMT" secondAttribute="bottom" constant="23" id="PJL-BU-Gki"/>
                             <constraint firstItem="EEo-8X-6JB" firstAttribute="centerX" secondItem="I14-Bi-0Rk" secondAttribute="centerX" id="PaM-5P-NLx"/>
                             <constraint firstItem="hog-XN-Uby" firstAttribute="top" secondItem="gKL-GD-H1G" secondAttribute="bottom" constant="8" id="Tav-tP-sQN"/>
-                            <constraint firstItem="gKL-GD-H1G" firstAttribute="top" secondItem="dWj-yU-v9h" secondAttribute="bottom" constant="10" id="Ziy-AC-byj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tqD-Fc-6x9" secondAttribute="trailing" id="aeS-Dy-Ozi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S0W-3c-zMT" secondAttribute="trailing" id="VLG-Yw-k6a"/>
+                            <constraint firstItem="gKL-GD-H1G" firstAttribute="top" secondItem="dWj-yU-v9h" secondAttribute="bottom" constant="15" id="Ziy-AC-byj"/>
+                            <constraint firstItem="Fka-Nd-Q1g" firstAttribute="leading" secondItem="I14-Bi-0Rk" secondAttribute="leading" id="efG-LB-gTg"/>
                             <constraint firstItem="hog-XN-Uby" firstAttribute="centerX" secondItem="I14-Bi-0Rk" secondAttribute="centerX" id="gKw-UO-CbX"/>
-                            <constraint firstItem="tqD-Fc-6x9" firstAttribute="leading" secondItem="I14-Bi-0Rk" secondAttribute="leadingMargin" id="ieg-Bs-SGQ"/>
-                            <constraint firstItem="S0W-3c-zMT" firstAttribute="leading" secondItem="I14-Bi-0Rk" secondAttribute="leadingMargin" id="oIm-gW-xX3"/>
+                            <constraint firstItem="S0W-3c-zMT" firstAttribute="leading" secondItem="I14-Bi-0Rk" secondAttribute="leadingMargin" id="uYM-fH-WAZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Fka-Nd-Q1g" secondAttribute="trailing" id="vCg-Ym-Y0c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gKL-GD-H1G" secondAttribute="trailing" id="vlV-5E-AQb"/>
+                            <constraint firstItem="EEo-8X-6JB" firstAttribute="top" secondItem="Fka-Nd-Q1g" secondAttribute="bottom" constant="7" id="w21-d6-n6g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About" id="YRS-Ng-7hG">
