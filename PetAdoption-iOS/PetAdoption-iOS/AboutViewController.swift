@@ -30,6 +30,9 @@ class AboutViewController: UIViewController {
         openWebpage(address: "http://www.codefororlando.com")
     }
     
+    @IBAction func sourceCodeTapped(_ sender: Any) {
+    }
+    
     private func openWebpage(address: String) {
         if let url = URL(string: address) {
             if #available(iOS 10, *) {
