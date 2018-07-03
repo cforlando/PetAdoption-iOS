@@ -315,7 +315,6 @@
                                         </state>
                                         <connections>
                                             <action selector="openSourceCodeTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="kgO-Qx-tZU"/>
-                                            <action selector="sourceCodeTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="I9d-Vg-ewD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fso-Vf-2f1">
@@ -343,7 +342,6 @@
                                     <color key="titleColor" red="0.2244985998" green="0.6251985431" blue="0.32303506139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="codeForOrlandoTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="Wrf-tf-JqX"/>
                                     <action selector="twitterTapped:" destination="mDu-K2-ZWG" eventType="touchUpInside" id="BcD-Q2-X2P"/>
                                 </connections>
                             </button>
