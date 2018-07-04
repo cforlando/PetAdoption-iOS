@@ -29,33 +29,23 @@ class AboutViewController: UIViewController {
     }
     
     @IBAction func twitterTapped(_ sender: UIButton) {
-        openWebpage(address: "https://twitter.com/CodeForOrlando")
+        openWebpage(address: "https://twitter.com/CodeForOrlando", navigationController: nil, inAppBrowser: false)
     }
     
     @IBAction func rateAppTapped(_ sender: UIButton) {
-        openWebpage(address: "https://itunes.apple.com/us/app/pet-adoptions-cfo/id1356383076?mt=8")
+        openWebpage(address: "https://itunes.apple.com/us/app/pet-adoptions-cfo/id1356383076?mt=8", navigationController: nil, inAppBrowser: false)
     }
     
     @IBAction func codeForOrlandoTapped(_ sender: UIButton) {
-        openWebpage(address: "http://www.codefororlando.com")
+        openWebpage(address: "http://www.codefororlando.com", navigationController: self.navigationController, inAppBrowser: true)
     }
     
     @IBAction func openSourceCodeTapped(_ sender: Any) {
-        openWebpage(address: "https://github.com/cforlando/PetAdoption-iOS/")
+        openWebpage(address: "https://github.com/cforlando/PetAdoption-iOS/", navigationController: self.navigationController, inAppBrowser: true)
     }
     
     @IBAction func openLicensesTapped(_ sender: Any) {
-        openWebpage(address: "https://github.com/cforlando/PetAdoption-iOS/blob/develop/LICENSE.md")
+        let licensesVC = LicensesViewController()
+        self.navigationController?.pushViewController(licensesVC, animated: true)
     }
-    
-    private func openWebpage(address: String) {
-        if let url = URL(string: address) {
-            if #available(iOS 10, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
-    }
-    
 }
