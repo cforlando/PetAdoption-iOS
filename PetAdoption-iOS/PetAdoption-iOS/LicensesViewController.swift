@@ -28,7 +28,9 @@ class LicensesViewController: UITableViewController {
         items = [
             Item(title: "AlamoFire", detail: "Elegant HTTP Networking in Swift.", url: "https://github.com/Alamofire/Alamofire/blob/master/LICENSE"),
             Item(title: "CocoaPods", detail: "A dependency manager for Swift and Objective-C Cocoa projects.", url: "https://cocoapods.org/legal"),
-            Item(title: "Code For Orlando - PetAdoption iOS", detail: "Our own license.", url: "https://github.com/cforlando/PetAdoption-iOS/blob/develop/LICENSE.md"),
+            Item(title: "Code For Orlando - PetAdoption iOS", detail: "Our license.", url: "https://github.com/cforlando/PetAdoption-iOS/blob/develop/LICENSE.md"),
+            Item(title: "Crashlitics", detail: "The most powerful, yet lightest weight crash reporting solution.", url: "https://www.fabric.io/licenses"),
+            Item(title: "Fabric", detail: "Fabric is a platform that helps your mobile team build better apps, understand your users, and grow your business.", url: "https://fabric.io/licenses"),
             Item(title: "Petfinder API", detail: "The Petfinder API gives developers access to Petfinder's database of over 300,000 adoptable pets and 11,000 animal welfare organizations (AWO)", url: "https://www.petfinder.com/developers/api-docs"),
             Item(title: "SwiftyJSON", detail: "The better way to deal with JSON data in Swift.", url: "https://github.com/SwiftyJSON/SwiftyJSON/blob/master/LICENSE")
         ]
