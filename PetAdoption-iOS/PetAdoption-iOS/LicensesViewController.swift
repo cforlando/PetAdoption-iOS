@@ -22,6 +22,8 @@ class LicensesViewController: UITableViewController {
     override func viewDidLoad() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         loadData()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     private func loadData(){
@@ -31,7 +33,7 @@ class LicensesViewController: UITableViewController {
             Item(title: "Code For Orlando - PetAdoption iOS", detail: "Our license.", url: "https://github.com/cforlando/PetAdoption-iOS/blob/develop/LICENSE.md"),
             Item(title: "Crashlitics", detail: "The most powerful, yet lightest weight crash reporting solution.", url: "https://www.fabric.io/licenses"),
             Item(title: "Fabric", detail: "Fabric is a platform that helps your mobile team build better apps, understand your users, and grow your business.", url: "https://fabric.io/licenses"),
-            Item(title: "Petfinder API", detail: "The Petfinder API gives developers access to Petfinder's database of over 300,000 adoptable pets and 11,000 animal welfare organizations (AWO)", url: "https://www.petfinder.com/developers/api-docs"),
+            Item(title: "Petfinder API", detail: "The Petfinder API gives developers access to Petfinder's database of over 300,000 adoptable pets and 11,000 animal welfare organizations (AWO).", url: "https://www.petfinder.com/developers/api-docs"),
             Item(title: "SwiftyJSON", detail: "The better way to deal with JSON data in Swift.", url: "https://github.com/SwiftyJSON/SwiftyJSON/blob/master/LICENSE")
         ]
     }
@@ -44,6 +46,7 @@ class LicensesViewController: UITableViewController {
         cell.tintColor = .gray
         let item = items[indexPath.row]
         cell.textLabel?.text = item.title
+        cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = item.detail
         return cell
     }
@@ -54,10 +57,6 @@ class LicensesViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
