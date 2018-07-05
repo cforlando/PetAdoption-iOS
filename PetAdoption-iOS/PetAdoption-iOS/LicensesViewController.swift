@@ -24,6 +24,7 @@ class LicensesViewController: UITableViewController {
         loadData()
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
     }
     
     private func loadData(){
