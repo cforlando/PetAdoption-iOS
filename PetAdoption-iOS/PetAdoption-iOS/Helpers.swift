@@ -6,21 +6,20 @@
 //  Copyright © 2018 Code For Orlando. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import SafariServices
 
 func openWebpage(address: String, navigationController: UINavigationController?, inAppBrowser: Bool = false) {
+    guard let url = URL(string: address) else { return }
     if inAppBrowser && navigationController != nil {
-        let svc = SFSafariViewController(url: URL(string: address)!)
-        navigationController?.pushViewController(svc, animated: true)
+        let webviewer = WebViewer(withURL: url)
+        navigationController?.pushViewController(webviewer, animated: true)
         return
-    }
-    if let url = URL(string: address) {
+    } else { // open in external browser / app
         if #available(iOS 10, *) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
             UIApplication.shared.openURL(url)
         }
     }
+    
 }
